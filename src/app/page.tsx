@@ -1,3 +1,29 @@
+import { Header } from '@/components/header';
+import { HeroSection } from '@/components/sections/hero-section';
+import { StrategicOpportunitySection } from '@/components/sections/strategic-opportunity-section';
+import { BinancePowerhouseSection } from '@/components/sections/binance-powerhouse-section';
+import { QatarVisionSection } from '@/components/sections/qatar-vision-section';
+import { DohaHQSection } from '@/components/sections/doha-hq-section';
+import { InvestmentDeepDiveSection } from '@/components/sections/investment-deep-dive-section';
+import { JointInitiativesSection } from '@/components/sections/joint-initiatives-section';
+import { ImplementationTimelineSection } from '@/components/sections/implementation-timeline-section';
+import { ConclusionSection } from '@/components/sections/conclusion-section';
+
 export default function Home() {
-  return <></>;
+  return (
+    <div className="flex flex-col min-h-screen">
+      <Header />
+      <main className="flex-1">
+        <HeroSection />
+        <StrategicOpportunitySection />
+        <BinancePowerhouseSection />
+        <QatarVisionSection />
+        <DohaHQSection />
+        <InvestmentDeepDiveSection />
+        <JointInitiativesSection />
+        <ImplementationTimelineSection />
+        <ConclusionSection />
+      </main>
+    </div>
+  );
 }
