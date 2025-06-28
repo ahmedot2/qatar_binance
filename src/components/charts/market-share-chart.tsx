@@ -10,15 +10,19 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
-import { ChartTooltipContent } from "@/components/ui/chart"
+import {
+  ChartContainer,
+  ChartTooltipContent,
+} from "@/components/ui/chart"
+import type { ChartConfig } from "@/components/ui/chart"
 import { Button } from "@/components/ui/button"
 import { SwitchCamera, Layers } from "lucide-react"
 
 const pieData = [
-  { browser: "binance", volume: 41.14, fill: "hsl(var(--primary))" },
-  { browser: "htx", volume: 15.2, fill: "hsl(var(--chart-2))" },
-  { browser: "coinbase", volume: 8.6, fill: "hsl(var(--chart-3))" },
-  { browser: "other", volume: 35.06, fill: "hsl(var(--muted-foreground))" },
+  { browser: "binance", volume: 41.14, fill: "var(--color-binance)" },
+  { browser: "htx", volume: 15.2, fill: "var(--color-htx)" },
+  { browser: "coinbase", volume: 8.6, fill: "var(--color-coinbase)" },
+  { browser: "other", volume: 35.06, fill: "var(--color-other)" },
 ]
 
 const barData = [
@@ -26,6 +30,28 @@ const barData = [
   { month: "HTX", volume: 58.8 },
   { month: "Coinbase", volume: 33.4 },
 ]
+
+const chartConfig = {
+  volume: {
+    label: "Volume",
+  },
+  binance: {
+    label: "Binance",
+    color: "hsl(var(--primary))",
+  },
+  htx: {
+    label: "HTX",
+    color: "hsl(var(--chart-2))",
+  },
+  coinbase: {
+    label: "Coinbase",
+    color: "hsl(var(--chart-3))",
+  },
+  other: {
+    label: "Other",
+    color: "hsl(var(--muted-foreground))",
+  },
+} satisfies ChartConfig
 
 export function MarketShareChart() {
   const [chartType, setChartType] = React.useState<"pie" | "bar">("pie")
@@ -45,7 +71,7 @@ export function MarketShareChart() {
       <CardContent>
         <div className="w-full h-[350px] relative">
           <div className={`absolute inset-0 transition-opacity duration-500 ${chartType === 'pie' ? 'opacity-100' : 'opacity-0'}`}>
-            <ResponsiveContainer width="100%" height="100%">
+            <ChartContainer config={chartConfig}>
               <PieChart>
                 <Tooltip
                   cursor={false}
@@ -60,7 +86,7 @@ export function MarketShareChart() {
                 >
                 </Pie>
               </PieChart>
-            </ResponsiveContainer>
+            </ChartContainer>
           </div>
           <div className={`absolute inset-0 transition-opacity duration-500 ${chartType === 'bar' ? 'opacity-100' : 'opacity-0'}`}>
             <ResponsiveContainer width="100%" height="100%">
