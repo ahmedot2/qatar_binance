@@ -29,7 +29,7 @@ export function BinancePowerhouseSection() {
                             <CardTitle>Binance by the Numbers</CardTitle>
                             <CardDescription>An unparalleled cash-flow engine.</CardDescription>
                         </CardHeader>
-                        <CardContent className="grid grid-cols-2 md:grid-cols-4 gap-6">
+                        <CardContent className="grid grid-cols-1 sm:grid-cols-3 gap-6">
                             <div className="stat-card">
                                 <BarChart className="w-10 h-10 text-primary mb-2" />
                                 <div className="text-3xl font-bold">$16.8B</div>
@@ -45,34 +45,34 @@ export function BinancePowerhouseSection() {
                                 <div className="text-3xl font-bold">$6-7B</div>
                                 <p className="text-sm text-muted-foreground">Estimated Net Profit</p>
                             </div>
-                             <Card className="col-span-2 md:col-span-4">
-                                <CardHeader>
-                                    <CardTitle>Proof of Reserves (March 2025)</CardTitle>
-                                    <CardDescription>Commitment to transparency and user fund security.</CardDescription>
-                                </CardHeader>
-                                <CardContent className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
-                                    <div className="flex flex-col items-center">
-                                        <BitcoinIcon className="w-10 h-10 mb-2 text-primary" />
-                                        <div className="font-bold text-lg">Bitcoin</div>
-                                        <Badge variant="secondary" className="mt-1">100.77%</Badge>
-                                    </div>
-                                    <div className="flex flex-col items-center">
-                                        <EthereumIcon className="w-10 h-10 mb-2 text-primary" />
-                                        <div className="font-bold text-lg">Ethereum</div>
-                                        <Badge variant="secondary" className="mt-1">100.00%</Badge>
-                                    </div>
-                                    <div className="flex flex-col items-center">
-                                        <BnbIcon className="w-10 h-10 mb-2 text-primary" />
-                                        <div className="font-bold text-lg">BNB</div>
-                                        <Badge variant="secondary" className="mt-1">110.92%</Badge>
-                                    </div>
-                                    <div className="flex flex-col items-center">
-                                        <UsdtIcon className="w-10 h-10 mb-2 text-primary" />
-                                        <div className="font-bold text-lg">USDT</div>
-                                        <Badge variant="secondary" className="mt-1">104.42%</Badge>
-                                    </div>
-                                </CardContent>
-                            </Card>
+                        </CardContent>
+                    </Card>
+                    <Card className="lg:col-span-2">
+                        <CardHeader>
+                            <CardTitle>Proof of Reserves (March 2025)</CardTitle>
+                            <CardDescription>Commitment to transparency and user fund security.</CardDescription>
+                        </CardHeader>
+                        <CardContent className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+                            <div className="flex flex-col items-center">
+                                <BitcoinIcon className="w-10 h-10 mb-2 text-primary" />
+                                <div className="font-bold text-lg">Bitcoin</div>
+                                <Badge variant="secondary" className="mt-1">100.77%</Badge>
+                            </div>
+                            <div className="flex flex-col items-center">
+                                <EthereumIcon className="w-10 h-10 mb-2 text-primary" />
+                                <div className="font-bold text-lg">Ethereum</div>
+                                <Badge variant="secondary" className="mt-1">100.00%</Badge>
+                            </div>
+                            <div className="flex flex-col items-center">
+                                <BnbIcon className="w-10 h-10 mb-2 text-primary" />
+                                <div className="font-bold text-lg">BNB</div>
+                                <Badge variant="secondary" className="mt-1">110.92%</Badge>
+                            </div>
+                            <div className="flex flex-col items-center">
+                                <UsdtIcon className="w-10 h-10 mb-2 text-primary" />
+                                <div className="font-bold text-lg">USDT</div>
+                                <Badge variant="secondary" className="mt-1">104.42%</Badge>
+                            </div>
                         </CardContent>
                     </Card>
                 </div>
