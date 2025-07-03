@@ -3,6 +3,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { ReturnScenariosChart } from "@/components/charts/return-scenarios-chart"
 import { Badge } from "@/components/ui/badge"
 import { Banknote, Users, BarChart, FileText, Lock } from "lucide-react"
+import { AnimatedCounter } from "../animated-counter"
 
 const rights = [
     { icon: Users, text: "Board-observer seat" },
@@ -15,9 +16,9 @@ const rights = [
 export function InvestmentDeepDiveSection() {
     return (
         <Section id="investment">
-            <h2 className="section-title">V. The Investment: Structure & Returns</h2>
+            <h2 className="section-title">V. Unlocking Value: The Investment Framework</h2>
             <p className="section-subtitle">
-                A detailed breakdown of the proposed $10B investment, structured to maximize Qatar's influence and financial upside while ensuring robust governance and investor protections.
+                A strategic $10B injection designed to maximize Qatar's influence and financial upside, fortified by robust governance and investor protections.
             </p>
 
             <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 mt-12">
@@ -27,17 +28,21 @@ export function InvestmentDeepDiveSection() {
                 <div className="lg:col-span-2 space-y-8">
                      <Card>
                         <CardHeader>
-                            <CardTitle>Deal Structure</CardTitle>
+                            <CardTitle>The Strategic Stake</CardTitle>
                         </CardHeader>
                         <CardContent className="space-y-4">
                             <div>
                                 <Badge variant="outline">Investment</Badge>
-                                <p className="font-bold text-2xl mt-1">$10 Billion</p>
+                                <div className="font-bold text-3xl mt-1">
+                                    <AnimatedCounter value={10} prefix="$" suffix=" Billion" />
+                                </div>
                                 <p className="text-xs text-muted-foreground">In two equal tranches (closing + 12 months)</p>
                             </div>
                             <div>
-                                <Badge variant="outline">Valuation</Badge>
-                                <p className="font-bold text-2xl mt-1">~6.5% Stake</p>
+                                <Badge variant="outline">Equity Stake</Badge>
+                                <div className="font-bold text-3xl mt-1">
+                                    <AnimatedCounter value={6.5} decimals={1} prefix="~" suffix="%" />
+                                </div>
                                 <p className="text-xs text-muted-foreground">at a $155B post-money valuation</p>
                             </div>
                         </CardContent>
@@ -45,7 +50,7 @@ export function InvestmentDeepDiveSection() {
 
                     <Card>
                         <CardHeader>
-                            <CardTitle>Governance & Investor Rights</CardTitle>
+                            <CardTitle>Fortified Governance</CardTitle>
                         </CardHeader>
                         <CardContent className="space-y-3">
                            {rights.map((right, index) => (
@@ -61,26 +66,26 @@ export function InvestmentDeepDiveSection() {
 
             <Card className="mt-8 bg-accent/10">
                 <CardHeader>
-                    <CardTitle className="text-center text-accent">Our Commitment: An Aligned Partnership</CardTitle>
-                    <CardDescription className="text-center">Precision, Performance, Partnership</CardDescription>
+                    <CardTitle className="text-center text-accent">A Partnership Built on Trust & Alignment</CardTitle>
+                    <CardDescription className="text-center">Our structure ensures our interests are perfectly aligned with Qatar's success.</CardDescription>
                 </CardHeader>
                 <CardContent>
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
                         <div className="p-4">
-                            <div className="font-bold text-lg">"X & 20" Model</div>
-                            <p className="text-xs text-muted-foreground">Competitive Fees</p>
+                            <div className="font-bold text-lg">Performance-Aligned</div>
+                            <p className="text-xs text-muted-foreground">Competitive, success-based model</p>
                         </div>
                         <div className="p-4">
-                            <div className="font-bold text-lg">8% Hurdle Rate</div>
-                            <p className="text-xs text-muted-foreground">Preferred Return</p>
+                            <div className="font-bold text-lg">Preferred Returns</div>
+                            <p className="text-xs text-muted-foreground">Ensuring Qatar's capital works first</p>
                         </div>
                         <div className="p-4">
-                            <div className="font-bold text-lg">Euro Waterfall</div>
-                            <p className="text-xs text-muted-foreground">Capital + Hurdle First</p>
+                            <div className="font-bold text-lg">Capital Protection</div>
+                            <p className="text-xs text-muted-foreground">Return of capital before profit-sharing</p>
                         </div>
                          <div className="p-4">
-                            <div className="font-bold text-lg">Clawback</div>
-                            <p className="text-xs text-muted-foreground">Standard Protections</p>
+                            <div className="font-bold text-lg">Full Transparency</div>
+                            <p className="text-xs text-muted-foreground">Standard protections and reporting</p>
                         </div>
                     </div>
                 </CardContent>
