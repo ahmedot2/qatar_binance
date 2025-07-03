@@ -32,7 +32,7 @@ const pillars = [
 
 export function JointInitiativesSection() {
     return (
-        <Section id="initiatives" className="bg-secondary">
+        <Section id="initiatives" className="bg-transparent">
             <h2 className="section-title">VI. The Five Pillars of Partnership</h2>
             <p className="section-subtitle">
                 Beyond a simple investment, this is a strategic alliance built on five foundational pillars designed to construct a world-leading digital asset ecosystem in Qatar.

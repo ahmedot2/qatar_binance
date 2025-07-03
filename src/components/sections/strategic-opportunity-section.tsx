@@ -4,7 +4,7 @@ import { PieChart, Timer, Handshake, TrendingUp, Target, Briefcase } from "lucid
 
 export function StrategicOpportunitySection() {
     return (
-        <Section id="opportunity" className="bg-background">
+        <Section id="opportunity" className="bg-transparent">
             <div className="text-center">
                 <h2 className="section-title">I. The Strategic Opportunity</h2>
                 <p className="section-subtitle">
@@ -12,7 +12,7 @@ export function StrategicOpportunitySection() {
                 </p>
             </div>
 
-            <Card className="mt-12 max-w-6xl mx-auto bg-card/50">
+            <Card className="mt-12 max-w-6xl mx-auto">
                  <CardHeader>
                     <CardTitle className="text-center">Market at an Inflection Point</CardTitle>
                 </CardHeader>
