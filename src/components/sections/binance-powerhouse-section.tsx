@@ -13,21 +13,21 @@ const complianceText = "Binance has transformed from its early decentralized roo
 
 export function BinancePowerhouseSection() {
     return (
-        <Section id="binance" className="bg-background">
-            <h2 className="section-title">II. Binance: A Global Crypto Powerhouse</h2>
+        <Section id="binance" className="bg-secondary">
+            <h2 className="section-title">II. Assessing a Global Ecosystem</h2>
             <p className="section-subtitle">
                 From disruptive innovator to a mature, regulated powerhouse, Binance's market dominance, explosive growth, and commitment to compliance create an unparalleled investment vehicle.
             </p>
 
             <div className="mt-12">
-                <h3 className="text-3xl font-bold text-center mb-8">A. Unrivaled Market Dominance & Explosive Growth</h3>
+                <h3 className="text-3xl font-bold text-center mb-8">Unrivaled Market Dominance & Explosive Growth</h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
                     <MarketShareChart />
                     <UserGrowthChart />
 
                     <Card className="lg:col-span-2">
                         <CardHeader>
-                            <CardTitle>A Financial Juggernaut</CardTitle>
+                            <CardTitle>Binance by the Numbers</CardTitle>
                             <CardDescription>Key performance indicators illustrating a hyper-growth, profitable enterprise.</CardDescription>
                         </CardHeader>
                         <CardContent className="grid grid-cols-1 sm:grid-cols-3 gap-6">
@@ -50,7 +50,7 @@ export function BinancePowerhouseSection() {
                     </Card>
                     <Card className="lg:col-span-2">
                         <CardHeader>
-                            <CardTitle>Verifiable User Trust</CardTitle>
+                            <CardTitle>Proof of Reserves (March 2025)</CardTitle>
                             <CardDescription>A commitment to 1:1 asset backing, verified on-chain, setting the industry standard for transparency.</CardDescription>
                         </CardHeader>
                         <CardContent className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
@@ -80,7 +80,7 @@ export function BinancePowerhouseSection() {
             </div>
             
             <div className="mt-20">
-                 <h3 className="text-3xl font-bold text-center mb-8">B. The Pivot to Compliance: Building Global Trust</h3>
+                 <h3 className="text-3xl font-bold text-center mb-8">The Pivot to Compliance: Building Global Trust</h3>
                  <Card className="max-w-4xl mx-auto">
                     <CardHeader>
                         <CardTitle>From Disruptor to De-Risked</CardTitle>

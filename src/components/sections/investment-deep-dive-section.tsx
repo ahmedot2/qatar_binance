@@ -15,8 +15,8 @@ const rights = [
 
 export function InvestmentDeepDiveSection() {
     return (
-        <Section id="investment">
-            <h2 className="section-title">V. Unlocking Value: The Investment Framework</h2>
+        <Section id="investment" className="bg-background">
+            <h2 className="section-title">V. Unlocking Value Creation</h2>
             <p className="section-subtitle">
                 A strategic $10B injection designed to maximize Qatar's influence and financial upside, fortified by robust governance and investor protections.
             </p>

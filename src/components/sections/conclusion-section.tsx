@@ -6,7 +6,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../ui
 
 export function ConclusionSection() {
     return (
-        <Section id="contact" className="relative overflow-hidden bg-background">
+        <Section id="contact" className="relative overflow-hidden bg-secondary">
             <div className="absolute inset-0 z-0">
                  <div className="absolute bottom-0 left-0 -translate-x-1/3 translate-y-1/3 w-96 h-96 bg-primary/10 rounded-full blur-3xl animate-pulse-slow"></div>
                  <div className="absolute top-0 right-0 translate-x-1/3 -translate-y-1/3 w-96 h-96 bg-accent/10 rounded-full blur-3xl animate-pulse-slow animation-delay-4000"></div>

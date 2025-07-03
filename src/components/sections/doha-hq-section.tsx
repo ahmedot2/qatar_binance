@@ -11,7 +11,7 @@ const hubs = [
 
 export function DohaHQSection() {
     return (
-        <Section id="doha-hq" className="bg-background">
+        <Section id="doha-hq" className="bg-secondary">
             <h2 className="section-title">IV. The Unbeatable Proposition: Doha as Binance's Global HQ</h2>
             <p className="section-subtitle">
                 Why Doha is not just an option, but the optimal strategic choice for Binance's centralized global headquarters, offering a unique combination of regulatory clarity, strategic alignment, and unparalleled government support.

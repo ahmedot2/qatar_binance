@@ -36,8 +36,8 @@ const timelineEvents = [
 
 export function ImplementationTimelineSection() {
     return (
-        <Section id="timeline">
-            <h2 className="section-title">VII. Laying the Groundwork: Our Roadmap to Success</h2>
+        <Section id="timeline" className="bg-background">
+            <h2 className="section-title">VII. Laying the Groundwork: A Roadmap to Success</h2>
             <p className="section-subtitle">
                 A clear, phased roadmap ensures meticulous execution and collaborative progress, transforming vision into reality with defined milestones and clear accountability.
             </p>

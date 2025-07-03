@@ -4,15 +4,15 @@ import { PieChart, Timer, Handshake, TrendingUp, Target, Briefcase } from "lucid
 
 export function StrategicOpportunitySection() {
     return (
-        <Section id="opportunity">
+        <Section id="opportunity" className="bg-background">
             <div className="text-center">
                 <h2 className="section-title">I. The Strategic Opportunity</h2>
                 <p className="section-subtitle">
-                    The digital asset market is at a pivotal inflection point, with projections valuing it at over $16 trillion by 2030. As institutional capital floods the space, Binance, the undisputed market leader, is selectively opening its equity to visionary sovereign partners. This presents a rare, time-sensitive opportunity for Qatar to acquire a foundational stake in the future of finance.
+                    The digital asset market is at a pivotal inflection point, projected to exceed $16 trillion by 2030. As institutional capital enters, Binance—the undisputed market leader—is selectively opening its equity to visionary sovereign partners. This presents a rare, time-sensitive window for Qatar to acquire a foundational stake in the future of finance.
                 </p>
             </div>
 
-            <Card className="mt-12 max-w-6xl mx-auto bg-background/50">
+            <Card className="mt-12 max-w-6xl mx-auto bg-card/50">
                  <CardHeader>
                     <CardTitle className="text-center">Market at an Inflection Point</CardTitle>
                 </CardHeader>
@@ -45,7 +45,7 @@ export function StrategicOpportunitySection() {
                     </CardHeader>
                     <CardContent>
                         <p className="text-muted-foreground">
-                            A <strong className="text-foreground">$10B investment</strong> for a <strong className="text-foreground">~6.5% equity stake</strong> in the world’s most critical digital asset infrastructure, positioning Qatar as a key architect of the future financial system.
+                            Acquire a <strong className="text-foreground">~6.5% equity stake</strong> with a <strong className="text-foreground">$10B investment</strong> in the world’s most critical digital asset infrastructure, positioning Qatar as a key architect of the future financial system.
                         </p>
                     </CardContent>
                 </Card>
@@ -59,7 +59,7 @@ export function StrategicOpportunitySection() {
                     </CardHeader>
                     <CardContent>
                         <p className="text-muted-foreground">
-                            The market is expanding exponentially. <strong className="text-foreground">Abu Dhabi’s recent $2B investment</strong> validates the model and signals a closing window of opportunity for foundational partners.
+                            The market is expanding exponentially. <strong className="text-foreground">Abu Dhabi’s recent $2B investment</strong> validates the model and signals a closing window for foundational partners.
                         </p>
                     </CardContent>
                 </Card>
