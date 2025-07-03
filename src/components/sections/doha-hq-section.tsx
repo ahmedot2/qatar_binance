@@ -58,9 +58,9 @@ export function DohaHQSection() {
                         <TableHeader>
                             <TableRow>
                                 <TableHead>Feature</TableHead>
-                                <TableHead className="text-center">Doha</TableHead>
-                                <TableHead className="text-center">Dubai</TableHead>
-                                <TableHead className="text-center">Singapore</TableHead>
+                                <TableHead className="text-center uppercase tracking-wider text-xs">Doha</TableHead>
+                                <TableHead className="text-center uppercase tracking-wider text-xs">Dubai</TableHead>
+                                <TableHead className="text-center uppercase tracking-wider text-xs">Singapore</TableHead>
                             </TableRow>
                         </TableHeader>
                         <TableBody>

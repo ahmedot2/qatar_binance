@@ -6,20 +6,20 @@ import { ArrowDown } from "lucide-react"
 export function HeroSection() {
     return (
         <section className="h-screen w-full relative flex items-center justify-center text-center text-white overflow-hidden">
-            <div className="absolute inset-0 bg-black z-0">
-                <div className="absolute inset-0 bg-grid-pattern opacity-10"></div>
+            <div className="absolute inset-0 bg-black z-0 overflow-hidden">
+                <div className="aurora-1 absolute bottom-0 left-[-20%] right-0 top-[-10%] h-[500px] w-[500px] rounded-full bg-[radial-gradient(circle_farthest-side,hsl(var(--primary)/0.2),transparent)]"></div>
+                <div className="aurora-2 absolute bottom-[-20%] right-[-20%] top-auto h-[500px] w-[500px] rounded-full bg-[radial-gradient(circle_farthest-side,hsl(var(--accent)/0.2),transparent)]"></div>
                 <div className="absolute inset-0 bg-gradient-to-t from-background to-transparent"></div>
                 <style jsx>{`
-                    .bg-grid-pattern {
-                        background-image:
-                            linear-gradient(to right, hsl(var(--primary) / 0.1) 1px, transparent 1px),
-                            linear-gradient(to bottom, hsl(var(--primary) / 0.1) 1px, transparent 1px);
-                        background-size: 3rem 3rem;
-                        animation: pan 60s linear infinite;
+                    .aurora-1 {
+                        animation: move-aurora 15s cubic-bezier(0.4, 0, 0.6, 1) infinite;
                     }
-                    @keyframes pan {
-                        0% { background-position: 0% 0%; }
-                        100% { background-position: 100% 100%; }
+                    .aurora-2 {
+                        animation: move-aurora 15s cubic-bezier(0.4, 0, 0.6, 1) -7.5s infinite;
+                    }
+                    @keyframes move-aurora {
+                        0%, 100% { transform: translate(0, 0) rotate(0deg) scale(1.0); }
+                        50% { transform: translate(40px, -40px) rotate(180deg) scale(1.2); }
                     }
                 `}</style>
             </div>

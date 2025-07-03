@@ -36,7 +36,7 @@ export function StrategicOpportunitySection() {
             </Card>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8 max-w-6xl mx-auto">
-                <Card className="hover:border-primary transition-colors">
+                <Card>
                     <CardHeader>
                         <CardTitle className="flex items-center gap-2">
                             <PieChart className="w-6 h-6 text-primary" />
@@ -50,7 +50,7 @@ export function StrategicOpportunitySection() {
                     </CardContent>
                 </Card>
 
-                <Card className="hover:border-primary transition-colors">
+                <Card>
                     <CardHeader>
                         <CardTitle className="flex items-center gap-2">
                             <Timer className="w-6 h-6 text-primary" />
@@ -64,7 +64,7 @@ export function StrategicOpportunitySection() {
                     </CardContent>
                 </Card>
 
-                <Card className="hover:border-primary transition-colors">
+                <Card>
                     <CardHeader>
                         <CardTitle className="flex items-center gap-2">
                             <Handshake className="w-6 h-6 text-primary" />

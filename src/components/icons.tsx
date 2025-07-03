@@ -1,3 +1,4 @@
+import { cn } from '@/lib/utils';
 import type { SVGProps } from 'react';
 
 export function BitcoinIcon(props: SVGProps<SVGSVGElement>) {
@@ -48,7 +49,7 @@ export function Section(
 ) {
   return (
     <section
-      className={`container mx-auto px-4 py-16 md:py-24 ${className}`}
+      className={cn("container mx-auto px-4 py-16 md:py-24 fade-in-on-scroll", className)}
       {...props}
     />
   )

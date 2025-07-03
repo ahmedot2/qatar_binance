@@ -110,6 +110,25 @@ body {
   .stat-label {
     @apply mt-2 text-sm text-muted-foreground;
   }
+
+  .fade-in-on-scroll {
+    animation: fade-in-on-scroll-animation 1s ease-out forwards;
+    animation-timeline: view();
+    animation-range-start: entry 10%;
+    animation-range-end: entry 40%;
+    opacity: 0;
+  }
+
+  @keyframes fade-in-on-scroll-animation {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 }
 
 ::selection {
