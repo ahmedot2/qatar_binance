@@ -49,7 +49,7 @@ export function Section(
 ) {
   return (
     <section
-      className={cn("container mx-auto px-4 py-16 md:py-24 fade-in-on-scroll", className)}
+      className={cn("container mx-auto px-4 py-16 md:py-24", className)}
       {...props}
     />
   )
