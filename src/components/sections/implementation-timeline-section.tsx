@@ -1,37 +1,63 @@
 import { Section } from "@/components/icons"
+import { Handshake, FileText, Banknote, Rocket, CheckCircle } from "lucide-react"
 
 const timelineEvents = [
-    { date: "July 2025", event: "Engage", description: "Sheikh Gabr & Richard Teng summit in Doha" },
-    { date: "Aug 2025", event: "Term-sheet", description: "Deal economics & governance agreed" },
-    { date: "Oct 2025", event: "DD & Approvals", description: "Financial, legal, QCB/QFMA sign-off" },
-    { date: "Nov 2025", event: "Close Tranche 1", description: "$5 B transfer via USD stablecoin" },
-    { date: "Dec 2025", event: "Blockchain-Hub Kick-off", description: "Announce QFC sandbox + Academy" },
-    { date: "Q2 2026", event: "Close Tranche 2", description: "Remaining $5 B transfer" },
+    {
+        icon: Handshake,
+        phase: "Phase 1: Engagement & Alignment (July 2025)",
+        title: "Strategic Summit",
+        description: "Leadership summit in Doha to formalize partnership vision and objectives."
+    },
+    {
+        icon: FileText,
+        phase: "Phase 2: Framework & Diligence (Aug - Oct 2025)",
+        title: "Definitive Agreements",
+        description: "Finalize term sheet, governance, and complete financial and legal due diligence with regulatory sign-off."
+    },
+    {
+        icon: Banknote,
+        phase: "Phase 3: Initial Investment (Nov 2025)",
+        title: "Tranche 1 Closing",
+        description: "Initial $5B capital injection to formalize Qatar's strategic stake."
+    },
+    {
+        icon: Rocket,
+        phase: "Phase 4: Ecosystem Activation (Dec 2025)",
+        title: "Joint Initiative Kick-off",
+        description: "Launch Regulatory Sandbox, Binance Academy, and announce Doha as the home for Binance Blockchain Week."
+    },
+    {
+        icon: CheckCircle,
+        phase: "Phase 5: Full Deployment (Q2 2026)",
+        title: "Tranche 2 Closing",
+        description: "Final $5B investment, cementing the long-term strategic partnership and HQ establishment."
+    }
 ]
 
 export function ImplementationTimelineSection() {
     return (
         <Section id="timeline">
-            <h2 className="section-title">VII. Execution Roadmap & Next Steps</h2>
+            <h2 className="section-title">VII. Laying the Groundwork: Our Roadmap to Success</h2>
             <p className="section-subtitle">
-                A clear, actionable timeline for executing this landmark investment and partnership.
+                A clear, phased roadmap ensures meticulous execution and collaborative progress, transforming vision into reality with defined milestones and clear accountability.
             </p>
 
-            <div className="relative mt-12 max-w-4xl mx-auto">
-                <div className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-border -translate-x-1/2"></div>
-                {timelineEvents.map((item, index) => (
-                    <div key={item.event} className={`relative flex items-center mb-8 ${index % 2 === 0 ? 'justify-start' : 'justify-end'}`}>
-                        <div className={`w-[calc(50%-2rem)] ${index % 2 === 0 ? 'text-right' : 'text-left'}`}>
-                            <div className="p-4 bg-card rounded-lg shadow-md">
-                                <h4 className="font-bold text-lg text-primary">{item.event}</h4>
-                                <p className="text-sm text-muted-foreground">{item.description}</p>
+            <div className="relative mt-16 max-w-3xl mx-auto">
+                <div className="absolute left-6 top-0 h-full w-px bg-border" aria-hidden="true" />
+                <div className="relative flex flex-col gap-12">
+                    {timelineEvents.map((item, index) => (
+                         <div key={index} className="relative pl-16">
+                            <div className="absolute left-6 top-1 h-12 w-12 -translate-x-1/2 rounded-full bg-background border-2 border-primary flex items-center justify-center">
+                                <item.icon className="h-6 w-6 text-primary" />
+                            </div>
+                            <div className="flex-1">
+                                <p className="text-sm font-semibold text-primary">{item.phase}</p>
+                                <h4 className="mt-1 text-xl font-bold tracking-tight">{item.title}</h4>
+                                <p className="mt-2 text-muted-foreground">{item.description}</p>
                             </div>
                         </div>
-                        <div className="absolute left-1/2 -translate-x-1/2 w-8 h-8 bg-background border-2 border-primary rounded-full flex items-center justify-center font-bold text-primary">
-                            <span className="text-xs">{item.date.split(' ')[0].substring(0,3)}</span>
-                        </div>
-                    </div>
-                ))}
+                    ))}
+                </div>
             </div>
 
             <div className="mt-16 text-center max-w-3xl mx-auto">
