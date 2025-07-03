@@ -8,7 +8,7 @@ export function QatarVisionSection() {
         <Section id="qatar">
             <h2 className="section-title">III. Qatar: A Visionary Digital Economy Hub</h2>
             <p className="section-subtitle">
-                Showcasing Qatar's national ambition and its strategic positioning as a future-forward digital and financial hub.
+                Qatar's ambitious National Vision 2030 provides the ideal foundation for Binance's global headquarters, creating powerful synergies for economic diversification and technological sovereignty.
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
@@ -21,43 +21,43 @@ export function QatarVisionSection() {
                         <div className="stat-card">
                             <Landmark className="w-10 h-10 text-primary mb-2" />
                             <div className="text-3xl font-bold"> &gt;$200B</div>
-                            <p className="text-sm text-muted-foreground">Allocated to Infrastructure & Smart Cities</p>
+                            <p className="text-sm text-muted-foreground">Infrastructure Investment</p>
                         </div>
                         <div className="stat-card">
                             <DollarSign className="w-10 h-10 text-primary mb-2" />
                             <div className="text-3xl font-bold">$11B</div>
-                            <p className="text-sm text-muted-foreground">Projected GDP Contribution by 2030</p>
+                            <p className="text-sm text-muted-foreground">Projected Digital GDP Contribution</p>
                         </div>
                         <div className="stat-card">
                             <Briefcase className="w-10 h-10 text-primary mb-2" />
                             <div className="text-3xl font-bold">26,000</div>
-                            <p className="text-sm text-muted-foreground">New ICT Jobs by 2030</p>
+                            <p className="text-sm text-muted-foreground">New Tech Jobs by 2030</p>
                         </div>
                     </CardContent>
                 </Card>
                 
                 <Card className="lg:col-span-2">
                      <CardHeader>
-                        <CardTitle>A Progressive Regulatory Blueprint</CardTitle>
-                        <CardDescription>From prohibition to a framework for innovation, focusing on RWA tokenization.</CardDescription>
+                        <CardTitle>A Future-Ready Regulatory Framework</CardTitle>
+                        <CardDescription>Qatar is actively building a world-class regulatory environment designed to attract top-tier digital asset firms.</CardDescription>
                     </CardHeader>
                     <CardContent className="space-y-4">
                         <div className="flex items-center justify-between p-4 bg-muted rounded-lg">
                             <div>
                                 <p className="font-bold">RWA Tokenization Ambition</p>
-                                <p className="text-sm text-muted-foreground">Real estate, skyscrapers, and more.</p>
+                                <p className="text-sm text-muted-foreground">A strategic focus on tokenizing real-world assets.</p>
                             </div>
                             <div className="text-2xl font-bold text-primary">&gt;$500M</div>
                         </div>
                         <div className="flex items-center justify-between p-4 bg-muted rounded-lg">
                              <div>
                                 <p className="font-bold">Digital Assets Lab</p>
-                                <p className="text-sm text-muted-foreground">Launched Oct 2023.</p>
+                                <p className="text-sm text-muted-foreground">Regulatory sandbox launched in Oct 2023.</p>
                             </div>
                             <div className="text-2xl font-bold text-primary">20+ Companies</div>
                         </div>
                         <div className="pt-2">
-                            <h4 className="font-semibold mb-2">Compelling Business Incentives:</h4>
+                            <h4 className="font-semibold mb-2">Unmatched Business Incentives:</h4>
                             <div className="flex flex-wrap gap-2">
                                 <Badge>100% Foreign Ownership</Badge>
                                 <Badge>100% Profit Repatriation</Badge>
@@ -71,8 +71,8 @@ export function QatarVisionSection() {
 
                 <Card>
                     <CardHeader>
-                        <CardTitle>QIA: A Strategic Capital Partner</CardTitle>
-                        <CardDescription>Patient capital with a strategic vision.</CardDescription>
+                        <CardTitle>QIA: The Patient, Strategic Investor</CardTitle>
+                        <CardDescription>The ideal partner to anchor Binance's next phase of growth.</CardDescription>
                     </CardHeader>
                     <CardContent className="space-y-4">
                         <div className="text-center">
@@ -80,7 +80,7 @@ export function QatarVisionSection() {
                             <p className="text-sm text-muted-foreground">Assets Under Management</p>
                         </div>
                         <p className="text-sm text-center text-muted-foreground pt-2">
-                            Classified as a "Strategic, active investor" with plans to double annual investments in the U.S., focusing on AI, infrastructure, and real estate.
+                            A globally-respected strategic investor with a long-term vision, actively increasing exposure to technology and AI.
                         </p>
                          <div className="p-3 bg-muted rounded-lg text-center">
                             <p className="font-bold text-sm">Sovereign Investment Precedent</p>

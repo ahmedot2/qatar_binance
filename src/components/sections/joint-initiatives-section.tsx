@@ -6,36 +6,36 @@ const initiatives = [
     {
         icon: FlaskConical,
         title: "Regulatory Sandbox",
-        description: "Co-design licensing playbooks within QFC Digital Assets Lab.",
+        description: "Co-develop a world-leading regulatory framework, positioning Qatar as the gold standard for digital asset licensing.",
     },
     {
         icon: GraduationCap,
         title: "Education & Talent",
-        description: "Binance Academy-Qatar scholarships aiming for 1M+ students by 2026.",
+        description: "Launch Binance Academy in Qatar, aiming to educate 1M+ students and develop a world-class local talent pool.",
     },
     {
         icon: LineChart,
         title: "Crypto Capital Markets",
-        description: "Platform for tokenized RWAs, making Doha a regional crypto-financing hub.",
+        description: "Build the leading platform for tokenized RWAs, establishing Doha as the premier regional hub for crypto-financing.",
     },
     {
         icon: Rocket,
         title: "Startup Accelerator",
-        description: "Binance Labs–Doha: $100M seed fund with 50% QIA co-investment.",
+        description: "Launch Binance Labs–Doha with a $100M seed fund, with 50% co-investment from QIA to fuel local innovation.",
     },
     {
         icon: CalendarDays,
         title: "Global Events",
-        description: "Annual 'Binance Blockchain Week – Doha' to cement global visibility.",
+        description: "Host the annual 'Binance Blockchain Week' in Doha to cement the city's global visibility and leadership role.",
     }
 ]
 
 export function JointInitiativesSection() {
     return (
         <Section id="initiatives" className="bg-background">
-            <h2 className="section-title">VI. Joint Initiatives</h2>
+            <h2 className="section-title">VI. Beyond Capital: Catalyzing the Ecosystem</h2>
             <p className="section-subtitle">
-                Showcasing the tangible, collaborative efforts designed to establish Qatar as a leading global blockchain hub.
+                This partnership extends beyond investment, encompassing a suite of joint initiatives designed to accelerate the growth of Qatar's digital economy and solidify its position as a global blockchain leader.
             </p>
 
             <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

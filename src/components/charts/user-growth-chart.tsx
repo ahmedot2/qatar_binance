@@ -23,8 +23,8 @@ export function UserGrowthChart() {
   return (
     <Card>
       <CardHeader>
-        <CardTitle>User Growth Trajectory</CardTitle>
-        <CardDescription>Total users in millions</CardDescription>
+        <CardTitle>Exponential User Acquisition</CardTitle>
+        <CardDescription>A viral growth engine consistently attracting millions of new users globally.</CardDescription>
       </CardHeader>
       <CardContent>
         <div className="h-[350px]">

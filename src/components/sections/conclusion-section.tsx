@@ -6,16 +6,16 @@ export function ConclusionSection() {
     return (
         <Section id="contact" className="bg-background">
             <div className="text-center">
-                <h2 className="section-title">VIII. Charting Binance's Future from Doha</h2>
+                <h2 className="section-title">VIII. Architecting the Future, Together</h2>
                 <p className="section-subtitle">
-                    A powerful summary of mutual benefits, de-risking, the precedent set for the crypto industry, and the vision for shaping global digital finance.
+                    This is more than an investment; it's a declaration of intent. A partnership between Qatar and Binance will not only generate immense value but will redefine the global financial landscape for generations to come.
                 </p>
             </div>
 
             <Card className="mt-12 max-w-5xl mx-auto">
                 <CardHeader>
-                    <CardTitle className="text-2xl text-center">Partner with Us to Shape the Future of Digital Finance</CardTitle>
-                    <CardDescription className="text-center">Submit your inquiry to begin the conversation.</CardDescription>
+                    <CardTitle className="text-2xl text-center">Begin the Partnership</CardTitle>
+                    <CardDescription className="text-center">Contact us to initiate the next steps in this landmark opportunity.</CardDescription>
                 </CardHeader>
                 <CardContent>
                     <ContactForm />

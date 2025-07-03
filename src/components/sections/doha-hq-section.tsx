@@ -12,37 +12,37 @@ const hubs = [
 export function DohaHQSection() {
     return (
         <Section id="doha-hq" className="bg-background">
-            <h2 className="section-title">IV. Doha as Binance's Global HQ</h2>
+            <h2 className="section-title">IV. The Unbeatable Proposition: Doha as Binance's Global HQ</h2>
             <p className="section-subtitle">
-                Presenting the compelling case for Doha as Binance's global headquarters, emphasizing synergy, mutual benefits, and de-risking factors.
+                Why Doha is not just an option, but the optimal strategic choice for Binance's centralized global headquarters, offering a unique combination of regulatory clarity, strategic alignment, and unparalleled government support.
             </p>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-12">
                 <Card>
                     <CardHeader>
-                        <CardTitle>The Perfect Match: Binance & Qatar</CardTitle>
+                        <CardTitle>Synergy and Mutual Benefits</CardTitle>
                     </CardHeader>
                     <CardContent className="space-y-4 text-muted-foreground">
-                        <p>Binance's move to a formal HQ aligns perfectly with Qatar's vision. Qatar's RWA-focused framework offers a stable, compliant environment for Binance to expand institutional offerings and integrate with traditional finance.</p>
+                        <p>A formal HQ in Doha aligns perfectly with Qatar's digital ambitions. It offers Binance a stable, compliant environment to expand institutional offerings and de-risk its global operations, while cementing Qatar's status as a top-tier financial hub.</p>
                         <ul className="list-disc pl-5 space-y-2">
                             <li><strong className="text-foreground">Prestige & Soft Power:</strong> Aligns Qatar with the #1 crypto brand.</li>
-                            <li><strong className="text-foreground">Diversification:</strong> Adds high-growth digital-asset exposure.</li>
-                            <li><strong className="text-foreground">Technology Sovereignty:</strong> Hedges against future dollar-centric shocks.</li>
+                            <li><strong className="text-foreground">Economic Diversification:</strong> High-growth digital-asset exposure.</li>
+                            <li><strong className="text-foreground">Tech Sovereignty:</strong> Hedges against future dollar-centric shocks.</li>
                             <li><strong className="text-foreground">Regional Leadership:</strong> Positions Doha as a leading blockchain capital.</li>
                         </ul>
                     </CardContent>
                 </Card>
                 <Card>
                     <CardHeader>
-                        <CardTitle>Building Trust, Mitigating Risk</CardTitle>
+                        <CardTitle>De-Risking the Future</CardTitle>
                     </CardHeader>
                     <CardContent className="space-y-4 text-muted-foreground">
-                        <p>A formal, centralized HQ in Doha centralizes risks but enhances legitimacy. The move aligns with Qatar's principle of "digital sovereignty," enhancing trust among users and governments globally.</p>
+                        <p>A centralized HQ enhances legitimacy and provides regulatory certainty. This move, backed by Qatar's commitment to "digital sovereignty," builds trust among users, institutions, and governments worldwide.</p>
                          <ul className="list-disc pl-5 space-y-2">
-                            <li><strong className="text-foreground">Regulatory Clamp-downs:</strong> Mitigated by compliance overhaul.</li>
-                            <li><strong className="text-foreground">Crypto Winter:</strong> 5-year horizon spans cycles.</li>
-                            <li><strong className="text-foreground">Governance Opacity:</strong> Enhanced info rights secure transparency.</li>
-                            <li><strong className="text-foreground">Liquidity:</strong> IPO / secondary rights after 36 months.</li>
+                            <li><strong className="text-foreground">Regulatory Scrutiny:</strong> Mitigated by robust compliance framework.</li>
+                            <li><strong className="text-foreground">Market Volatility:</strong> 5-year investment horizon spans market cycles.</li>
+                            <li><strong className="text-foreground">Governance Concerns:</strong> Addressed via board representation and information rights.</li>
+                            <li><strong className="text-foreground">Exit Liquidity:</strong> Secured through IPO / secondary sale rights after 36 months.</li>
                         </ul>
                     </CardContent>
                 </Card>
@@ -50,8 +50,8 @@ export function DohaHQSection() {
 
             <Card className="mt-8">
                 <CardHeader>
-                    <CardTitle>Doha vs. Other Hubs: A Comparative Look</CardTitle>
-                    <CardDescription>Tangible benefits of operating from Qatar.</CardDescription>
+                    <CardTitle>The Doha Advantage: A Clear Winner</CardTitle>
+                    <CardDescription>Tangible benefits of operating from Qatar versus other global hubs.</CardDescription>
                 </CardHeader>
                 <CardContent>
                     <Table>

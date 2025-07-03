@@ -15,9 +15,9 @@ const rights = [
 export function InvestmentDeepDiveSection() {
     return (
         <Section id="investment">
-            <h2 className="section-title">V. The $10 Billion Strategic Investment</h2>
+            <h2 className="section-title">V. The Investment: Structure & Returns</h2>
             <p className="section-subtitle">
-                A detailed breakdown of the investment, highlighting its structure, governance, and compelling financial returns.
+                A detailed breakdown of the proposed $10B investment, structured to maximize Qatar's influence and financial upside while ensuring robust governance and investor protections.
             </p>
 
             <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 mt-12">
@@ -27,25 +27,25 @@ export function InvestmentDeepDiveSection() {
                 <div className="lg:col-span-2 space-y-8">
                      <Card>
                         <CardHeader>
-                            <CardTitle>The Deal: Structure</CardTitle>
+                            <CardTitle>Deal Structure</CardTitle>
                         </CardHeader>
                         <CardContent className="space-y-4">
                             <div>
-                                <Badge variant="outline">Ticket Size</Badge>
+                                <Badge variant="outline">Investment</Badge>
                                 <p className="font-bold text-2xl mt-1">$10 Billion</p>
-                                <p className="text-xs text-muted-foreground">Two equal tranches (closing + 12 months)</p>
+                                <p className="text-xs text-muted-foreground">In two equal tranches (closing + 12 months)</p>
                             </div>
                             <div>
-                                <Badge variant="outline">Equity & Valuation</Badge>
+                                <Badge variant="outline">Valuation</Badge>
                                 <p className="font-bold text-2xl mt-1">~6.5% Stake</p>
-                                <p className="text-xs text-muted-foreground">at $155B Post-Money Valuation</p>
+                                <p className="text-xs text-muted-foreground">at a $155B post-money valuation</p>
                             </div>
                         </CardContent>
                     </Card>
 
                     <Card>
                         <CardHeader>
-                            <CardTitle>Key Governance & Exit Rights</CardTitle>
+                            <CardTitle>Governance & Investor Rights</CardTitle>
                         </CardHeader>
                         <CardContent className="space-y-3">
                            {rights.map((right, index) => (
@@ -61,7 +61,7 @@ export function InvestmentDeepDiveSection() {
 
             <Card className="mt-8 bg-accent/10">
                 <CardHeader>
-                    <CardTitle className="text-center text-accent">The Ark: Your Aligned Investment Partner</CardTitle>
+                    <CardTitle className="text-center text-accent">Our Commitment: An Aligned Partnership</CardTitle>
                     <CardDescription className="text-center">Precision, Performance, Partnership</CardDescription>
                 </CardHeader>
                 <CardContent>

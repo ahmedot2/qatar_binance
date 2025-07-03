@@ -27,10 +27,10 @@ export function HeroSection() {
                 <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tighter !text-white leading-tight">
                     Qatar × Binance
                     <br />
-                    <span className="text-primary">Building the Digital-Finance Nexus</span>
+                    <span className="text-primary">Forging the Future of Global Finance</span>
                 </h1>
                 <p className="mt-6 max-w-3xl mx-auto text-lg md:text-xl text-slate-300">
-                    A $10 Billion Strategic Investment to Shape the Future of Global Digital Finance.
+                    A landmark partnership to establish Doha as the world's premier digital-asset hub and co-architect the future of the financial system.
                 </p>
                 <div className="mt-10">
                     <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">

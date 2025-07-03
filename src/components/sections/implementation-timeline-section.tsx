@@ -12,9 +12,9 @@ const timelineEvents = [
 export function ImplementationTimelineSection() {
     return (
         <Section id="timeline">
-            <h2 className="section-title">VII. Implementation & Call to Action</h2>
+            <h2 className="section-title">VII. Execution Roadmap & Next Steps</h2>
             <p className="section-subtitle">
-                A clear timeline for the investment, culminating in a clear call to action.
+                A clear, actionable timeline for executing this landmark investment and partnership.
             </p>
 
             <div className="relative mt-12 max-w-4xl mx-auto">
@@ -35,10 +35,10 @@ export function ImplementationTimelineSection() {
             </div>
 
             <div className="mt-16 text-center max-w-3xl mx-auto">
-                <h3 className="text-2xl font-bold">Decision Needed</h3>
-                <p className="text-lg text-muted-foreground mt-2">"Authorize The Ark to open negotiations immediately."</p>
-                <h3 className="text-2xl font-bold mt-8">Next Step</h3>
-                <p className="text-lg text-muted-foreground mt-2">"Confirm mandate for The Ark to present this term-sheet to Binance’s CEO within 30 days."</p>
+                <h3 className="text-2xl font-bold">Decision Point</h3>
+                <p className="text-lg text-muted-foreground mt-2">The mandate to proceed with negotiations.</p>
+                <h3 className="text-2xl font-bold mt-8">Immediate Action</h3>
+                <p className="text-lg text-muted-foreground mt-2">Authorize The Ark to formally present this proposal to Binance leadership.</p>
             </div>
         </Section>
     )
