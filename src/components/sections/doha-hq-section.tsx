@@ -54,48 +54,82 @@ export function DohaHQSection() {
                     <CardDescription>Tangible benefits of operating from Qatar versus other global hubs.</CardDescription>
                 </CardHeader>
                 <CardContent>
-                    <Table>
-                        <TableHeader>
-                            <TableRow>
-                                <TableHead>Feature</TableHead>
-                                <TableHead className="text-center uppercase tracking-wider text-xs">Doha</TableHead>
-                                <TableHead className="text-center uppercase tracking-wider text-xs">Dubai</TableHead>
-                                <TableHead className="text-center uppercase tracking-wider text-xs">Singapore</TableHead>
-                            </TableRow>
-                        </TableHeader>
-                        <TableBody>
-                            <TableRow>
-                                <TableCell className="font-medium">100% Foreign Ownership</TableCell>
-                                <TableCell className="text-center"><CheckCircle2 className="w-5 h-5 text-green-500 mx-auto" /></TableCell>
-                                <TableCell className="text-center"><CheckCircle2 className="w-5 h-5 text-green-500 mx-auto" /></TableCell>
-                                <TableCell className="text-center"><CheckCircle2 className="w-5 h-5 text-green-500 mx-auto" /></TableCell>
-                            </TableRow>
-                             <TableRow>
-                                <TableCell className="font-medium">100% Profit Repatriation</TableCell>
-                                <TableCell className="text-center"><CheckCircle2 className="w-5 h-5 text-green-500 mx-auto" /></TableCell>
-                                <TableCell className="text-center"><CheckCircle2 className="w-5 h-5 text-green-500 mx-auto" /></TableCell>
-                                <TableCell className="text-center"><CheckCircle2 className="w-5 h-5 text-green-500 mx-auto" /></TableCell>
-                            </TableRow>
-                             <TableRow>
-                                <TableCell className="font-medium">Judicial System</TableCell>
-                                <TableCell className="text-center">English Common Law</TableCell>
-                                <TableCell className="text-center">Civil Law</TableCell>
-                                <TableCell className="text-center">English Common Law</TableCell>
-                            </TableRow>
-                            <TableRow>
-                                <TableCell className="font-medium">Infrastructure</TableCell>
-                                <TableCell className="text-center font-semibold text-primary">Cutting-Edge</TableCell>
-                                <TableCell className="text-center">Advanced</TableCell>
-                                <TableCell className="text-center">Advanced</TableCell>
-                            </TableRow>
-                            <TableRow>
-                                <TableCell className="font-medium">Govt. Incentives</TableCell>
-                                <TableCell className="text-center"><CheckCircle2 className="w-5 h-5 text-green-500 mx-auto" /></TableCell>
-                                <TableCell className="text-center"><CheckCircle2 className="w-5 h-5 text-green-500 mx-auto" /></TableCell>
-                                <TableCell className="text-center"><XCircle className="w-5 h-5 text-red-500 mx-auto" /></TableCell>
-                            </TableRow>
-                        </TableBody>
-                    </Table>
+                    {/* Mobile View */}
+                    <div className="grid grid-cols-1 gap-6 md:hidden">
+                        {hubs.map((hub) => (
+                            <div key={hub.hub} className="rounded-lg border bg-card/50 p-4">
+                                <h3 className="text-lg font-bold mb-4">{hub.hub}</h3>
+                                <div className="space-y-3">
+                                    <div className="flex justify-between items-center">
+                                        <span className="text-sm text-muted-foreground">100% Foreign Ownership</span>
+                                        {hub.ownership ? <CheckCircle2 className="w-5 h-5 text-green-500" /> : <XCircle className="w-5 h-5 text-red-500" />}
+                                    </div>
+                                    <div className="flex justify-between items-center">
+                                        <span className="text-sm text-muted-foreground">100% Profit Repatriation</span>
+                                        {hub.repatriation ? <CheckCircle2 className="w-5 h-5 text-green-500" /> : <XCircle className="w-5 h-5 text-red-500" />}
+                                    </div>
+                                    <div className="flex justify-between items-center">
+                                        <span className="text-sm text-muted-foreground">Judicial System</span>
+                                        <span className="font-medium text-sm text-right">{hub.judicial}</span>
+                                    </div>
+                                    <div className="flex justify-between items-center">
+                                        <span className="text-sm text-muted-foreground">Infrastructure</span>
+                                        <span className={`font-semibold text-sm ${hub.infra === 'Cutting-Edge' ? 'text-primary' : ''}`}>{hub.infra}</span>
+                                    </div>
+                                     <div className="flex justify-between items-center">
+                                        <span className="text-sm text-muted-foreground">Govt. Incentives</span>
+                                        {hub.incentives ? <CheckCircle2 className="w-5 h-5 text-green-500" /> : <XCircle className="w-5 h-5 text-red-500" />}
+                                    </div>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+
+                    {/* Desktop View */}
+                    <div className="hidden md:block">
+                        <Table>
+                            <TableHeader>
+                                <TableRow>
+                                    <TableHead>Feature</TableHead>
+                                    <TableHead className="text-center uppercase tracking-wider text-xs">Doha</TableHead>
+                                    <TableHead className="text-center uppercase tracking-wider text-xs">Dubai</TableHead>
+                                    <TableHead className="text-center uppercase tracking-wider text-xs">Singapore</TableHead>
+                                </TableRow>
+                            </TableHeader>
+                            <TableBody>
+                                <TableRow>
+                                    <TableCell className="font-medium">100% Foreign Ownership</TableCell>
+                                    <TableCell className="text-center"><CheckCircle2 className="w-5 h-5 text-green-500 mx-auto" /></TableCell>
+                                    <TableCell className="text-center"><CheckCircle2 className="w-5 h-5 text-green-500 mx-auto" /></TableCell>
+                                    <TableCell className="text-center"><CheckCircle2 className="w-5 h-5 text-green-500 mx-auto" /></TableCell>
+                                </TableRow>
+                                <TableRow>
+                                    <TableCell className="font-medium">100% Profit Repatriation</TableCell>
+                                    <TableCell className="text-center"><CheckCircle2 className="w-5 h-5 text-green-500 mx-auto" /></TableCell>
+                                    <TableCell className="text-center"><CheckCircle2 className="w-5 h-5 text-green-500 mx-auto" /></TableCell>
+                                    <TableCell className="text-center"><CheckCircle2 className="w-5 h-5 text-green-500 mx-auto" /></TableCell>
+                                </TableRow>
+                                <TableRow>
+                                    <TableCell className="font-medium">Judicial System</TableCell>
+                                    <TableCell className="text-center">English Common Law</TableCell>
+                                    <TableCell className="text-center">Civil Law</TableCell>
+                                    <TableCell className="text-center">English Common Law</TableCell>
+                                </TableRow>
+                                <TableRow>
+                                    <TableCell className="font-medium">Infrastructure</TableCell>
+                                    <TableCell className="text-center font-semibold text-primary">Cutting-Edge</TableCell>
+                                    <TableCell className="text-center">Advanced</TableCell>
+                                    <TableCell className="text-center">Advanced</TableCell>
+                                </TableRow>
+                                <TableRow>
+                                    <TableCell className="font-medium">Govt. Incentives</TableCell>
+                                    <TableCell className="text-center"><CheckCircle2 className="w-5 h-5 text-green-500 mx-auto" /></TableCell>
+                                    <TableCell className="text-center"><CheckCircle2 className="w-5 h-5 text-green-500 mx-auto" /></TableCell>
+                                    <TableCell className="text-center"><XCircle className="w-5 h-5 text-red-500 mx-auto" /></TableCell>
+                                </TableRow>
+                            </TableBody>
+                        </Table>
+                    </div>
                 </CardContent>
             </Card>
 
