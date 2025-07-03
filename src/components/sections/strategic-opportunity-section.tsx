@@ -1,28 +1,51 @@
 import { Section } from "@/components/icons"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { DollarSign, BarChart, Globe } from "lucide-react"
+import { PieChart, Timer, Handshake, TrendingUp, Target, Briefcase } from "lucide-react"
 
 export function StrategicOpportunitySection() {
     return (
         <Section id="opportunity">
             <div className="text-center">
-                <h2 className="section-title">I. The Strategic Imperative</h2>
+                <h2 className="section-title">I. The Strategic Opportunity</h2>
                 <p className="section-subtitle">
-                    The digital asset market is at a pivotal inflection point. As institutional capital pours in, Binance—the undisputed industry leader—is selectively opening its cap table to visionary sovereign partners. This presents a rare, time-sensitive opportunity for Qatar to secure a foundational stake in the future of finance.
+                    The digital asset market is at a pivotal inflection point, with projections valuing it at over $16 trillion by 2030. As institutional capital floods the space, Binance, the undisputed market leader, is selectively opening its equity to visionary sovereign partners. This presents a rare, time-sensitive opportunity for Qatar to acquire a foundational stake in the future of finance.
                 </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12 max-w-6xl mx-auto">
+            <Card className="mt-12 max-w-6xl mx-auto bg-background/50">
+                 <CardHeader>
+                    <CardTitle className="text-center">Market at an Inflection Point</CardTitle>
+                </CardHeader>
+                <CardContent className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+                    <div className="stat-card bg-transparent border-0 shadow-none p-4">
+                        <TrendingUp className="w-10 h-10 text-primary mb-2" />
+                        <div className="text-3xl font-bold">$1.2T+</div>
+                        <p className="text-sm text-muted-foreground">Current Digital Asset Market</p>
+                    </div>
+                    <div className="stat-card bg-transparent border-0 shadow-none p-4">
+                        <Target className="w-10 h-10 text-primary mb-2" />
+                        <div className="text-3xl font-bold">$16T</div>
+                        <p className="text-sm text-muted-foreground">Projected Market Size by 2030</p>
+                    </div>
+                    <div className="stat-card bg-transparent border-0 shadow-none p-4">
+                        <Briefcase className="w-10 h-10 text-primary mb-2" />
+                        <div className="text-3xl font-bold">90%</div>
+                        <p className="text-sm text-muted-foreground">of Fortune 100 Exploring Blockchain</p>
+                    </div>
+                </CardContent>
+            </Card>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8 max-w-6xl mx-auto">
                 <Card className="hover:border-primary transition-colors">
                     <CardHeader>
                         <CardTitle className="flex items-center gap-2">
-                            <DollarSign className="w-6 h-6 text-primary" />
-                            The Investment
+                            <PieChart className="w-6 h-6 text-primary" />
+                            The Stake
                         </CardTitle>
                     </CardHeader>
                     <CardContent>
                         <p className="text-muted-foreground">
-                            A <strong className="text-foreground">$10 billion</strong> investment for a strategic minority stake, positioning Qatar as a key shareholder in the world’s largest digital asset exchange.
+                            A <strong className="text-foreground">$10B investment</strong> for a <strong className="text-foreground">~6.5% equity stake</strong> in the world’s most critical digital asset infrastructure, positioning Qatar as a key architect of the future financial system.
                         </p>
                     </CardContent>
                 </Card>
@@ -30,13 +53,13 @@ export function StrategicOpportunitySection() {
                 <Card className="hover:border-primary transition-colors">
                     <CardHeader>
                         <CardTitle className="flex items-center gap-2">
-                            <BarChart className="w-6 h-6 text-primary" />
-                            The Timing
+                            <Timer className="w-6 h-6 text-primary" />
+                            The Urgency
                         </CardTitle>
                     </CardHeader>
                     <CardContent>
                         <p className="text-muted-foreground">
-                            The market is surging and Binance is capitalizing on this momentum. Abu Dhabi’s recent <strong className="text-foreground">$2B investment</strong> validates the model, creating a competitive dynamic and urgency to act.
+                            The market is expanding exponentially. <strong className="text-foreground">Abu Dhabi’s recent $2B investment</strong> validates the model and signals a closing window of opportunity for foundational partners.
                         </p>
                     </CardContent>
                 </Card>
@@ -44,13 +67,13 @@ export function StrategicOpportunitySection() {
                 <Card className="hover:border-primary transition-colors">
                     <CardHeader>
                         <CardTitle className="flex items-center gap-2">
-                            <Globe className="w-6 h-6 text-primary" />
-                            The Vision
+                            <Handshake className="w-6 h-6 text-primary" />
+                            The Symbiosis
                         </CardTitle>
                     </CardHeader>
                     <CardContent>
                         <p className="text-muted-foreground">
-                            Establish Doha as the definitive <strong className="text-foreground">global hub for Web3</strong>, generating significant returns and securing unparalleled influence in the new digital economy.
+                            Anchor <strong className="text-foreground">Binance in Doha</strong>, creating the world's preeminent digital asset hub and generating unparalleled economic and strategic returns for Qatar.
                         </p>
                     </CardContent>
                 </Card>
