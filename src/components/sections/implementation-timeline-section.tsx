@@ -48,7 +48,7 @@ export function ImplementationTimelineSection() {
                     {timelineEvents.map((item, index) => (
                          <div key={index} className="relative pl-16">
                             <div className="absolute left-6 top-1 h-12 w-12 -translate-x-1/2 rounded-full bg-background border-2 border-primary flex items-center justify-center">
-                                <item.icon className="h-6 w-6 text-primary" />
+                                <item.icon className="h-6 w-6 text-primary" aria-hidden="true" />
                             </div>
                             <div className="flex-1">
                                 <p className="text-sm font-semibold text-primary">{item.phase}</p>

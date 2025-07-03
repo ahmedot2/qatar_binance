@@ -13,6 +13,8 @@ import {
 } from "@/components/ui/card"
 import {
   ChartContainer,
+  ChartLegend,
+  ChartLegendContent,
 } from "@/components/ui/chart"
 import type { ChartConfig } from "@/components/ui/chart"
 import { Button } from "@/components/ui/button"
@@ -99,14 +101,14 @@ export function MarketShareChart() {
           <CardDescription>Binance's share of global spot trading volume vs. competitors.</CardDescription>
         </div>
         <Button variant="ghost" size="icon" onClick={() => setChartType(chartType === "pie" ? "bar" : "pie")}>
-          {chartType === 'pie' ? <Layers /> : <SwitchCamera />}
+          {chartType === 'pie' ? <Layers aria-hidden="true" /> : <SwitchCamera aria-hidden="true" />}
           <span className="sr-only">Toggle chart type</span>
         </Button>
       </CardHeader>
       <CardContent>
         <div className="w-full h-[350px] relative">
           <div className={`absolute inset-0 transition-all duration-500 ${chartType === 'pie' ? 'opacity-100 scale-100' : 'opacity-0 scale-95 pointer-events-none'}`}>
-            <ChartContainer config={chartConfig}>
+            <ChartContainer config={chartConfig} className="mx-auto aspect-square max-h-[350px]">
               <PieChart>
                 <Pie
                   activeIndex={activeIndex}
@@ -114,8 +116,8 @@ export function MarketShareChart() {
                   data={pieData}
                   dataKey="volume"
                   nameKey="browser"
-                  innerRadius={100}
-                  outerRadius={120}
+                  innerRadius={80}
+                  outerRadius={110}
                   strokeWidth={5}
                   onMouseEnter={onPieEnter}
                 >
@@ -123,6 +125,10 @@ export function MarketShareChart() {
                         <Cell key={`cell-${index}`} fill={entry.fill} className="transition-all duration-300" />
                     ))}
                 </Pie>
+                 <ChartLegend
+                    content={<ChartLegendContent nameKey="browser" />}
+                    className="-translate-y-[2rem] flex-wrap gap-2 [&>*]:basis-1/4 [&>*]:justify-center"
+                />
               </PieChart>
             </ChartContainer>
           </div>

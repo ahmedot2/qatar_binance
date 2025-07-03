@@ -32,17 +32,17 @@ export function BinancePowerhouseSection() {
                         </CardHeader>
                         <CardContent className="grid grid-cols-1 sm:grid-cols-3 gap-6">
                             <div className="stat-card">
-                                <BarChart className="w-10 h-10 text-primary mb-2" />
+                                <BarChart className="w-10 h-10 text-primary mb-2" aria-hidden="true" />
                                 <AnimatedCounter className="text-3xl font-bold" value={16.8} decimals={1} prefix="$" suffix="B" />
                                 <p className="text-sm text-muted-foreground">2024 Revenue (+40% YoY)</p>
                             </div>
                             <div className="stat-card">
-                                <Users className="w-10 h-10 text-primary mb-2" />
+                                <Users className="w-10 h-10 text-primary mb-2" aria-hidden="true" />
                                 <AnimatedCounter className="text-3xl font-bold" value={187000} />
                                 <p className="text-sm text-muted-foreground">Daily New Registrations</p>
                             </div>
                             <div className="stat-card">
-                                <Landmark className="w-10 h-10 text-primary mb-2" />
+                                <Landmark className="w-10 h-10 text-primary mb-2" aria-hidden="true" />
                                 <AnimatedCounter className="text-3xl font-bold" value={6.5} decimals={1} prefix="$" suffix="B" />
                                 <p className="text-sm text-muted-foreground">Estimated Net Profit</p>
                             </div>

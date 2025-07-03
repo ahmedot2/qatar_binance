@@ -21,8 +21,10 @@ export function AnimatedCounter({ value, className, decimals = 0, prefix = '', s
   };
 
   return (
-    <span className={className}>
-      {prefix}{formatNumber(count)}{suffix}
+    <span className={className} role="status" aria-label={`${prefix}${formatNumber(value)}${suffix}`}>
+      <span aria-hidden="true">
+        {prefix}{formatNumber(count)}{suffix}
+      </span>
     </span>
   );
 }

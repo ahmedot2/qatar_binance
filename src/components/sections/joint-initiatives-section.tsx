@@ -44,7 +44,7 @@ export function JointInitiativesSection() {
                         <item.icon aria-hidden="true" className="absolute -right-4 -bottom-4 h-24 w-24 text-primary/10 transition-transform duration-500 group-hover:scale-125 group-hover:rotate-12" />
                         <CardHeader className="relative z-10">
                             <div className="bg-primary/10 p-3 rounded-lg self-start">
-                                <item.icon className="w-8 h-8 text-primary" />
+                                <item.icon className="w-8 h-8 text-primary" aria-hidden="true" />
                             </div>
                             <CardTitle className="mt-4">{item.title}</CardTitle>
                         </CardHeader>
