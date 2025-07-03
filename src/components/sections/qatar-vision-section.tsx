@@ -1,11 +1,11 @@
-import { Section } from "@/components/icons"
+import { AnimatedSection } from "@/components/animated-section"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Map, Landmark, Briefcase, HandCoins, ShieldCheck, Scale, DollarSign } from "lucide-react"
 
 export function QatarVisionSection() {
     return (
-        <Section id="qatar" className="bg-transparent">
+        <AnimatedSection id="qatar" className="bg-transparent">
             <h2 className="section-title">III. Qatar: A Visionary Digital Economy Hub</h2>
             <p className="section-subtitle">
                 Qatar's ambitious National Vision 2030 provides the ideal foundation for Binance's global headquarters, creating powerful synergies for economic diversification and technological sovereignty.
@@ -89,6 +89,6 @@ export function QatarVisionSection() {
                     </CardContent>
                 </Card>
             </div>
-        </Section>
+        </AnimatedSection>
     )
 }

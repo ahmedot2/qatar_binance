@@ -1,12 +1,12 @@
 "use client"
 
-import { Section } from "@/components/icons"
+import { AnimatedSection } from "@/components/animated-section"
 import { ContactForm } from "@/components/contact-form"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../ui/card"
 
 export function ConclusionSection() {
     return (
-        <Section id="contact" className="relative overflow-hidden bg-transparent">
+        <AnimatedSection id="contact" className="relative overflow-hidden bg-background/70">
             <div className="relative z-10 text-center">
                 <h2 className="section-title">A Paradigm Shift: Architecting Tomorrow</h2>
                 <p className="section-subtitle">
@@ -23,6 +23,6 @@ export function ConclusionSection() {
                     <ContactForm />
                 </CardContent>
             </Card>
-        </Section>
+        </AnimatedSection>
     )
 }

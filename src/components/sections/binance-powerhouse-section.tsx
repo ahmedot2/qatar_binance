@@ -1,4 +1,4 @@
-import { Section } from "@/components/icons"
+import { AnimatedSection } from "@/components/animated-section"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { MarketShareChart } from "@/components/charts/market-share-chart"
 import { UserGrowthChart } from "@/components/charts/user-growth-chart"
@@ -13,7 +13,7 @@ const complianceText = "Binance has transformed from its early decentralized roo
 
 export function BinancePowerhouseSection() {
     return (
-        <Section id="binance" className="bg-transparent">
+        <AnimatedSection id="binance" className="bg-background/70">
             <h2 className="section-title">II. Assessing a Global Ecosystem</h2>
             <p className="section-subtitle">
                 From disruptive innovator to a mature, regulated powerhouse, Binance's market dominance, explosive growth, and commitment to compliance create an unparalleled investment vehicle.
@@ -106,6 +106,6 @@ export function BinancePowerhouseSection() {
                  </Card>
             </div>
 
-        </Section>
+        </AnimatedSection>
     )
 }

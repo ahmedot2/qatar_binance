@@ -1,4 +1,4 @@
-import { Section } from "@/components/icons"
+import { AnimatedSection } from "@/components/animated-section"
 import { Handshake, FileText, Banknote, Rocket, CheckCircle } from "lucide-react"
 
 const timelineEvents = [
@@ -36,7 +36,7 @@ const timelineEvents = [
 
 export function ImplementationTimelineSection() {
     return (
-        <Section id="timeline" className="bg-transparent">
+        <AnimatedSection id="timeline" className="bg-background/70">
             <h2 className="section-title">VII. Laying the Groundwork: A Roadmap to Success</h2>
             <p className="section-subtitle">
                 A clear, phased roadmap ensures meticulous execution and collaborative progress, transforming vision into reality with defined milestones and clear accountability.
@@ -66,6 +66,6 @@ export function ImplementationTimelineSection() {
                 <h3 className="text-2xl font-bold mt-8">Immediate Action</h3>
                 <p className="text-lg text-muted-foreground mt-2">Authorize The Ark to formally present this proposal to Binance leadership.</p>
             </div>
-        </Section>
+        </AnimatedSection>
     )
 }

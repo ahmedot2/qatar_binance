@@ -1,4 +1,4 @@
-import { Section } from "@/components/icons"
+import { AnimatedSection } from "@/components/animated-section"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { ReturnScenariosChart } from "@/components/charts/return-scenarios-chart"
 import { Badge } from "@/components/ui/badge"
@@ -15,7 +15,7 @@ const rights = [
 
 export function InvestmentDeepDiveSection() {
     return (
-        <Section id="investment" className="bg-transparent">
+        <AnimatedSection id="investment" className="bg-background/70">
             <h2 className="section-title">V. Unlocking Value Creation</h2>
             <p className="section-subtitle">
                 A strategic $10B injection designed to maximize Qatar's influence and financial upside, fortified by robust governance and investor protections.
@@ -91,6 +91,6 @@ export function InvestmentDeepDiveSection() {
                 </CardContent>
             </Card>
 
-        </Section>
+        </AnimatedSection>
     )
 }
