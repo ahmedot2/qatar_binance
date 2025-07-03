@@ -1,7 +1,8 @@
+
 "use client"
 
 import * as React from "react"
-import { Bar, BarChart, Pie, PieChart, ResponsiveContainer, XAxis, YAxis, Tooltip } from "recharts"
+import { Bar, BarChart, Pie, PieChart, ResponsiveContainer, XAxis, YAxis, Tooltip, Sector, Cell } from "recharts"
 
 import {
   Card,
@@ -12,7 +13,6 @@ import {
 } from "@/components/ui/card"
 import {
   ChartContainer,
-  ChartTooltipContent,
 } from "@/components/ui/chart"
 import type { ChartConfig } from "@/components/ui/chart"
 import { Button } from "@/components/ui/button"
@@ -53,8 +53,43 @@ const chartConfig = {
   },
 } satisfies ChartConfig
 
+const renderActiveShape = (props: any) => {
+  const { cx, cy, innerRadius, outerRadius, startAngle, endAngle, fill, payload } = props;
+
+  return (
+    <g>
+      <text x={cx} y={cy - 12} dy={8} textAnchor="middle" fill={fill} className="text-lg font-bold transition-all">
+        {`${payload.volume}%`}
+      </text>
+      <text x={cx} y={cy + 12} dy={8} textAnchor="middle" fill="hsl(var(--muted-foreground))" className="text-sm capitalize transition-all">
+        {payload.browser}
+      </text>
+      <Sector
+        cx={cx}
+        cy={cy}
+        innerRadius={innerRadius}
+        outerRadius={outerRadius + 8}
+        startAngle={startAngle}
+        endAngle={endAngle}
+        fill={fill}
+        stroke="hsl(var(--background))"
+        strokeWidth={3}
+      />
+    </g>
+  );
+};
+
+
 export function MarketShareChart() {
   const [chartType, setChartType] = React.useState<"pie" | "bar">("pie")
+  const [activeIndex, setActiveIndex] = React.useState<number>(0)
+
+  const onPieEnter = React.useCallback(
+    (_: any, index: number) => {
+      setActiveIndex(index)
+    },
+    [setActiveIndex]
+  )
 
   return (
     <Card>
@@ -70,25 +105,28 @@ export function MarketShareChart() {
       </CardHeader>
       <CardContent>
         <div className="w-full h-[350px] relative">
-          <div className={`absolute inset-0 transition-opacity duration-500 ${chartType === 'pie' ? 'opacity-100' : 'opacity-0'}`}>
+          <div className={`absolute inset-0 transition-all duration-500 ${chartType === 'pie' ? 'opacity-100 scale-100' : 'opacity-0 scale-95 pointer-events-none'}`}>
             <ChartContainer config={chartConfig}>
               <PieChart>
-                <Tooltip
-                  cursor={false}
-                  content={<ChartTooltipContent hideLabel />}
-                />
                 <Pie
+                  activeIndex={activeIndex}
+                  activeShape={renderActiveShape}
                   data={pieData}
                   dataKey="volume"
                   nameKey="browser"
                   innerRadius={100}
+                  outerRadius={120}
                   strokeWidth={5}
+                  onMouseEnter={onPieEnter}
                 >
+                    {pieData.map((entry, index) => (
+                        <Cell key={`cell-${index}`} fill={entry.fill} className="transition-all duration-300" />
+                    ))}
                 </Pie>
               </PieChart>
             </ChartContainer>
           </div>
-          <div className={`absolute inset-0 transition-opacity duration-500 ${chartType === 'bar' ? 'opacity-100' : 'opacity-0'}`}>
+          <div className={`absolute inset-0 transition-all duration-500 ${chartType === 'bar' ? 'opacity-100 scale-100' : 'opacity-0 scale-95 pointer-events-none'}`}>
             <ResponsiveContainer width="100%" height="100%">
               <BarChart data={barData} layout="vertical" margin={{ left: 10, right: 10 }}>
                 <XAxis type="number" hide />
@@ -98,6 +136,7 @@ export function MarketShareChart() {
                   stroke="hsl(var(--foreground))"
                   axisLine={false}
                   tickLine={false}
+                  width={60}
                 />
                 <Tooltip
                   cursor={{ fill: 'hsl(var(--muted))' }}
@@ -115,7 +154,7 @@ export function MarketShareChart() {
                     return null
                   }}
                 />
-                <Bar dataKey="volume" fill="hsl(var(--primary))" radius={[0, 4, 4, 0]} />
+                <Bar dataKey="volume" fill="hsl(var(--primary))" radius={[0, 4, 4, 0]} isAnimationActive={chartType === 'bar'} />
               </BarChart>
             </ResponsiveContainer>
           </div>
