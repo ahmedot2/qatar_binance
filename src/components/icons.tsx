@@ -53,9 +53,3 @@ export function Section(
     />
   )
 }
-
-export function AnimatedCounter({ value, className }: { value: number, className?: string }) {
-  // This is a placeholder. For a real animated counter, you'd use a library
-  // like react-spring or framer-motion, or a custom hook with requestAnimationFrame.
-  return <span className={className}>{value.toLocaleString()}</span>
-}
