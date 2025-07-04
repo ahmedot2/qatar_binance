@@ -5,15 +5,28 @@ import { ArrowDown } from "lucide-react"
 
 export function HeroSection() {
     return (
-        <section className="h-screen w-full relative flex items-center justify-center text-center text-foreground overflow-hidden">
+        <section className="h-screen w-full relative flex items-center justify-center text-center text-white overflow-hidden">
+            <video
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="absolute z-[-1] w-full h-full object-cover"
+                src="/videos/hero-background.mp4"
+            >
+                Your browser does not support the video tag.
+            </video>
+            
+            <div className="absolute inset-0 bg-black/40 z-0"></div>
             <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent z-0"></div>
+
             <div className="relative z-10 p-4">
-                <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tighter text-foreground leading-tight">
+                <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tighter leading-tight">
                     Qatar × Binance
                     <br />
                     <span className="text-primary">Forging the Future of Global Finance</span>
                 </h1>
-                <p className="mt-6 max-w-3xl mx-auto text-lg md:text-xl text-muted-foreground">
+                <p className="mt-6 max-w-3xl mx-auto text-lg md:text-xl text-neutral-200">
                     A landmark partnership to establish Doha as the world's premier digital-asset hub and co-architect the future of the financial system.
                 </p>
                 <div className="mt-10">
