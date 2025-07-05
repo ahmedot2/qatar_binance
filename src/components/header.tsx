@@ -12,6 +12,7 @@ const navLinks = [
     { href: "#investment", label: "Investment" },
     { href: "#initiatives", label: "Initiatives" },
     { href: "#timeline", label: "Timeline" },
+    { href: "#pitch-deck", label: "Pitch Deck" },
     { href: "#contact", label: "Contact" },
 ]
 

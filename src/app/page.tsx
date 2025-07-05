@@ -7,6 +7,7 @@ import { DohaHQSection } from '@/components/sections/doha-hq-section';
 import { InvestmentDeepDiveSection } from '@/components/sections/investment-deep-dive-section';
 import { JointInitiativesSection } from '@/components/sections/joint-initiatives-section';
 import { ImplementationTimelineSection } from '@/components/sections/implementation-timeline-section';
+import { PitchDeckSection } from '@/components/sections/pitch-deck-section';
 import { ConclusionSection } from '@/components/sections/conclusion-section';
 
 export default function Home() {
@@ -22,6 +23,7 @@ export default function Home() {
         <InvestmentDeepDiveSection />
         <JointInitiativesSection />
         <ImplementationTimelineSection />
+        <PitchDeckSection />
         <ConclusionSection />
       </main>
     </div>
