@@ -22,6 +22,13 @@ const slideImages = [
   "/slides/slide-8.png",
   "/slides/slide-9.png",
   "/slides/slide-10.png",
+  "/slides/slide-11.png",
+  "/slides/slide-12.png",
+  "/slides/slide-13.png",
+  "/slides/slide-14.png",
+  "/slides/slide-15.png",
+  "/slides/slide-16.png",
+  "/slides/slide-17.png",
 ];
 
 export function PitchDeckCarousel() {
