@@ -13,36 +13,36 @@ export function StrategicOpportunitySection() {
                 </p>
             </div>
 
-            <Card className="mt-12 max-w-6xl mx-auto">
-                 <CardHeader>
-                    <CardTitle className="text-center">Market at an Inflection Point</CardTitle>
-                </CardHeader>
-                <CardContent className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
-                    <div className="stat-card bg-transparent border-0 shadow-none p-4">
-                        <TrendingUp className="w-10 h-10 text-primary mb-2" aria-hidden="true" />
-                        <div className="text-3xl font-bold">
-                            <AnimatedCounter value={1.2} decimals={1} suffix="T" prefix="$" />+
+            <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                 <Card className="md:col-span-3">
+                     <CardHeader>
+                        <CardTitle className="text-center">Market at an Inflection Point</CardTitle>
+                    </CardHeader>
+                    <CardContent className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+                        <div className="stat-card bg-transparent border-0 shadow-none p-4">
+                            <TrendingUp className="w-10 h-10 text-primary mb-2" aria-hidden="true" />
+                            <div className="text-3xl font-bold">
+                                <AnimatedCounter value={1.2} decimals={1} suffix="T" prefix="$" />+
+                            </div>
+                            <p className="text-sm text-muted-foreground">Current Digital Asset Market</p>
                         </div>
-                        <p className="text-sm text-muted-foreground">Current Digital Asset Market</p>
-                    </div>
-                    <div className="stat-card bg-transparent border-0 shadow-none p-4">
-                        <Target className="w-10 h-10 text-primary mb-2" aria-hidden="true" />
-                        <div className="text-3xl font-bold">
-                            <AnimatedCounter value={16} suffix="T" prefix="$" />
+                        <div className="stat-card bg-transparent border-0 shadow-none p-4">
+                            <Target className="w-10 h-10 text-primary mb-2" aria-hidden="true" />
+                            <div className="text-3xl font-bold">
+                                <AnimatedCounter value={16} suffix="T" prefix="$" />
+                            </div>
+                            <p className="text-sm text-muted-foreground">Projected Market Size by 2030</p>
                         </div>
-                        <p className="text-sm text-muted-foreground">Projected Market Size by 2030</p>
-                    </div>
-                    <div className="stat-card bg-transparent border-0 shadow-none p-4">
-                        <Briefcase className="w-10 h-10 text-primary mb-2" aria-hidden="true" />
-                        <div className="text-3xl font-bold">
-                            <AnimatedCounter value={90} suffix="%" />
+                        <div className="stat-card bg-transparent border-0 shadow-none p-4">
+                            <Briefcase className="w-10 h-10 text-primary mb-2" aria-hidden="true" />
+                            <div className="text-3xl font-bold">
+                                <AnimatedCounter value={90} suffix="%" />
+                            </div>
+                            <p className="text-sm text-muted-foreground">of Fortune 100 Exploring Blockchain</p>
                         </div>
-                        <p className="text-sm text-muted-foreground">of Fortune 100 Exploring Blockchain</p>
-                    </div>
-                </CardContent>
-            </Card>
+                    </CardContent>
+                </Card>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8 max-w-6xl mx-auto">
                 <Card>
                     <CardHeader>
                         <CardTitle className="flex items-center gap-2">

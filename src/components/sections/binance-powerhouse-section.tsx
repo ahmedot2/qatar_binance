@@ -19,93 +19,88 @@ export function BinancePowerhouseSection() {
                 From disruptive innovator to a mature, regulated powerhouse, Binance&apos;s market dominance, explosive growth, and commitment to compliance create an unparalleled investment vehicle.
             </p>
 
-            <div className="mt-12">
-                <h3 className="text-3xl font-bold text-center mb-8">Unrivaled Market Dominance & Explosive Growth</h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+            <div className="mt-12 grid grid-cols-1 lg:grid-cols-4 gap-8">
+                <div className="lg:col-span-2">
                     <MarketShareChart />
-                    <UserGrowthChart />
-
-                    <Card className="lg:col-span-2">
-                        <CardHeader>
-                            <CardTitle>Binance by the Numbers</CardTitle>
-                            <CardDescription>Key performance indicators illustrating a hyper-growth, profitable enterprise.</CardDescription>
-                        </CardHeader>
-                        <CardContent className="grid grid-cols-1 sm:grid-cols-3 gap-6">
-                            <div className="stat-card">
-                                <BarChart className="w-10 h-10 text-primary mb-2" aria-hidden="true" />
-                                <AnimatedCounter className="text-3xl font-bold" value={16.8} decimals={1} prefix="$" suffix="B" />
-                                <p className="text-sm text-muted-foreground">2024 Revenue (+40% YoY)</p>
-                            </div>
-                            <div className="stat-card">
-                                <Users className="w-10 h-10 text-primary mb-2" aria-hidden="true" />
-                                <AnimatedCounter className="text-3xl font-bold" value={187000} />
-                                <p className="text-sm text-muted-foreground">Daily New Registrations</p>
-                            </div>
-                            <div className="stat-card">
-                                <Landmark className="w-10 h-10 text-primary mb-2" aria-hidden="true" />
-                                <AnimatedCounter className="text-3xl font-bold" value={6.5} decimals={1} prefix="$" suffix="B" />
-                                <p className="text-sm text-muted-foreground">Estimated Net Profit</p>
-                            </div>
-                        </CardContent>
-                    </Card>
-                    <Card className="lg:col-span-2">
-                        <CardHeader>
-                            <CardTitle>Proof of Reserves (March 2025)</CardTitle>
-                            <CardDescription>A commitment to 1:1 asset backing, verified on-chain, setting the industry standard for transparency.</CardDescription>
-                        </CardHeader>
-                        <CardContent className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
-                            <div className="flex flex-col items-center">
-                                <BitcoinIcon className="w-10 h-10 mb-2 text-primary" />
-                                <div className="font-bold text-lg">Bitcoin</div>
-                                <Badge variant="secondary" className="mt-1">100.77%</Badge>
-                            </div>
-                            <div className="flex flex-col items-center">
-                                <EthereumIcon className="w-10 h-10 mb-2 text-primary" />
-                                <div className="font-bold text-lg">Ethereum</div>
-                                <Badge variant="secondary" className="mt-1">100.00%</Badge>
-                            </div>
-                            <div className="flex flex-col items-center">
-                                <BnbIcon className="w-10 h-10 mb-2 text-primary" />
-                                <div className="font-bold text-lg">BNB</div>
-                                <Badge variant="secondary" className="mt-1">110.92%</Badge>
-                            </div>
-                            <div className="flex flex-col items-center">
-                                <UsdtIcon className="w-10 h-10 mb-2 text-primary" />
-                                <div className="font-bold text-lg">USDT</div>
-                                <Badge variant="secondary" className="mt-1">104.42%</Badge>
-                            </div>
-                        </CardContent>
-                    </Card>
                 </div>
-            </div>
-            
-            <div className="mt-20">
-                 <h3 className="text-3xl font-bold text-center mb-8">The Pivot to Compliance: Building Global Trust</h3>
-                 <Card className="max-w-4xl mx-auto">
+                <div className="lg:col-span-2">
+                    <UserGrowthChart />
+                </div>
+                <Card className="lg:col-span-4">
                     <CardHeader>
-                        <CardTitle>From Disruptor to De-Risked</CardTitle>
-                        <CardDescription>A new era of regulatory compliance and global partnership.</CardDescription>
+                        <CardTitle>Binance by the Numbers</CardTitle>
+                        <CardDescription>Key performance indicators illustrating a hyper-growth, profitable enterprise.</CardDescription>
                     </CardHeader>
-                    <CardContent className="space-y-6">
-                        <TextSummarizer text={complianceText} />
-                        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-4">
-                            <div className="stat-card">
-                                <AnimatedCounter className="text-3xl font-bold text-accent" value={650} suffix="+" />
-                                <p className="text-sm text-muted-foreground">Full-Time Compliance Team</p>
-                            </div>
-                            <div className="stat-card">
-                                <AnimatedCounter className="text-3xl font-bold text-accent" value={21} />
-                                <p className="text-sm text-muted-foreground">Regulatory Approvals</p>
-                            </div>
-                            <div className="stat-card">
-                                <AnimatedCounter className="text-3xl font-bold text-accent" value={65} suffix="k" prefix="~" />
-                                <p className="text-sm text-muted-foreground">LE Requests Responded</p>
-                            </div>
+                    <CardContent className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+                        <div className="stat-card">
+                            <BarChart className="w-10 h-10 text-primary mb-2" aria-hidden="true" />
+                            <AnimatedCounter className="text-3xl font-bold" value={16.8} decimals={1} prefix="$" suffix="B" />
+                            <p className="text-sm text-muted-foreground">2024 Revenue (+40% YoY)</p>
+                        </div>
+                        <div className="stat-card">
+                            <Users className="w-10 h-10 text-primary mb-2" aria-hidden="true" />
+                            <AnimatedCounter className="text-3xl font-bold" value={187000} />
+                            <p className="text-sm text-muted-foreground">Daily New Registrations</p>
+                        </div>
+                        <div className="stat-card">
+                            <Landmark className="w-10 h-10 text-primary mb-2" aria-hidden="true" />
+                            <AnimatedCounter className="text-3xl font-bold" value={6.5} decimals={1} prefix="$" suffix="B" />
+                            <p className="text-sm text-muted-foreground">Estimated Net Profit</p>
                         </div>
                     </CardContent>
-                 </Card>
+                </Card>
+                <Card className="lg:col-span-2">
+                    <CardHeader>
+                        <CardTitle>Proof of Reserves (March 2025)</CardTitle>
+                        <CardDescription>A commitment to 1:1 asset backing, verified on-chain, setting the industry standard for transparency.</CardDescription>
+                    </CardHeader>
+                    <CardContent className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+                        <div className="flex flex-col items-center">
+                            <BitcoinIcon className="w-10 h-10 mb-2 text-primary" />
+                            <div className="font-bold text-lg">Bitcoin</div>
+                            <Badge variant="secondary" className="mt-1">100.77%</Badge>
+                        </div>
+                        <div className="flex flex-col items-center">
+                            <EthereumIcon className="w-10 h-10 mb-2 text-primary" />
+                            <div className="font-bold text-lg">Ethereum</div>
+                            <Badge variant="secondary" className="mt-1">100.00%</Badge>
+                        </div>
+                        <div className="flex flex-col items-center">
+                            <BnbIcon className="w-10 h-10 mb-2 text-primary" />
+                            <div className="font-bold text-lg">BNB</div>
+                            <Badge variant="secondary" className="mt-1">110.92%</Badge>
+                        </div>
+                        <div className="flex flex-col items-center">
+                            <UsdtIcon className="w-10 h-10 mb-2 text-primary" />
+                            <div className="font-bold text-lg">USDT</div>
+                            <Badge variant="secondary" className="mt-1">104.42%</Badge>
+                        </div>
+                    </CardContent>
+                </Card>
+                <Card className="lg:col-span-2">
+                   <CardHeader>
+                       <CardTitle>The Pivot to Compliance</CardTitle>
+                       <CardDescription>A new era of regulatory compliance and global partnership.</CardDescription>
+                   </CardHeader>
+                   <CardContent className="space-y-6">
+                       <TextSummarizer text={complianceText} />
+                       <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-4">
+                           <div className="stat-card">
+                               <AnimatedCounter className="text-3xl font-bold text-accent" value={650} suffix="+" />
+                               <p className="text-sm text-muted-foreground">Full-Time Compliance Team</p>
+                           </div>
+                           <div className="stat-card">
+                               <AnimatedCounter className="text-3xl font-bold text-accent" value={21} />
+                               <p className="text-sm text-muted-foreground">Regulatory Approvals</p>
+                           </div>
+                           <div className="stat-card">
+                               <AnimatedCounter className="text-3xl font-bold text-accent" value={65} suffix="k" prefix="~" />
+                               <p className="text-sm text-muted-foreground">LE Requests Responded</p>
+                           </div>
+                       </div>
+                   </CardContent>
+                </Card>
             </div>
-
         </AnimatedSection>
     )
 }
