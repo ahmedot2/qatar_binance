@@ -13,16 +13,16 @@ import {
 import { Card, CardContent } from "@/components/ui/card"
 
 const slideImages = [
-  "https://placehold.co/1280x720.png",
-  "https://placehold.co/1280x720.png",
-  "https://placehold.co/1280x720.png",
-  "https://placehold.co/1280x720.png",
-  "https://placehold.co/1280x720.png",
-  "https://placehold.co/1280x720.png",
-  "https://placehold.co/1280x720.png",
-  "https://placehold.co/1280x720.png",
-  "https://placehold.co/1280x720.png",
-  "https://placehold.co/1280x720.png",
+  "/slides/slide-1.png",
+  "/slides/slide-2.png",
+  "/slides/slide-3.png",
+  "/slides/slide-4.png",
+  "/slides/slide-5.png",
+  "/slides/slide-6.png",
+  "/slides/slide-7.png",
+  "/slides/slide-8.png",
+  "/slides/slide-9.png",
+  "/slides/slide-10.png",
 ];
 
 export function PitchDeckCarousel() {
