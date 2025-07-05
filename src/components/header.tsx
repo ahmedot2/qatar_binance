@@ -27,7 +27,7 @@ export function Header() {
     }, [])
 
     return (
-        <header className={`sticky top-0 z-50 transition-all duration-300 ${scrolled ? 'bg-background/80 backdrop-blur-lg border-b' : 'bg-transparent'}`}>
+        <header className={`sticky top-0 z-50 transition-all duration-300 ${scrolled ? 'bg-background/70 backdrop-blur-xl border-b border-white/10' : 'bg-transparent'}`}>
             <div className="container mx-auto px-4">
                 <div className="flex h-16 items-center justify-between">
                     <a href="#" className="flex items-center gap-2 font-bold text-lg">
@@ -49,7 +49,7 @@ export function Header() {
                                     <Menu />
                                 </Button>
                             </SheetTrigger>
-                            <SheetContent side="right">
+                            <SheetContent side="right" className="bg-background/70 backdrop-blur-xl border-l border-white/10">
                                 <nav className="flex flex-col space-y-4 mt-8">
                                     {navLinks.map((link) => (
                                         <a key={link.href} href={link.href} className="text-lg font-medium text-foreground transition-colors hover:text-primary">
