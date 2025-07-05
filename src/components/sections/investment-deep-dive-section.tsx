@@ -21,7 +21,7 @@ export function InvestmentDeepDiveSection() {
                 A strategic $10B injection designed to maximize Qatar's influence and financial upside, fortified by robust governance and investor protections.
             </p>
 
-            <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 mt-12 items-start">
+            <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 mt-12 items-stretch">
                 <div className="lg:col-span-3">
                     <ReturnScenariosChart />
                 </div>
@@ -49,11 +49,11 @@ export function InvestmentDeepDiveSection() {
                         </CardContent>
                     </Card>
 
-                    <Card>
+                    <Card className="flex flex-col flex-grow">
                         <CardHeader>
                             <CardTitle>Fortified Governance</CardTitle>
                         </CardHeader>
-                        <CardContent className="space-y-3">
+                        <CardContent className="space-y-3 flex-grow flex flex-col justify-center">
                             {rights.map((right, index) => (
                                 <div key={index} className="flex items-center gap-3">
                                     <right.icon className="w-5 h-5 text-primary" aria-hidden="true" />
