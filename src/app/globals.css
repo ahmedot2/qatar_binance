@@ -102,7 +102,7 @@ body {
     @apply w-full h-[300px] md:h-[400px];
   }
   .stat-card {
-    @apply bg-card p-6 rounded-lg shadow-md flex flex-col items-center justify-center text-center;
+    @apply bg-transparent p-6 rounded-lg flex flex-col items-center justify-center text-center;
   }
   .stat-value {
     @apply text-4xl font-bold text-primary;
