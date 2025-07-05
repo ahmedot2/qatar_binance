@@ -11,7 +11,7 @@ export function PitchDeckSection() {
             </p>
 
             <div className="mt-12 flex justify-center">
-                <Card className="w-full max-w-5xl p-2 bg-transparent">
+                <Card className="w-full max-w-5xl p-2">
                     <PitchDeckCarousel />
                 </Card>
             </div>

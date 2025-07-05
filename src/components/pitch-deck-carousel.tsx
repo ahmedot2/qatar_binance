@@ -10,7 +10,6 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel"
-import { Card, CardContent } from "@/components/ui/card"
 
 const slideImages = [
   "/slides/slide-1.png",
@@ -32,18 +31,16 @@ export function PitchDeckCarousel() {
         {slideImages.map((src, index) => (
           <CarouselItem key={index}>
             <div className="p-1">
-              <Card className="overflow-hidden">
-                <CardContent className="flex aspect-[16/9] items-center justify-center p-0">
-                  <Image 
-                    src={src} 
-                    alt={`Slide ${index + 1}`} 
-                    width={1280} 
-                    height={720} 
-                    className="w-full h-full object-cover"
-                    data-ai-hint="presentation slide" 
-                  />
-                </CardContent>
-              </Card>
+              <div className="flex aspect-[16/9] items-center justify-center overflow-hidden rounded-xl">
+                <Image 
+                  src={src} 
+                  alt={`Slide ${index + 1}`} 
+                  width={1280} 
+                  height={720} 
+                  className="w-full h-full object-cover"
+                  data-ai-hint="presentation slide" 
+                />
+              </div>
             </div>
           </CarouselItem>
         ))}
