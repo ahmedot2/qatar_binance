@@ -21,46 +21,48 @@ export function InvestmentDeepDiveSection() {
                 A strategic $10B injection designed to maximize Qatar's influence and financial upside, fortified by robust governance and investor protections.
             </p>
 
-            <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 mt-12 items-stretch">
-                <div className="lg:col-span-3 lg:row-span-2">
+            <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 mt-12 items-start">
+                <div className="lg:col-span-3">
                     <ReturnScenariosChart />
                 </div>
                 
-                <Card className="lg:col-span-2">
-                    <CardHeader>
-                        <CardTitle>The Strategic Stake</CardTitle>
-                    </CardHeader>
-                    <CardContent className="space-y-4">
-                        <div>
-                            <Badge variant="outline">Investment</Badge>
-                            <div className="font-bold text-3xl mt-1">
-                                <AnimatedCounter value={10} prefix="$" suffix=" Billion" />
+                <div className="lg:col-span-2 flex flex-col gap-8">
+                    <Card>
+                        <CardHeader>
+                            <CardTitle>The Strategic Stake</CardTitle>
+                        </CardHeader>
+                        <CardContent className="space-y-4">
+                            <div>
+                                <Badge variant="outline">Investment</Badge>
+                                <div className="font-bold text-3xl mt-1">
+                                    <AnimatedCounter value={10} prefix="$" suffix=" Billion" />
+                                </div>
+                                <p className="text-xs text-muted-foreground">In two equal tranches (closing + 12 months)</p>
                             </div>
-                            <p className="text-xs text-muted-foreground">In two equal tranches (closing + 12 months)</p>
-                        </div>
-                        <div>
-                            <Badge variant="outline">Equity Stake</Badge>
-                            <div className="font-bold text-3xl mt-1">
-                                <AnimatedCounter value={6.5} decimals={1} prefix="~" suffix="%" />
+                            <div>
+                                <Badge variant="outline">Equity Stake</Badge>
+                                <div className="font-bold text-3xl mt-1">
+                                    <AnimatedCounter value={6.5} decimals={1} prefix="~" suffix="%" />
+                                </div>
+                                <p className="text-xs text-muted-foreground">at a $155B post-money valuation</p>
                             </div>
-                            <p className="text-xs text-muted-foreground">at a $155B post-money valuation</p>
-                        </div>
-                    </CardContent>
-                </Card>
+                        </CardContent>
+                    </Card>
 
-                <Card className="lg:col-span-2">
-                    <CardHeader>
-                        <CardTitle>Fortified Governance</CardTitle>
-                    </CardHeader>
-                    <CardContent className="space-y-3">
-                        {rights.map((right, index) => (
-                            <div key={index} className="flex items-center gap-3">
-                                <right.icon className="w-5 h-5 text-primary" aria-hidden="true" />
-                                <span className="text-sm text-muted-foreground">{right.text}</span>
-                            </div>
-                        ))}
-                    </CardContent>
-                </Card>
+                    <Card>
+                        <CardHeader>
+                            <CardTitle>Fortified Governance</CardTitle>
+                        </CardHeader>
+                        <CardContent className="space-y-3">
+                            {rights.map((right, index) => (
+                                <div key={index} className="flex items-center gap-3">
+                                    <right.icon className="w-5 h-5 text-primary" aria-hidden="true" />
+                                    <span className="text-sm text-muted-foreground">{right.text}</span>
+                                </div>
+                            ))}
+                        </CardContent>
+                    </Card>
+                </div>
             </div>
 
             <Card className="mt-8 bg-accent/10">
