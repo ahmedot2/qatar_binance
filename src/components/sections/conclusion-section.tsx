@@ -6,7 +6,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../ui
 
 export function ConclusionSection() {
     return (
-        <AnimatedSection id="contact" className="relative overflow-hidden bg-background/70">
+        <AnimatedSection id="contact" className="relative overflow-hidden bg-transparent">
             <div className="relative z-10 text-center">
                 <h2 className="section-title">A Paradigm Shift: Architecting Tomorrow</h2>
                 <p className="section-subtitle">
@@ -17,7 +17,7 @@ export function ConclusionSection() {
             <Card className="relative z-10 mt-12 max-w-5xl mx-auto">
                 <CardHeader>
                     <CardTitle className="text-2xl text-center">Initiate the Shift</CardTitle>
-                    <CardDescription className="text-center">The future is not waiting. Let's begin the conversation that will define it. Reach out to formalize our partnership and start building the new financial paradigm.</CardDescription>
+                    <CardDescription className="text-center">The future is not waiting. Let&apos;s begin the conversation that will define it. Reach out to formalize our partnership and start building the new financial paradigm.</CardDescription>
                 </CardHeader>
                 <CardContent>
                     <ContactForm />

@@ -8,7 +8,7 @@ export function QatarVisionSection() {
         <AnimatedSection id="qatar" className="bg-transparent">
             <h2 className="section-title">III. Qatar: A Visionary Digital Economy Hub</h2>
             <p className="section-subtitle">
-                Qatar's ambitious National Vision 2030 provides the ideal foundation for Binance's global headquarters, creating powerful synergies for economic diversification and technological sovereignty.
+                Qatar&apos;s ambitious National Vision 2030 provides the ideal foundation for Binance&apos;s global headquarters, creating powerful synergies for economic diversification and technological sovereignty.
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
@@ -72,7 +72,7 @@ export function QatarVisionSection() {
                 <Card>
                     <CardHeader>
                         <CardTitle>QIA: The Patient, Strategic Investor</CardTitle>
-                        <CardDescription>The ideal partner to anchor Binance's next phase of growth.</CardDescription>
+                        <CardDescription>The ideal partner to anchor Binance&apos;s next phase of growth.</CardDescription>
                     </CardHeader>
                     <CardContent className="space-y-4">
                         <div className="text-center">
@@ -84,7 +84,7 @@ export function QatarVisionSection() {
                         </p>
                          <div className="p-3 bg-muted rounded-lg text-center">
                             <p className="font-bold text-sm">Sovereign Investment Precedent</p>
-                            <p className="text-xs text-muted-foreground">Abu Dhabi's MGX invested $2B in Binance (May 2025), paid in stablecoins.</p>
+                            <p className="text-xs text-muted-foreground">Abu Dhabi&apos;s MGX invested $2B in Binance (May 2025), paid in stablecoins.</p>
                         </div>
                     </CardContent>
                 </Card>

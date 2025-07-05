@@ -98,7 +98,7 @@ export function MarketShareChart() {
       <CardHeader className="flex flex-row items-center justify-between">
         <div>
           <CardTitle>Unassailable Market Leadership</CardTitle>
-          <CardDescription>Binance's share of global spot trading volume vs. competitors.</CardDescription>
+          <CardDescription>Binance&apos;s share of global spot trading volume vs. competitors.</CardDescription>
         </div>
         <Button variant="ghost" size="icon" onClick={() => setChartType(chartType === "pie" ? "bar" : "pie")}>
           {chartType === 'pie' ? <Layers aria-hidden="true" /> : <SwitchCamera aria-hidden="true" />}

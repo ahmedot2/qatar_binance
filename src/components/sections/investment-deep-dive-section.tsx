@@ -15,10 +15,10 @@ const rights = [
 
 export function InvestmentDeepDiveSection() {
     return (
-        <AnimatedSection id="investment" className="bg-background/70">
+        <AnimatedSection id="investment" className="bg-transparent">
             <h2 className="section-title">V. Unlocking Value Creation</h2>
             <p className="section-subtitle">
-                A strategic $10B injection designed to maximize Qatar's influence and financial upside, fortified by robust governance and investor protections.
+                A strategic $10B injection designed to maximize Qatar&apos;s influence and financial upside, fortified by robust governance and investor protections.
             </p>
 
             <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 mt-12">
@@ -67,7 +67,7 @@ export function InvestmentDeepDiveSection() {
             <Card className="mt-8 bg-accent/10">
                 <CardHeader>
                     <CardTitle className="text-center text-accent">A Partnership Built on Trust & Alignment</CardTitle>
-                    <CardDescription className="text-center">Our structure ensures our interests are perfectly aligned with Qatar's success.</CardDescription>
+                    <CardDescription className="text-center">Our structure ensures our interests are perfectly aligned with Qatar&apos;s success.</CardDescription>
                 </CardHeader>
                 <CardContent>
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
@@ -77,7 +77,7 @@ export function InvestmentDeepDiveSection() {
                         </div>
                         <div className="p-4">
                             <div className="font-bold text-lg">Preferred Returns</div>
-                            <p className="text-xs text-muted-foreground">Ensuring Qatar's capital works first</p>
+                            <p className="text-xs text-muted-foreground">Ensuring Qatar&apos;s capital works first</p>
                         </div>
                         <div className="p-4">
                             <div className="font-bold text-lg">Capital Protection</div>

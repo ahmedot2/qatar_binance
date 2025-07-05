@@ -66,7 +66,7 @@ export function StrategicOpportunitySection() {
                     </CardHeader>
                     <CardContent>
                         <p className="text-muted-foreground">
-                            The market is expanding exponentially. <strong className="text-foreground">Abu Dhabi’s recent $2B investment</strong> validates the model and signals a closing window for foundational partners.
+                            The market is expanding exponentially. <strong className="text-foreground">Abu Dhabi&apos;s recent $2B investment</strong> validates the model and signals a closing window for foundational partners.
                         </p>
                     </CardContent>
                 </Card>

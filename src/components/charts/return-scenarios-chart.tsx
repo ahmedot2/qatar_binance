@@ -22,7 +22,7 @@ export function ReturnScenariosChart() {
     <Card>
       <CardHeader>
         <CardTitle>Compelling Return Scenarios</CardTitle>
-        <CardDescription>Projected returns based on growth cases for Binance's valuation over a 5-year horizon.</CardDescription>
+        <CardDescription>Projected returns based on growth cases for Binance&apos;s valuation over a 5-year horizon.</CardDescription>
       </CardHeader>
       <CardContent>
         <div className="h-[350px]">
