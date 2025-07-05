@@ -6,7 +6,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../ui
 
 export function ConclusionSection() {
     return (
-        <AnimatedSection id="contact" className="relative overflow-hidden bg-transparent">
+        <AnimatedSection id="contact" className="relative overflow-hidden bg-transparent py-24">
             <div className="relative z-10 text-center">
                 <h2 className="section-title">A Paradigm Shift: Architecting Tomorrow</h2>
                 <p className="section-subtitle">

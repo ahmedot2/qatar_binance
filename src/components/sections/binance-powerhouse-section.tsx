@@ -13,7 +13,7 @@ const complianceText = "Binance has transformed from its early decentralized roo
 
 export function BinancePowerhouseSection() {
     return (
-        <AnimatedSection id="binance" className="bg-transparent">
+        <AnimatedSection id="binance" className="bg-transparent py-24">
             <h2 className="section-title">II. Assessing a Global Ecosystem</h2>
             <p className="section-subtitle">
                 From disruptive innovator to a mature, regulated powerhouse, Binance&apos;s market dominance, explosive growth, and commitment to compliance create an unparalleled investment vehicle.

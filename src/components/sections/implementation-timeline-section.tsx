@@ -36,7 +36,7 @@ const timelineEvents = [
 
 export function ImplementationTimelineSection() {
     return (
-        <AnimatedSection id="timeline" className="bg-transparent">
+        <AnimatedSection id="timeline" className="bg-transparent py-24">
             <h2 className="section-title">VII. Laying the Groundwork: A Roadmap to Success</h2>
             <p className="section-subtitle">
                 A clear, phased roadmap ensures meticulous execution and collaborative progress, transforming vision into reality with defined milestones and clear accountability.

@@ -5,7 +5,7 @@ import { AnimatedCounter } from "../animated-counter"
 
 export function StrategicOpportunitySection() {
     return (
-        <AnimatedSection id="opportunity" className="bg-transparent">
+        <AnimatedSection id="opportunity" className="bg-transparent py-24">
             <div className="text-center">
                 <h2 className="section-title">I. The Strategic Opportunity</h2>
                 <p className="section-subtitle">

@@ -5,7 +5,7 @@ import { Map, Landmark, Briefcase, HandCoins, ShieldCheck, Scale, DollarSign } f
 
 export function QatarVisionSection() {
     return (
-        <AnimatedSection id="qatar" className="bg-transparent">
+        <AnimatedSection id="qatar" className="bg-transparent py-24">
             <h2 className="section-title">III. Qatar: A Visionary Digital Economy Hub</h2>
             <p className="section-subtitle">
                 Qatar&apos;s ambitious National Vision 2030 provides the ideal foundation for Binance&apos;s global headquarters, creating powerful synergies for economic diversification and technological sovereignty.

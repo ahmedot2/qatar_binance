@@ -17,8 +17,7 @@ export function HeroSection() {
                 Your browser does not support the video tag.
             </video>
             
-            <div className="absolute inset-0 bg-black/40 z-0"></div>
-            <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent z-0"></div>
+            <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/50 to-background z-0"></div>
 
             <div className="relative z-10 p-4">
                 <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tighter leading-tight">

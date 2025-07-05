@@ -15,53 +15,52 @@ const rights = [
 
 export function InvestmentDeepDiveSection() {
     return (
-        <AnimatedSection id="investment" className="bg-transparent">
+        <AnimatedSection id="investment" className="bg-transparent py-24">
             <h2 className="section-title">V. Unlocking Value Creation</h2>
             <p className="section-subtitle">
-                A strategic $10B injection designed to maximize Qatar&apos;s influence and financial upside, fortified by robust governance and investor protections.
+                A strategic $10B injection designed to maximize Qatar's influence and financial upside, fortified by robust governance and investor protections.
             </p>
 
-            <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 mt-12">
-                <div className="lg:col-span-3">
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-12 items-start">
+                <div className="lg:col-span-2 lg:row-span-2">
                     <ReturnScenariosChart />
                 </div>
-                <div className="lg:col-span-2 space-y-8">
-                     <Card>
-                        <CardHeader>
-                            <CardTitle>The Strategic Stake</CardTitle>
-                        </CardHeader>
-                        <CardContent className="space-y-4">
-                            <div>
-                                <Badge variant="outline">Investment</Badge>
-                                <div className="font-bold text-3xl mt-1">
-                                    <AnimatedCounter value={10} prefix="$" suffix=" Billion" />
-                                </div>
-                                <p className="text-xs text-muted-foreground">In two equal tranches (closing + 12 months)</p>
+                
+                <Card>
+                    <CardHeader>
+                        <CardTitle>The Strategic Stake</CardTitle>
+                    </CardHeader>
+                    <CardContent className="space-y-4">
+                        <div>
+                            <Badge variant="outline">Investment</Badge>
+                            <div className="font-bold text-3xl mt-1">
+                                <AnimatedCounter value={10} prefix="$" suffix=" Billion" />
                             </div>
-                            <div>
-                                <Badge variant="outline">Equity Stake</Badge>
-                                <div className="font-bold text-3xl mt-1">
-                                    <AnimatedCounter value={6.5} decimals={1} prefix="~" suffix="%" />
-                                </div>
-                                <p className="text-xs text-muted-foreground">at a $155B post-money valuation</p>
+                            <p className="text-xs text-muted-foreground">In two equal tranches (closing + 12 months)</p>
+                        </div>
+                        <div>
+                            <Badge variant="outline">Equity Stake</Badge>
+                            <div className="font-bold text-3xl mt-1">
+                                <AnimatedCounter value={6.5} decimals={1} prefix="~" suffix="%" />
                             </div>
-                        </CardContent>
-                    </Card>
+                            <p className="text-xs text-muted-foreground">at a $155B post-money valuation</p>
+                        </div>
+                    </CardContent>
+                </Card>
 
-                    <Card>
-                        <CardHeader>
-                            <CardTitle>Fortified Governance</CardTitle>
-                        </CardHeader>
-                        <CardContent className="space-y-3">
-                           {rights.map((right, index) => (
-                                <div key={index} className="flex items-center gap-3">
-                                    <right.icon className="w-5 h-5 text-primary" aria-hidden="true" />
-                                    <span className="text-sm text-muted-foreground">{right.text}</span>
-                                </div>
-                           ))}
-                        </CardContent>
-                    </Card>
-                </div>
+                <Card>
+                    <CardHeader>
+                        <CardTitle>Fortified Governance</CardTitle>
+                    </CardHeader>
+                    <CardContent className="space-y-3">
+                        {rights.map((right, index) => (
+                            <div key={index} className="flex items-center gap-3">
+                                <right.icon className="w-5 h-5 text-primary" aria-hidden="true" />
+                                <span className="text-sm text-muted-foreground">{right.text}</span>
+                            </div>
+                        ))}
+                    </CardContent>
+                </Card>
             </div>
 
             <Card className="mt-8 bg-accent/10">
@@ -83,7 +82,7 @@ export function InvestmentDeepDiveSection() {
                             <div className="font-bold text-lg">Capital Protection</div>
                             <p className="text-xs text-muted-foreground">Return of capital before profit-sharing</p>
                         </div>
-                         <div className="p-4">
+                            <div className="p-4">
                             <div className="font-bold text-lg">Full Transparency</div>
                             <p className="text-xs text-muted-foreground">Standard protections and reporting</p>
                         </div>
