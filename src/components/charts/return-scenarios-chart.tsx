@@ -19,13 +19,13 @@ const data = [
 
 export function ReturnScenariosChart() {
   return (
-    <Card>
+    <Card className="h-full flex flex-col">
       <CardHeader>
         <CardTitle>Compelling Return Scenarios</CardTitle>
         <CardDescription>Projected returns based on growth cases for Binance&apos;s valuation over a 5-year horizon.</CardDescription>
       </CardHeader>
-      <CardContent>
-        <div className="h-[350px]">
+      <CardContent className="flex-1">
+        <div className="w-full h-full min-h-[300px]">
           <ResponsiveContainer width="100%" height="100%">
             <BarChart data={data}>
                 <XAxis
