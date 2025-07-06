@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react"
 import { Button } from "@/components/ui/button"
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
+import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet"
 import { Menu } from "lucide-react"
 
 const navLinks = [
@@ -51,6 +51,10 @@ export function Header() {
                                 </Button>
                             </SheetTrigger>
                             <SheetContent side="right" className="bg-white/5 backdrop-blur-lg border-l border-white/10 shadow-glass-inset">
+                                <SheetHeader className="sr-only">
+                                  <SheetTitle>Menu</SheetTitle>
+                                  <SheetDescription>Main navigation menu</SheetDescription>
+                                </SheetHeader>
                                 <nav className="flex flex-col space-y-4 mt-8">
                                     {navLinks.map((link) => (
                                         <a key={link.href} href={link.href} className="text-lg font-medium text-foreground transition-colors hover:text-primary">
