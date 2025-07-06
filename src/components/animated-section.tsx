@@ -16,34 +16,30 @@ export function AnimatedSection({ children, className, id, ...props }: AnimatedS
   const sectionRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
-    const ctx = gsap.context(() => {
-      const section = sectionRef.current;
-      if (!section) return;
+    const section = sectionRef.current;
+    if (!section) return;
 
-      // A more robust way to animate: select all direct children of the section.
-      const elementsToAnimate = gsap.utils.toArray(section.children);
-      
-      if (elementsToAnimate.length === 0) return;
+    // A more robust way to animate: select all direct children of the section.
+    const elementsToAnimate = gsap.utils.toArray(section.children);
+    
+    if (elementsToAnimate.length === 0) return;
 
-      // Animate all direct children with a stagger effect.
-      // This is more robust than looking for specific classes.
-      gsap.from(elementsToAnimate, {
-        opacity: 0,
-        y: 30,
-        ease: 'power3.out',
-        duration: 0.8,
-        stagger: 0.15,
-        scrollTrigger: {
-          trigger: section,
-          start: 'top 80%',
-          toggleActions: 'play none none none',
-        },
-      });
+    // Animate all direct children with a stagger effect.
+    // This is more robust than looking for specific classes.
+    gsap.from(elementsToAnimate, {
+      opacity: 0,
+      y: 30,
+      ease: 'power3.out',
+      duration: 0.8,
+      stagger: 0.15,
+      scrollTrigger: {
+        trigger: section,
+        start: 'top 80%',
+        toggleActions: 'play none none none',
+      },
+    });
 
-    }, sectionRef);
-
-    return () => ctx.revert(); // cleanup
-  }, []);
+  }, sectionRef);
 
   return (
     <section
