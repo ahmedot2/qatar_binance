@@ -28,7 +28,6 @@ export default function Home() {
               >
                 Your browser does not support the video tag.
               </video>
-              <div className="absolute inset-0 -z-10 bg-black/80" />
 
               <StrategicOpportunitySection />
               <BinancePowerhouseSection />

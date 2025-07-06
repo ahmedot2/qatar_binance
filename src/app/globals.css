@@ -61,7 +61,7 @@ body {
     --muted-foreground: 0 0% 63.9%;
     --accent: 340 71% 31%; /* #8A1538 - Qatar Maroon */
     --accent-foreground: 0 0% 98%;
-    --destructive: 0 72.2% 50.6%;
+    --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
     --border: 0 0% 20%;
     --input: 0 0% 20%;
@@ -94,9 +94,11 @@ body {
 @layer utilities {
   .section-title {
     @apply text-4xl md:text-5xl font-bold tracking-tighter text-center;
+    text-shadow: 0 2px 4px rgb(0 0 0 / 0.5);
   }
   .section-subtitle {
     @apply mt-4 text-lg text-muted-foreground text-center max-w-3xl mx-auto;
+    text-shadow: 0 1px 3px rgb(0 0 0 / 0.5);
   }
   .chart-container {
     @apply w-full h-[300px] md:h-[400px];
