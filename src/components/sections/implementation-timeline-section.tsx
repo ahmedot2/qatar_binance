@@ -1,4 +1,6 @@
 import { AnimatedSection } from "@/components/animated-section"
+import { Card, CardContent } from "@/components/ui/card"
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel"
 import { Handshake, FileText, Banknote, Rocket, CheckCircle } from "lucide-react"
 
 const timelineEvents = [
@@ -37,27 +39,44 @@ const timelineEvents = [
 export function ImplementationTimelineSection() {
     return (
         <AnimatedSection id="timeline" className="bg-transparent py-24">
-            <h2 className="section-title">VII. Laying the Groundwork: A Roadmap to Success</h2>
+            <h2 className="section-title">VII. A Roadmap to Success</h2>
             <p className="section-subtitle">
-                A clear, phased roadmap ensures meticulous execution and collaborative progress, transforming vision into reality with defined milestones and clear accountability.
+                A clear, phased roadmap ensures meticulous execution, transforming vision into reality with defined milestones and clear accountability.
             </p>
 
-            <div className="relative mt-16 max-w-3xl mx-auto">
-                <div className="absolute left-6 top-0 h-full w-px bg-border" aria-hidden="true" />
-                <div className="relative flex flex-col gap-12">
-                    {timelineEvents.map((item, index) => (
-                         <div key={index} className="relative pl-16">
-                            <div className="absolute left-6 top-1 h-12 w-12 -translate-x-1/2 rounded-full bg-background border-2 border-primary flex items-center justify-center">
-                                <item.icon className="h-6 w-6 text-primary" aria-hidden="true" />
-                            </div>
-                            <div className="flex-1">
-                                <p className="text-sm font-semibold text-primary">{item.phase}</p>
-                                <h4 className="mt-1 text-xl font-bold tracking-tight">{item.title}</h4>
-                                <p className="mt-2 text-muted-foreground">{item.description}</p>
-                            </div>
-                        </div>
-                    ))}
-                </div>
+            <div className="mt-16">
+                 <Carousel
+                    opts={{
+                        align: "start",
+                    }}
+                    className="w-full"
+                >
+                    <CarouselContent className="-ml-8">
+                        {timelineEvents.map((item, index) => (
+                            <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3 pl-8">
+                                <div className="p-1 h-full">
+                                    <Card className="h-full flex flex-col group overflow-hidden">
+                                        <CardContent className="p-6 flex-1 flex flex-col items-start relative">
+                                            <div className="absolute top-4 right-6 text-7xl font-bold text-primary/10 transition-all duration-300 group-hover:text-primary/20 group-hover:scale-110">
+                                                0{index + 1}
+                                            </div>
+                                            <div className="bg-primary/10 p-3 rounded-lg self-start z-10">
+                                                <item.icon className="w-8 h-8 text-primary" aria-hidden="true" />
+                                            </div>
+                                            <div className="mt-6 z-10">
+                                                <p className="text-sm font-semibold text-primary">{item.phase}</p>
+                                                <h4 className="mt-1 text-xl font-bold tracking-tight">{item.title}</h4>
+                                                <p className="mt-2 text-muted-foreground flex-1">{item.description}</p>
+                                            </div>
+                                        </CardContent>
+                                    </Card>
+                                </div>
+                            </CarouselItem>
+                        ))}
+                    </CarouselContent>
+                    <CarouselPrevious className="hidden md:flex" />
+                    <CarouselNext className="hidden md:flex" />
+                </Carousel>
             </div>
 
             <div className="mt-16 text-center max-w-3xl mx-auto">
