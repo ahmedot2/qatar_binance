@@ -16,7 +16,7 @@ export default function Home() {
       <Header />
       <main className="flex-1">
         <HeroSection />
-        <div className="relative isolate dark">
+        <div className="relative isolate">
             <video
               autoPlay
               loop
@@ -27,7 +27,7 @@ export default function Home() {
             >
               Your browser does not support the video tag.
             </video>
-            <div className="absolute inset-0 -z-10 bg-background/85" />
+            <div className="absolute inset-0 -z-10 bg-background/95" />
 
             <StrategicOpportunitySection />
             <BinancePowerhouseSection />
