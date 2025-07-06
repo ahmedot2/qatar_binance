@@ -16,28 +16,30 @@ export default function Home() {
       <Header />
       <main className="flex-1">
         <HeroSection />
-        <div className="relative isolate text-neutral-200 [&_.section-subtitle]:text-neutral-300">
-            <video
-              autoPlay
-              loop
-              muted
-              playsInline
-              className="absolute -z-20 w-full h-full object-cover"
-              src="/videos/main-background.mp4"
-            >
-              Your browser does not support the video tag.
-            </video>
-            <div className="absolute inset-0 -z-10 bg-black/80" />
+        <div className="dark">
+          <div className="relative isolate">
+              <video
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="absolute -z-20 w-full h-full object-cover"
+                src="/videos/main-background.mp4"
+              >
+                Your browser does not support the video tag.
+              </video>
+              <div className="absolute inset-0 -z-10 bg-black/80" />
 
-            <StrategicOpportunitySection />
-            <BinancePowerhouseSection />
-            <QatarVisionSection />
-            <DohaHQSection />
-            <InvestmentDeepDiveSection />
-            <JointInitiativesSection />
-            <ImplementationTimelineSection />
-            <PitchDeckSection />
-            <ConclusionSection />
+              <StrategicOpportunitySection />
+              <BinancePowerhouseSection />
+              <QatarVisionSection />
+              <DohaHQSection />
+              <InvestmentDeepDiveSection />
+              <JointInitiativesSection />
+              <ImplementationTimelineSection />
+              <PitchDeckSection />
+              <ConclusionSection />
+          </div>
         </div>
       </main>
     </div>
