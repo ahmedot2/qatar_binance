@@ -94,11 +94,9 @@ body {
 @layer utilities {
   .section-title {
     @apply text-4xl md:text-5xl font-bold tracking-tighter text-center;
-    text-shadow: 0 2px 4px rgb(0 0 0 / 0.5);
   }
   .section-subtitle {
     @apply mt-4 text-lg text-muted-foreground text-center max-w-3xl mx-auto;
-    text-shadow: 0 1px 3px rgb(0 0 0 / 0.5);
   }
   .chart-container {
     @apply w-full h-[300px] md:h-[400px];
