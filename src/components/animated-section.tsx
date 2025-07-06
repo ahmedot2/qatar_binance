@@ -23,16 +23,20 @@ export function AnimatedSection({ children, className, id, ...props }: AnimatedS
       const timeline = gsap.timeline({
         scrollTrigger: {
           trigger: section,
-          start: 'top 75%',
+          start: 'top 80%',
           toggleActions: 'play none none none',
         },
       });
 
       const title = section.querySelector('.section-title');
       const subtitle = section.querySelector('.section-subtitle');
-      // A more robust selector for grid items and cards
-      const items = section.querySelectorAll('.grid > *, .mt-12 > *, .relative.mt-16, .mt-16.text-center');
 
+      // Robustly select all direct children of the section that are not the title or subtitle.
+      const contentElements = gsap.utils.toArray(section.children).filter(child => {
+        const element = child as Element;
+        return !element.matches('.section-title') && !element.matches('.section-subtitle');
+      });
+      
       if (title) {
         timeline.from(title, {
           opacity: 0,
@@ -48,17 +52,17 @@ export function AnimatedSection({ children, className, id, ...props }: AnimatedS
           y: 30,
           duration: 0.8,
           ease: 'power3.out',
-        }, "-=0.6"); // Overlap with title animation
+        }, "-=0.6");
       }
 
-      if (items.length > 0) {
-        timeline.from(items, {
+      if (contentElements.length > 0) {
+        timeline.from(contentElements, {
           opacity: 0,
           y: 30,
           stagger: 0.15,
-          duration: 0.6,
+          duration: 0.8,
           ease: 'power3.out',
-        }, "-=0.5"); // Overlap with subtitle animation
+        }, "-=0.5");
       }
 
     }, sectionRef);
