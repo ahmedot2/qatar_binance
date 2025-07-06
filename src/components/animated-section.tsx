@@ -39,7 +39,7 @@ export function AnimatedSection({ children, className, id, ...props }: AnimatedS
       },
     });
 
-  }, sectionRef);
+  }, []);
 
   return (
     <section
