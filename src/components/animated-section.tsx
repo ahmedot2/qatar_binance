@@ -20,50 +20,25 @@ export function AnimatedSection({ children, className, id, ...props }: AnimatedS
       const section = sectionRef.current;
       if (!section) return;
 
-      const timeline = gsap.timeline({
+      // A more robust way to animate: select all direct children of the section.
+      const elementsToAnimate = gsap.utils.toArray(section.children);
+      
+      if (elementsToAnimate.length === 0) return;
+
+      // Animate all direct children with a stagger effect.
+      // This is more robust than looking for specific classes.
+      gsap.from(elementsToAnimate, {
+        opacity: 0,
+        y: 30,
+        ease: 'power3.out',
+        duration: 0.8,
+        stagger: 0.15,
         scrollTrigger: {
           trigger: section,
           start: 'top 80%',
           toggleActions: 'play none none none',
         },
       });
-
-      const title = section.querySelector('.section-title');
-      const subtitle = section.querySelector('.section-subtitle');
-
-      // Robustly select all direct children of the section that are not the title or subtitle.
-      const contentElements = gsap.utils.toArray(section.children).filter(child => {
-        const element = child as Element;
-        return !element.matches('.section-title') && !element.matches('.section-subtitle');
-      });
-      
-      if (title) {
-        timeline.from(title, {
-          opacity: 0,
-          y: 30,
-          duration: 0.8,
-          ease: 'power3.out',
-        });
-      }
-
-      if (subtitle) {
-        timeline.from(subtitle, {
-          opacity: 0,
-          y: 30,
-          duration: 0.8,
-          ease: 'power3.out',
-        }, "-=0.6");
-      }
-
-      if (contentElements.length > 0) {
-        timeline.from(contentElements, {
-          opacity: 0,
-          y: 30,
-          stagger: 0.15,
-          duration: 0.8,
-          ease: 'power3.out',
-        }, "-=0.5");
-      }
 
     }, sectionRef);
 
