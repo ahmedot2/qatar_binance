@@ -2,6 +2,7 @@ import { AnimatedSection } from "@/components/animated-section"
 import { Card, CardContent, CardHeader, CardTitle, CardFooter } from "@/components/ui/card"
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel"
 import { Handshake, FileText, Banknote, Rocket, CheckCircle, Target } from "lucide-react"
+import { Badge } from "@/components/ui/badge"
 
 const timelineEvents = [
     {
@@ -79,33 +80,36 @@ export function ImplementationTimelineSection() {
                 </Carousel>
             </div>
 
-            <div className="mt-24 grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-                <Card className="border-accent/50 hover:border-accent/100">
+            <div className="mt-24 grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <Card className="lg:col-span-2 border-primary/50 hover:border-primary/100 flex flex-col justify-between">
                     <CardHeader>
-                        <CardTitle className="flex items-center justify-between">
-                            <span>Decision Point</span>
-                            <Target className="w-7 h-7 text-accent" />
+                         <CardTitle className="flex items-center gap-4">
+                            <Rocket className="w-8 h-8 text-primary" />
+                            <span>Immediate Action Required</span>
                         </CardTitle>
                     </CardHeader>
                     <CardContent>
-                        <p className="text-lg text-muted-foreground">The mandate to proceed with negotiations.</p>
+                        <p className="text-xl text-foreground">
+                            Authorize The Ark to formally present this investment proposal to Binance leadership.
+                        </p>
                     </CardContent>
                     <CardFooter>
-                        <p className="text-xs text-muted-foreground">Awaiting formal approval from leadership.</p>
+                        <p className="text-sm text-muted-foreground">This is the critical next step in the engagement process.</p>
                     </CardFooter>
                 </Card>
-                <Card className="border-primary/50 hover:border-primary/100">
+
+                <Card className="border-accent/50 hover:border-accent/100 flex flex-col justify-between">
                     <CardHeader>
-                         <CardTitle className="flex items-center justify-between">
-                            <span>Immediate Action</span>
-                            <Rocket className="w-7 h-7 text-primary" />
+                        <CardTitle className="flex items-center gap-4">
+                            <Target className="w-8 h-8 text-accent" />
+                            <span>Decision Point</span>
                         </CardTitle>
                     </CardHeader>
                     <CardContent>
-                        <p className="text-lg text-muted-foreground">Authorize The Ark to formally present this proposal to Binance leadership.</p>
+                        <p className="text-lg text-foreground">The mandate to proceed with negotiations.</p>
                     </CardContent>
                     <CardFooter>
-                        <p className="text-xs text-muted-foreground">The next step in the engagement process.</p>
+                        <Badge variant="outline" className="border-accent text-accent">Awaiting Formal Approval</Badge>
                     </CardFooter>
                 </Card>
             </div>
