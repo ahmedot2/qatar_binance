@@ -19,21 +19,21 @@ export function StrategicOpportunitySection() {
                         <CardTitle className="text-center">Market at an Inflection Point</CardTitle>
                     </CardHeader>
                     <CardContent className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
-                        <div className="stat-card bg-transparent border-0 shadow-none p-4">
+                        <div className="rounded-2xl border border-white/5 bg-white/[.02] p-6 shadow-glass-inset backdrop-blur-sm flex flex-col items-center justify-center text-center transition-all duration-300 hover:bg-white/5">
                             <TrendingUp className="w-10 h-10 text-primary mb-2" aria-hidden="true" />
                             <div className="text-3xl font-bold">
                                 <AnimatedCounter value={1.2} decimals={1} suffix="T" prefix="$" />+
                             </div>
                             <p className="text-sm text-muted-foreground">Current Digital Asset Market</p>
                         </div>
-                        <div className="stat-card bg-transparent border-0 shadow-none p-4">
+                        <div className="rounded-2xl border border-white/5 bg-white/[.02] p-6 shadow-glass-inset backdrop-blur-sm flex flex-col items-center justify-center text-center transition-all duration-300 hover:bg-white/5">
                             <Target className="w-10 h-10 text-primary mb-2" aria-hidden="true" />
                             <div className="text-3xl font-bold">
                                 <AnimatedCounter value={16} suffix="T" prefix="$" />
                             </div>
                             <p className="text-sm text-muted-foreground">Projected Market Size by 2030</p>
                         </div>
-                        <div className="stat-card bg-transparent border-0 shadow-none p-4">
+                        <div className="rounded-2xl border border-white/5 bg-white/[.02] p-6 shadow-glass-inset backdrop-blur-sm flex flex-col items-center justify-center text-center transition-all duration-300 hover:bg-white/5">
                             <Briefcase className="w-10 h-10 text-primary mb-2" aria-hidden="true" />
                             <div className="text-3xl font-bold">
                                 <AnimatedCounter value={90} suffix="%" />
