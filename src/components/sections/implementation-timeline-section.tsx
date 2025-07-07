@@ -1,37 +1,42 @@
 import { AnimatedSection } from "@/components/animated-section"
-import { Card, CardContent, CardHeader, CardTitle, CardFooter } from "@/components/ui/card"
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel"
-import { Handshake, FileText, Banknote, Rocket, CheckCircle, Target } from "lucide-react"
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
+import { Handshake, FileText, Banknote, Rocket, CheckCircle, Target, Flag } from "lucide-react"
 import { Badge } from "@/components/ui/badge"
+import { cn } from "@/lib/utils"
 
 const timelineEvents = [
     {
         icon: Handshake,
-        phase: "Phase 1: Engagement & Alignment (July 2025)",
+        phase: "Phase 1: Engagement & Alignment",
+        date: "July 2025",
         title: "Strategic Summit",
         description: "Leadership summit in Doha to formalize partnership vision and objectives."
     },
     {
         icon: FileText,
-        phase: "Phase 2: Framework & Diligence (Aug - Oct 2025)",
+        phase: "Phase 2: Framework & Diligence",
+        date: "Aug - Oct 2025",
         title: "Definitive Agreements",
         description: "Finalize term sheet, governance, and complete financial and legal due diligence with regulatory sign-off."
     },
     {
         icon: Banknote,
-        phase: "Phase 3: Initial Investment (Nov 2025)",
+        phase: "Phase 3: Initial Investment",
+        date: "Nov 2025",
         title: "Tranche 1 Closing",
         description: "Initial $5B capital injection to formalize Qatar's strategic stake."
     },
     {
         icon: Rocket,
-        phase: "Phase 4: Ecosystem Activation (Dec 2025)",
+        phase: "Phase 4: Ecosystem Activation",
+        date: "Dec 2025",
         title: "Joint Initiative Kick-off",
         description: "Launch Regulatory Sandbox, Binance Academy, and announce Doha as the home for Binance Blockchain Week."
     },
     {
         icon: CheckCircle,
-        phase: "Phase 5: Full Deployment (Q2 2026)",
+        phase: "Phase 5: Full Deployment",
+        date: "Q2 2026",
         title: "Tranche 2 Closing",
         description: "Final $5B investment, cementing the long-term strategic partnership and HQ establishment."
     }
@@ -45,43 +50,87 @@ export function ImplementationTimelineSection() {
                 A clear, phased roadmap ensures meticulous execution, transforming vision into reality with defined milestones and clear accountability.
             </p>
 
-            <div className="mt-16">
-                 <Carousel
-                    opts={{
-                        align: "start",
-                    }}
-                    className="w-full"
-                >
-                    <CarouselContent className="-ml-8">
-                        {timelineEvents.map((item, index) => (
-                            <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3 pl-8">
-                                <div className="p-1 h-full">
-                                    <Card className="h-full flex flex-col group overflow-hidden">
-                                        <CardContent className="p-6 flex-1 flex flex-col items-start relative">
-                                            <div className="absolute top-4 right-6 text-7xl font-bold text-primary/10 transition-all duration-300 group-hover:text-primary/20 group-hover:scale-110">
-                                                0{index + 1}
-                                            </div>
-                                            <div className="bg-primary/10 p-3 rounded-lg self-start z-10">
-                                                <item.icon className="w-8 h-8 text-primary" aria-hidden="true" />
-                                            </div>
-                                            <div className="mt-6 z-10">
-                                                <p className="text-sm font-semibold text-primary">{item.phase}</p>
-                                                <h4 className="mt-1 text-xl font-bold tracking-tight">{item.title}</h4>
-                                                <p className="mt-2 text-muted-foreground flex-1">{item.description}</p>
-                                            </div>
-                                        </CardContent>
-                                    </Card>
+            <div className="relative mt-20 container max-w-5xl mx-auto px-4">
+                {/* Vertical line */}
+                <div className="absolute left-6 h-full w-0.5 bg-border md:left-1/2 md:-translate-x-1/2" aria-hidden="true" />
+
+                <div className="space-y-20">
+                    {/* Start Point */}
+                    <div className="relative">
+                        <div className="md:flex md:justify-end">
+                            <div className="md:w-1/2 md:pr-14">
+                                <h3 className="pl-12 text-2xl font-bold text-primary md:pl-0 md:text-right">START</h3>
+                            </div>
+                        </div>
+                        <div className="absolute left-6 top-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-primary ring-8 ring-background md:left-1/2" />
+                    </div>
+
+                    {/* Timeline Items */}
+                    {timelineEvents.map((item, index) => (
+                        <div key={index} className="relative">
+                            <div className={cn("md:flex items-center", index % 2 !== 0 && "md:flex-row-reverse")}>
+                                <div className="md:w-1/2 md:pr-14">
+                                    {index % 2 === 0 && (
+                                        <Card className="ml-12 md:ml-0">
+                                            <CardHeader>
+                                                <p className="text-sm font-semibold text-primary">{item.phase} - <span className="text-muted-foreground">{item.date}</span></p>
+                                                <CardTitle>{item.title}</CardTitle>
+                                            </CardHeader>
+                                            <CardContent>
+                                                <p className="text-muted-foreground">{item.description}</p>
+                                            </CardContent>
+                                        </Card>
+                                    )}
                                 </div>
-                            </CarouselItem>
-                        ))}
-                    </CarouselContent>
-                    <CarouselPrevious className="hidden md:flex" />
-                    <CarouselNext className="hidden md:flex" />
-                </Carousel>
+                                <div className="md:w-1/2 md:pl-14">
+                                    {index % 2 !== 0 && (
+                                        <Card className="ml-12 md:ml-0">
+                                            <CardHeader>
+                                                <p className="text-sm font-semibold text-primary">{item.phase} - <span className="text-muted-foreground">{item.date}</span></p>
+                                                <CardTitle>{item.title}</CardTitle>
+                                            </CardHeader>
+                                            <CardContent>
+                                                <p className="text-muted-foreground">{item.description}</p>
+                                            </CardContent>
+                                        </Card>
+                                    )}
+                                </div>
+                            </div>
+                            <div className="absolute top-1/2 -translate-y-1/2 left-6 md:left-1/2 -translate-x-1/2">
+                                <div className="h-14 w-14 rounded-full bg-background flex items-center justify-center ring-8 ring-background">
+                                    <div className="bg-primary/10 p-3 rounded-full">
+                                        <item.icon className="w-6 h-6 text-primary" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    ))}
+                    
+                    {/* Goal Point */}
+                    <div className="relative">
+                        <div className={cn("md:flex items-center", timelineEvents.length % 2 === 0 && "md:flex-row-reverse")}>
+                             <div className="md:w-1/2 md:pr-14">
+                                {timelineEvents.length % 2 !== 0 && (
+                                    <h3 className="pl-12 text-2xl font-bold text-primary md:pl-0 md:text-right">GOAL</h3>
+                                )}
+                             </div>
+                             <div className="md:w-1/2 md:pl-14">
+                                {timelineEvents.length % 2 === 0 && (
+                                     <h3 className="pl-12 text-2xl font-bold text-primary md:ml-0">GOAL</h3>
+                                )}
+                             </div>
+                        </div>
+                        <div className="absolute left-6 top-1/2 -translate-y-1/2 -translate-x-1/2 md:left-1/2">
+                            <div className="h-6 w-6 rounded-full bg-primary flex items-center justify-center ring-8 ring-background">
+                                <Flag className="h-3 w-3 text-primary-foreground" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            <div className="mt-24 grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-                <Card className="lg:col-span-2 border-primary/50 hover:border-primary/100 flex flex-col justify-between">
+            <div className="mt-24 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <Card className="md:col-span-2 border-primary/50 hover:border-primary/100 flex flex-col justify-between">
                     <CardHeader>
                          <CardTitle className="flex items-center gap-4">
                             <Rocket className="w-8 h-8 text-primary" />
@@ -94,7 +143,7 @@ export function ImplementationTimelineSection() {
                         </p>
                     </CardContent>
                     <CardFooter>
-                        <p className="text-sm text-muted-foreground">This is the critical next step in the engagement process.</p>
+                        <p className="text-sm text-muted-foreground">The next step in the engagement process.</p>
                     </CardFooter>
                 </Card>
 
