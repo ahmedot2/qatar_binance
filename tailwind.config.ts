@@ -91,17 +91,10 @@ export default {
             height: '0',
           },
         },
-        'aurora-drift': {
-          '0%': { transform: 'translate(0, 0)' },
-          '50%': { transform: 'translate(100px, 80px)' },
-          '100%': { transform: 'translate(0, 0)' },
-        },
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
-        'aurora-1': 'aurora-drift 25s ease-in-out infinite',
-        'aurora-2': 'aurora-drift 30s ease-in-out -10s infinite',
       },
     },
   },

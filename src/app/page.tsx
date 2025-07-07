@@ -28,11 +28,6 @@ export default function Home() {
               Your browser does not support the video tag.
             </video>
             
-            <div aria-hidden="true" className="absolute inset-0 -z-10 overflow-hidden">
-                <div className="absolute left-1/4 top-0 h-96 w-96 animate-aurora-1 rounded-full bg-primary/20 blur-3xl" />
-                <div className="absolute bottom-0 right-1/4 h-96 w-96 animate-aurora-2 rounded-full bg-accent/20 blur-3xl" />
-            </div>
-
             <div className="absolute inset-0 -z-10 bg-background/95" />
 
             <StrategicOpportunitySection />
