@@ -14,34 +14,32 @@ export function StrategicOpportunitySection() {
             </div>
 
             <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-                 <Card className="md:col-span-3">
-                     <CardHeader>
-                        <CardTitle className="text-center">Market at an Inflection Point</CardTitle>
-                    </CardHeader>
-                    <CardContent className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
-                        <div className="rounded-2xl border border-white/5 bg-white/[.02] p-6 shadow-glass-inset backdrop-blur-sm flex flex-col items-center justify-center text-center transition-all duration-300 hover:bg-white/5">
+                <div className="md:col-span-3 p-6 rounded-2xl border border-white/10 bg-white/5 shadow-lg shadow-black/10 shadow-glass-inset backdrop-blur-lg backdrop-saturate-150">
+                    <h3 className="text-2xl font-semibold text-center mb-6">Market at an Inflection Point</h3>
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+                        <div className="stat-card">
                             <TrendingUp className="w-10 h-10 text-primary mb-2" aria-hidden="true" />
                             <div className="text-3xl font-bold">
                                 <AnimatedCounter value={1.2} decimals={1} suffix="T" prefix="$" />+
                             </div>
                             <p className="text-sm text-muted-foreground">Current Digital Asset Market</p>
                         </div>
-                        <div className="rounded-2xl border border-white/5 bg-white/[.02] p-6 shadow-glass-inset backdrop-blur-sm flex flex-col items-center justify-center text-center transition-all duration-300 hover:bg-white/5">
+                        <div className="stat-card">
                             <Target className="w-10 h-10 text-primary mb-2" aria-hidden="true" />
                             <div className="text-3xl font-bold">
                                 <AnimatedCounter value={16} suffix="T" prefix="$" />
                             </div>
                             <p className="text-sm text-muted-foreground">Projected Market Size by 2030</p>
                         </div>
-                        <div className="rounded-2xl border border-white/5 bg-white/[.02] p-6 shadow-glass-inset backdrop-blur-sm flex flex-col items-center justify-center text-center transition-all duration-300 hover:bg-white/5">
+                        <div className="stat-card">
                             <Briefcase className="w-10 h-10 text-primary mb-2" aria-hidden="true" />
                             <div className="text-3xl font-bold">
                                 <AnimatedCounter value={90} suffix="%" />
                             </div>
                             <p className="text-sm text-muted-foreground">of Fortune 100 Exploring Blockchain</p>
                         </div>
-                    </CardContent>
-                </Card>
+                    </div>
+                </div>
 
                 <Card>
                     <CardHeader>
