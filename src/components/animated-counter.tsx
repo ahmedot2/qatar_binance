@@ -1,6 +1,7 @@
 "use client"
 
 import { useAnimatedCounter } from '@/hooks/use-animated-counter';
+import { useEffect, useRef, useState } from 'react';
 
 interface AnimatedCounterProps {
   value: number;
@@ -11,7 +12,34 @@ interface AnimatedCounterProps {
 }
 
 export function AnimatedCounter({ value, className, decimals = 0, prefix = '', suffix = '' }: AnimatedCounterProps) {
-  const count = useAnimatedCounter(value, 2000, 0);
+  const ref = useRef<HTMLSpanElement>(null);
+  const [inView, setInView] = useState(false);
+  
+  const count = useAnimatedCounter(value, inView, 2000, 0);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setInView(entry.isIntersecting);
+      },
+      {
+        rootMargin: '0px',
+        threshold: 0.1,
+      }
+    );
+
+    const currentRef = ref.current;
+    if (currentRef) {
+      observer.observe(currentRef);
+    }
+
+    return () => {
+      if (currentRef) {
+        observer.unobserve(currentRef);
+      }
+    };
+  }, []);
+
 
   const formatNumber = (num: number) => {
     return num.toLocaleString(undefined, {
@@ -21,7 +49,7 @@ export function AnimatedCounter({ value, className, decimals = 0, prefix = '', s
   };
 
   return (
-    <span className={className} role="status" aria-label={`${prefix}${formatNumber(value)}${suffix}`}>
+    <span ref={ref} className={className} role="status" aria-label={`${prefix}${formatNumber(value)}${suffix}`}>
       <span aria-hidden="true">
         {prefix}{formatNumber(count)}{suffix}
       </span>
