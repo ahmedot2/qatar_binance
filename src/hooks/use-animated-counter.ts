@@ -10,12 +10,6 @@ export function useAnimatedCounter(end: number, duration = 2000, start = 0) {
   const startTimeRef = useRef<number | null>(null);
 
   useEffect(() => {
-    const motionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
-    if (motionQuery.matches) {
-        setCount(end);
-        return;
-    }
-
     const animate = (timestamp: number) => {
       if (startTimeRef.current === null) {
         startTimeRef.current = timestamp;

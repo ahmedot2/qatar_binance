@@ -11,7 +11,7 @@ export function HeroSection() {
                 loop
                 muted
                 playsInline
-                className="absolute z-[-1] w-full h-full object-cover filter grayscale opacity-70"
+                className="absolute z-[-1] w-full h-full object-cover"
                 src="/videos/hero-background.mp4"
             >
                 Your browser does not support the video tag.
