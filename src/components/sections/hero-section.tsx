@@ -11,7 +11,7 @@ export function HeroSection() {
                 loop
                 muted
                 playsInline
-                className="absolute z-[-1] w-full h-full object-cover"
+                className="absolute z-[-1] w-full h-full object-cover filter grayscale opacity-70"
                 src="/videos/hero-background.mp4"
             >
                 Your browser does not support the video tag.
@@ -26,7 +26,7 @@ export function HeroSection() {
                     <span className="text-primary">Forging the Future of Global Finance</span>
                 </h1>
                 <p className="mt-6 max-w-3xl mx-auto text-lg md:text-xl text-neutral-200">
-                    A landmark partnership to establish Doha as the world&apos;s premier digital-asset hub and co-architect the future of the financial system.
+                    A landmark partnership to establish Doha as the world's premier digital-asset hub and co-architect the future of the financial system.
                 </p>
                 <div className="mt-10">
                     <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">

@@ -39,7 +39,7 @@ export function LazyContentWrapper({ children }: { children: ReactNode }) {
                         loop
                         muted
                         playsInline
-                        className="absolute -z-20 w-full h-full object-cover"
+                        className="absolute -z-20 w-full h-full object-cover filter grayscale opacity-70"
                         src="/videos/main-background.mp4"
                     >
                         Your browser does not support the video tag.
