@@ -7,17 +7,23 @@ import { Badge } from "../ui/badge"
 import { BarChart, Users, Landmark } from "lucide-react"
 import { TextSummarizer } from "../text-summarizer"
 import { AnimatedCounter } from "../animated-counter"
+import DecryptedText from "../decrypted-text"
 
 const complianceText = "Binance has transformed from its early decentralized roots, navigating past regulatory challenges like the $4.3 billion U.S. settlement in 2023, to embrace a proactive and robust compliance posture under CEO Richard Teng. This strategic evolution involves establishing a centralized legal entity structure to enhance global trust and operational stability. The compliance team has expanded significantly to over 650 full-time employees, a 34% increase from November 2023, with over 1,000 total staff and contractors dedicated to compliance by the end of 2024. Binance has secured 21 regulatory approvals across multiple jurisdictions, including G7 nations, responded to approximately 65,000 law enforcement requests in 2024, and supported over 14,000 officials globally. This pivot is further exemplified by Binance's proactive engagement with governments, advising them on establishing digital asset reserves, showcasing a deep commitment to formalization, collaboration, and industry leadership."
-
+const subtitle = "From disruptive innovator to a mature, regulated powerhouse, Binance's market dominance, explosive growth, and commitment to compliance create an unparalleled investment vehicle."
 
 export function BinancePowerhouseSection() {
     return (
         <AnimatedSection id="binance" className="bg-transparent py-24">
             <h2 className="section-title">II. Assessing a Global Ecosystem</h2>
-            <p className="section-subtitle">
-                From disruptive innovator to a mature, regulated powerhouse, Binance&apos;s market dominance, explosive growth, and commitment to compliance create an unparalleled investment vehicle.
-            </p>
+             <DecryptedText
+                text={subtitle}
+                parentClassName="section-subtitle"
+                animateOn="view"
+                sequential={true}
+                speed={20}
+                encryptedClassName="text-primary/50"
+            />
 
             <div className="mt-12 grid grid-cols-1 lg:grid-cols-4 gap-8">
                 <div className="lg:col-span-2">

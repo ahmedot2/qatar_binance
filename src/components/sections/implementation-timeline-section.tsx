@@ -3,6 +3,7 @@ import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/componen
 import { Handshake, FileText, Banknote, Rocket, CheckCircle, Target, Flag } from "lucide-react"
 import { Badge } from "@/components/ui/badge"
 import { cn } from "@/lib/utils"
+import DecryptedText from "../decrypted-text"
 
 const timelineEvents = [
     {
@@ -42,13 +43,20 @@ const timelineEvents = [
     }
 ]
 
+const subtitle = "A clear, phased roadmap ensures meticulous execution, transforming vision into reality with defined milestones and clear accountability."
+
 export function ImplementationTimelineSection() {
     return (
         <AnimatedSection id="timeline" className="bg-transparent py-24">
             <h2 className="section-title">VII. A Roadmap to Success</h2>
-            <p className="section-subtitle">
-                A clear, phased roadmap ensures meticulous execution, transforming vision into reality with defined milestones and clear accountability.
-            </p>
+            <DecryptedText
+                text={subtitle}
+                parentClassName="section-subtitle"
+                animateOn="view"
+                sequential={true}
+                speed={20}
+                encryptedClassName="text-primary/50"
+            />
 
             <div className="relative mt-20 container max-w-5xl mx-auto px-4">
                 {/* Vertical line */}

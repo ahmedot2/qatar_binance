@@ -2,14 +2,22 @@ import { AnimatedSection } from "@/components/animated-section"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Map, Landmark, Briefcase, HandCoins, ShieldCheck, Scale, DollarSign } from "lucide-react"
+import DecryptedText from "../decrypted-text"
+
+const subtitle = "Qatar's ambitious National Vision 2030 provides the ideal foundation for Binance's global headquarters, creating powerful synergies for economic diversification and technological sovereignty."
 
 export function QatarVisionSection() {
     return (
         <AnimatedSection id="qatar" className="bg-transparent py-24">
             <h2 className="section-title">III. Qatar: A Visionary Digital Economy Hub</h2>
-            <p className="section-subtitle">
-                Qatar&apos;s ambitious National Vision 2030 provides the ideal foundation for Binance&apos;s global headquarters, creating powerful synergies for economic diversification and technological sovereignty.
-            </p>
+            <DecryptedText
+                text={subtitle}
+                parentClassName="section-subtitle"
+                animateOn="view"
+                sequential={true}
+                speed={20}
+                encryptedClassName="text-primary/50"
+            />
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
                 <Card className="lg:col-span-3">

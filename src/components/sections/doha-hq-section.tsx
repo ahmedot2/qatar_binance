@@ -2,6 +2,7 @@ import { AnimatedSection } from "@/components/animated-section"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table"
 import { CheckCircle2, XCircle } from "lucide-react"
+import DecryptedText from "../decrypted-text"
 
 const hubs = [
     { hub: 'Doha, Qatar', ownership: true, repatriation: true, tax: 'Competitive', judicial: 'English Common Law', infra: 'Cutting-Edge', incentives: true },
@@ -9,13 +10,20 @@ const hubs = [
     { hub: 'Singapore', ownership: true, repatriation: true, tax: 'Territorial', judicial: 'English Common Law', infra: 'Advanced', incentives: false },
 ]
 
+const subtitle = "Why Doha is not just an option, but the optimal strategic choice for Binance's centralized global headquarters, offering a unique combination of regulatory clarity, strategic alignment, and unparalleled government support."
+
 export function DohaHQSection() {
     return (
         <AnimatedSection id="doha-hq" className="bg-transparent py-24">
             <h2 className="section-title">IV. The Unbeatable Proposition: Doha as Binance&apos;s Global HQ</h2>
-            <p className="section-subtitle">
-                Why Doha is not just an option, but the optimal strategic choice for Binance&apos;s centralized global headquarters, offering a unique combination of regulatory clarity, strategic alignment, and unparalleled government support.
-            </p>
+            <DecryptedText
+                text={subtitle}
+                parentClassName="section-subtitle"
+                animateOn="view"
+                sequential={true}
+                speed={20}
+                encryptedClassName="text-primary/50"
+            />
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-12">
                 <Card>

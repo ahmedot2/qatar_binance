@@ -4,6 +4,7 @@ import { ReturnScenariosChart } from "@/components/charts/return-scenarios-chart
 import { Badge } from "@/components/ui/badge"
 import { Banknote, Users, BarChart, FileText, Lock } from "lucide-react"
 import { AnimatedCounter } from "../animated-counter"
+import DecryptedText from "../decrypted-text"
 
 const rights = [
     { icon: Users, text: "Board-observer seat" },
@@ -12,14 +13,20 @@ const rights = [
     { icon: Banknote, text: "Right-of-First-Offer on Secondary Sales" },
     { icon: Lock, text: "36-month Lock-up Period" },
 ]
+const subtitle = "A strategic $10B injection designed to maximize Qatar's influence and financial upside, fortified by robust governance and investor protections."
 
 export function InvestmentDeepDiveSection() {
     return (
         <AnimatedSection id="investment" className="bg-transparent py-24">
             <h2 className="section-title">V. Unlocking Value Creation</h2>
-            <p className="section-subtitle">
-                A strategic $10B injection designed to maximize Qatar's influence and financial upside, fortified by robust governance and investor protections.
-            </p>
+             <DecryptedText
+                text={subtitle}
+                parentClassName="section-subtitle"
+                animateOn="view"
+                sequential={true}
+                speed={20}
+                encryptedClassName="text-primary/50"
+            />
 
             <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 mt-12 items-stretch">
                 <div className="lg:col-span-3">

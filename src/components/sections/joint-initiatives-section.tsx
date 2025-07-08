@@ -2,6 +2,7 @@ import { AnimatedSection } from "@/components/animated-section"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { cn } from "@/lib/utils"
 import { GraduationCap, FlaskConical, LineChart, Rocket, CalendarDays } from "lucide-react"
+import DecryptedText from "../decrypted-text"
 
 const pillars = [
     {
@@ -35,14 +36,20 @@ const pillars = [
         className: "md:col-span-3 lg:col-span-3"
     }
 ]
+const subtitle = "Beyond a simple investment, this is a strategic alliance built on five foundational pillars designed to construct a world-leading digital asset ecosystem in Qatar."
 
 export function JointInitiativesSection() {
     return (
         <AnimatedSection id="initiatives" className="bg-transparent py-24">
             <h2 className="section-title">VI. The Five Pillars of Partnership</h2>
-            <p className="section-subtitle">
-                Beyond a simple investment, this is a strategic alliance built on five foundational pillars designed to construct a world-leading digital asset ecosystem in Qatar.
-            </p>
+            <DecryptedText
+                text={subtitle}
+                parentClassName="section-subtitle"
+                animateOn="view"
+                sequential={true}
+                speed={20}
+                encryptedClassName="text-primary/50"
+            />
 
             <div className="mt-12 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-8">
                 {pillars.map((item, index) => (

@@ -2,15 +2,23 @@ import { AnimatedSection } from "@/components/animated-section"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { PieChart, Timer, Handshake, TrendingUp, Target, Briefcase } from "lucide-react"
 import { AnimatedCounter } from "../animated-counter"
+import DecryptedText from "../decrypted-text"
+
+const subtitle = "The digital asset market is at a pivotal inflection point, projected to exceed $16 trillion by 2030. As institutional capital enters, Binance—the undisputed market leader—is selectively opening its equity to visionary sovereign partners. This presents a rare, time-sensitive window for Qatar to acquire a foundational stake in the future of finance."
 
 export function StrategicOpportunitySection() {
     return (
         <AnimatedSection id="opportunity" className="bg-transparent py-24">
             <div className="text-center">
                 <h2 className="section-title">I. The Strategic Opportunity</h2>
-                <p className="section-subtitle">
-                    The digital asset market is at a pivotal inflection point, projected to exceed $16 trillion by 2030. As institutional capital enters, Binance—the undisputed market leader—is selectively opening its equity to visionary sovereign partners. This presents a rare, time-sensitive window for Qatar to acquire a foundational stake in the future of finance.
-                </p>
+                <DecryptedText
+                    text={subtitle}
+                    parentClassName="section-subtitle"
+                    animateOn="view"
+                    sequential={true}
+                    speed={20}
+                    encryptedClassName="text-primary/50"
+                />
             </div>
 
             <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
