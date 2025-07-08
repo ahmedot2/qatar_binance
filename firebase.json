@@ -1,0 +1,13 @@
+
+{
+  "$schema": "https://firebase.google.com/schema/firebase-schema.json",
+  "hosting": {
+    "source": ".",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "appAssociation": "AUTO"
+  }
+}
