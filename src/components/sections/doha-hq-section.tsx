@@ -62,11 +62,11 @@ export function DohaHQSection() {
                                 <div className="space-y-3">
                                     <div className="flex justify-between items-center">
                                         <span className="text-sm text-muted-foreground">100% Foreign Ownership</span>
-                                        {hub.ownership ? <CheckCircle2 className="w-5 h-5 text-primary" aria-hidden="true" /> : <XCircle className="w-5 h-5 text-destructive" aria-hidden="true" />}
+                                        {hub.ownership ? <CheckCircle2 strokeWidth={1.5} className="w-5 h-5 text-primary" aria-hidden="true" /> : <XCircle strokeWidth={1.5} className="w-5 h-5 text-destructive" aria-hidden="true" />}
                                     </div>
                                     <div className="flex justify-between items-center">
                                         <span className="text-sm text-muted-foreground">100% Profit Repatriation</span>
-                                        {hub.repatriation ? <CheckCircle2 className="w-5 h-5 text-primary" aria-hidden="true" /> : <XCircle className="w-5 h-5 text-destructive" aria-hidden="true" />}
+                                        {hub.repatriation ? <CheckCircle2 strokeWidth={1.5} className="w-5 h-5 text-primary" aria-hidden="true" /> : <XCircle strokeWidth={1.5} className="w-5 h-5 text-destructive" aria-hidden="true" />}
                                     </div>
                                     <div className="flex justify-between items-center">
                                         <span className="text-sm text-muted-foreground">Judicial System</span>
@@ -78,7 +78,7 @@ export function DohaHQSection() {
                                     </div>
                                      <div className="flex justify-between items-center">
                                         <span className="text-sm text-muted-foreground">Govt. Incentives</span>
-                                        {hub.incentives ? <CheckCircle2 className="w-5 h-5 text-primary" aria-hidden="true" /> : <XCircle className="w-5 h-5 text-destructive" aria-hidden="true" />}
+                                        {hub.incentives ? <CheckCircle2 strokeWidth={1.5} className="w-5 h-5 text-primary" aria-hidden="true" /> : <XCircle strokeWidth={1.5} className="w-5 h-5 text-destructive" aria-hidden="true" />}
                                     </div>
                                 </div>
                             </div>
@@ -99,15 +99,15 @@ export function DohaHQSection() {
                             <TableBody>
                                 <TableRow>
                                     <TableCell className="font-medium">100% Foreign Ownership</TableCell>
-                                    <TableCell className="text-center"><CheckCircle2 className="w-5 h-5 text-primary mx-auto" aria-hidden="true" /></TableCell>
-                                    <TableCell className="text-center"><CheckCircle2 className="w-5 h-5 text-primary mx-auto" aria-hidden="true" /></TableCell>
-                                    <TableCell className="text-center"><CheckCircle2 className="w-5 h-5 text-primary mx-auto" aria-hidden="true" /></TableCell>
+                                    <TableCell className="text-center"><CheckCircle2 strokeWidth={1.5} className="w-5 h-5 text-primary mx-auto" aria-hidden="true" /></TableCell>
+                                    <TableCell className="text-center"><CheckCircle2 strokeWidth={1.5} className="w-5 h-5 text-primary mx-auto" aria-hidden="true" /></TableCell>
+                                    <TableCell className="text-center"><CheckCircle2 strokeWidth={1.5} className="w-5 h-5 text-primary mx-auto" aria-hidden="true" /></TableCell>
                                 </TableRow>
                                 <TableRow>
                                     <TableCell className="font-medium">100% Profit Repatriation</TableCell>
-                                    <TableCell className="text-center"><CheckCircle2 className="w-5 h-5 text-primary mx-auto" aria-hidden="true" /></TableCell>
-                                    <TableCell className="text-center"><CheckCircle2 className="w-5 h-5 text-primary mx-auto" aria-hidden="true" /></TableCell>
-                                    <TableCell className="text-center"><CheckCircle2 className="w-5 h-5 text-primary mx-auto" aria-hidden="true" /></TableCell>
+                                    <TableCell className="text-center"><CheckCircle2 strokeWidth={1.5} className="w-5 h-5 text-primary mx-auto" aria-hidden="true" /></TableCell>
+                                    <TableCell className="text-center"><CheckCircle2 strokeWidth={1.5} className="w-5 h-5 text-primary mx-auto" aria-hidden="true" /></TableCell>
+                                    <TableCell className="text-center"><CheckCircle2 strokeWidth={1.5} className="w-5 h-5 text-primary mx-auto" aria-hidden="true" /></TableCell>
                                 </TableRow>
                                 <TableRow>
                                     <TableCell className="font-medium">Judicial System</TableCell>
@@ -123,9 +123,9 @@ export function DohaHQSection() {
                                 </TableRow>
                                 <TableRow>
                                     <TableCell className="font-medium">Govt. Incentives</TableCell>
-                                    <TableCell className="text-center"><CheckCircle2 className="w-5 h-5 text-primary mx-auto" aria-hidden="true" /></TableCell>
-                                    <TableCell className="text-center"><CheckCircle2 className="w-5 h-5 text-primary mx-auto" aria-hidden="true" /></TableCell>
-                                    <TableCell className="text-center"><XCircle className="w-5 h-5 text-destructive mx-auto" aria-hidden="true" /></TableCell>
+                                    <TableCell className="text-center"><CheckCircle2 strokeWidth={1.5} className="w-5 h-5 text-primary mx-auto" aria-hidden="true" /></TableCell>
+                                    <TableCell className="text-center"><CheckCircle2 strokeWidth={1.5} className="w-5 h-5 text-primary mx-auto" aria-hidden="true" /></TableCell>
+                                    <TableCell className="text-center"><XCircle strokeWidth={1.5} className="w-5 h-5 text-destructive mx-auto" aria-hidden="true" /></TableCell>
                                 </TableRow>
                             </TableBody>
                         </Table>

@@ -99,7 +99,7 @@ export function ImplementationTimelineSection() {
                             <div className="absolute top-1/2 -translate-y-1/2 left-6 md:left-1/2 -translate-x-1/2">
                                 <div className="h-14 w-14 rounded-full bg-background flex items-center justify-center ring-8 ring-background">
                                     <div className="bg-primary/10 p-3 rounded-full">
-                                        <item.icon className="w-6 h-6 text-primary" />
+                                        <item.icon strokeWidth={1.5} className="w-6 h-6 text-primary" />
                                     </div>
                                 </div>
                             </div>
@@ -122,7 +122,7 @@ export function ImplementationTimelineSection() {
                         </div>
                         <div className="absolute left-6 top-1/2 -translate-y-1/2 -translate-x-1/2 md:left-1/2">
                             <div className="h-6 w-6 rounded-full bg-primary flex items-center justify-center ring-8 ring-background">
-                                <Flag className="h-3 w-3 text-primary-foreground" />
+                                <Flag strokeWidth={1.5} className="h-3 w-3 text-primary-foreground" />
                             </div>
                         </div>
                     </div>
@@ -133,7 +133,7 @@ export function ImplementationTimelineSection() {
                 <Card className="md:col-span-2 border-primary/50 hover:border-primary/100 flex flex-col justify-between">
                     <CardHeader>
                          <CardTitle className="flex items-center gap-4">
-                            <Rocket className="w-8 h-8 text-primary" />
+                            <Rocket strokeWidth={1.5} className="w-8 h-8 text-primary" />
                             <span>Immediate Action Required</span>
                         </CardTitle>
                     </CardHeader>
@@ -150,7 +150,7 @@ export function ImplementationTimelineSection() {
                 <Card className="border-accent/50 hover:border-accent/100 flex flex-col justify-between">
                     <CardHeader>
                         <CardTitle className="flex items-center gap-4">
-                            <Target className="w-8 h-8 text-accent" />
+                            <Target strokeWidth={1.5} className="w-8 h-8 text-accent" />
                             <span>Decision Point</span>
                         </CardTitle>
                     </CardHeader>

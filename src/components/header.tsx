@@ -1,3 +1,4 @@
+
 "use client"
 
 import { useEffect, useState } from "react"
@@ -47,7 +48,7 @@ export function Header() {
                         <Sheet>
                             <SheetTrigger asChild>
                                 <Button variant="ghost" size="icon">
-                                    <Menu />
+                                    <Menu strokeWidth={1.5} />
                                 </Button>
                             </SheetTrigger>
                             <SheetContent side="right" className="bg-white/5 backdrop-blur-lg border-l border-white/10 shadow-glass-inset">

@@ -19,17 +19,17 @@ export function QatarVisionSection() {
                     </CardHeader>
                     <CardContent className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
                         <div className="stat-card">
-                            <Landmark className="w-10 h-10 text-primary mb-2" aria-hidden="true" />
+                            <Landmark strokeWidth={1.5} className="w-10 h-10 text-primary mb-2" aria-hidden="true" />
                             <div className="text-3xl font-bold"> &gt;$200B</div>
                             <p className="text-sm text-muted-foreground">Infrastructure Investment</p>
                         </div>
                         <div className="stat-card">
-                            <DollarSign className="w-10 h-10 text-primary mb-2" aria-hidden="true" />
+                            <DollarSign strokeWidth={1.5} className="w-10 h-10 text-primary mb-2" aria-hidden="true" />
                             <div className="text-3xl font-bold">$11B</div>
                             <p className="text-sm text-muted-foreground">Projected Digital GDP Contribution</p>
                         </div>
                         <div className="stat-card">
-                            <Briefcase className="w-10 h-10 text-primary mb-2" aria-hidden="true" />
+                            <Briefcase strokeWidth={1.5} className="w-10 h-10 text-primary mb-2" aria-hidden="true" />
                             <div className="text-3xl font-bold">26,000</div>
                             <p className="text-sm text-muted-foreground">New Tech Jobs by 2030</p>
                         </div>

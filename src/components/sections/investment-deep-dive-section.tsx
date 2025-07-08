@@ -56,7 +56,7 @@ export function InvestmentDeepDiveSection() {
                         <CardContent className="space-y-3 flex-grow flex flex-col justify-center">
                             {rights.map((right, index) => (
                                 <div key={index} className="flex items-center gap-3">
-                                    <right.icon className="w-5 h-5 text-primary" aria-hidden="true" />
+                                    <right.icon strokeWidth={1.5} className="w-5 h-5 text-primary" aria-hidden="true" />
                                     <span className="text-sm text-muted-foreground">{right.text}</span>
                                 </div>
                             ))}

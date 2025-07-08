@@ -38,16 +38,16 @@ export function TextSummarizer({ text }: TextSummarizerProps) {
       
       <Button onClick={handleSummarize} disabled={isLoading} variant="outline" size="sm">
         {isLoading ? (
-          <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+          <Loader2 strokeWidth={1.5} className="mr-2 h-4 w-4 animate-spin" />
         ) : (
-          <Wand2 className="mr-2 h-4 w-4" />
+          <Wand2 strokeWidth={1.5} className="mr-2 h-4 w-4" />
         )}
         Summarize with AI
       </Button>
 
       {error && (
         <Alert variant="destructive">
-          <AlertTriangle className="h-4 w-4" />
+          <AlertTriangle strokeWidth={1.5} className="h-4 w-4" />
           <AlertTitle>Error</AlertTitle>
           <AlertDescription>{error}</AlertDescription>
         </Alert>
@@ -55,7 +55,7 @@ export function TextSummarizer({ text }: TextSummarizerProps) {
 
       {summary && (
         <Alert>
-          <Wand2 className="h-4 w-4" />
+          <Wand2 strokeWidth={1.5} className="h-4 w-4" />
           <AlertTitle>AI Summary</AlertTitle>
           <AlertDescription>{summary}</AlertDescription>
         </Alert>

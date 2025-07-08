@@ -101,7 +101,7 @@ export function MarketShareChart() {
           <CardDescription>Binance&apos;s share of global spot trading volume vs. competitors.</CardDescription>
         </div>
         <Button variant="ghost" size="icon" onClick={() => setChartType(chartType === "pie" ? "bar" : "pie")}>
-          {chartType === 'pie' ? <Layers aria-hidden="true" /> : <SwitchCamera aria-hidden="true" />}
+          {chartType === 'pie' ? <Layers strokeWidth={1.5} aria-hidden="true" /> : <SwitchCamera strokeWidth={1.5} aria-hidden="true" />}
           <span className="sr-only">Toggle chart type</span>
         </Button>
       </CardHeader>

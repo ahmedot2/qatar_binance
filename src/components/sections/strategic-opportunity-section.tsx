@@ -18,21 +18,21 @@ export function StrategicOpportunitySection() {
                     <h3 className="text-2xl font-semibold text-center mb-6">Market at an Inflection Point</h3>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
                         <div className="stat-card">
-                            <TrendingUp className="w-10 h-10 text-primary mb-2" aria-hidden="true" />
+                            <TrendingUp strokeWidth={1.5} className="w-10 h-10 text-primary mb-2" aria-hidden="true" />
                             <div className="text-3xl font-bold">
                                 <AnimatedCounter value={1.2} decimals={1} suffix="T" prefix="$" />+
                             </div>
                             <p className="text-sm text-muted-foreground">Current Digital Asset Market</p>
                         </div>
                         <div className="stat-card">
-                            <Target className="w-10 h-10 text-primary mb-2" aria-hidden="true" />
+                            <Target strokeWidth={1.5} className="w-10 h-10 text-primary mb-2" aria-hidden="true" />
                             <div className="text-3xl font-bold">
                                 <AnimatedCounter value={16} suffix="T" prefix="$" />
                             </div>
                             <p className="text-sm text-muted-foreground">Projected Market Size by 2030</p>
                         </div>
                         <div className="stat-card">
-                            <Briefcase className="w-10 h-10 text-primary mb-2" aria-hidden="true" />
+                            <Briefcase strokeWidth={1.5} className="w-10 h-10 text-primary mb-2" aria-hidden="true" />
                             <div className="text-3xl font-bold">
                                 <AnimatedCounter value={90} suffix="%" />
                             </div>
@@ -44,7 +44,7 @@ export function StrategicOpportunitySection() {
                 <Card>
                     <CardHeader>
                         <CardTitle className="flex items-center gap-2">
-                            <PieChart className="w-6 h-6 text-primary" aria-hidden="true" />
+                            <PieChart strokeWidth={1.5} className="w-6 h-6 text-primary" aria-hidden="true" />
                             The Stake
                         </CardTitle>
                     </CardHeader>
@@ -58,7 +58,7 @@ export function StrategicOpportunitySection() {
                 <Card>
                     <CardHeader>
                         <CardTitle className="flex items-center gap-2">
-                            <Timer className="w-6 h-6 text-primary" aria-hidden="true" />
+                            <Timer strokeWidth={1.5} className="w-6 h-6 text-primary" aria-hidden="true" />
                             The Urgency
                         </CardTitle>
                     </CardHeader>
@@ -72,7 +72,7 @@ export function StrategicOpportunitySection() {
                 <Card>
                     <CardHeader>
                         <CardTitle className="flex items-center gap-2">
-                            <Handshake className="w-6 h-6 text-primary" aria-hidden="true" />
+                            <Handshake strokeWidth={1.5} className="w-6 h-6 text-primary" aria-hidden="true" />
                             The Symbiosis
                         </CardTitle>
                     </CardHeader>

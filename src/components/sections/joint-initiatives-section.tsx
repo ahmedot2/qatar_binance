@@ -47,10 +47,10 @@ export function JointInitiativesSection() {
             <div className="mt-12 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-8">
                 {pillars.map((item, index) => (
                     <Card key={index} className={cn("group relative overflow-hidden flex flex-col hover:shadow-primary/20 hover:shadow-lg transition-all duration-300 hover:-translate-y-1", item.className)}>
-                        <item.icon aria-hidden="true" className="absolute -right-4 -bottom-4 h-24 w-24 text-primary/10 transition-transform duration-500 group-hover:scale-125 group-hover:rotate-12" />
+                        <item.icon strokeWidth={1.5} aria-hidden="true" className="absolute -right-4 -bottom-4 h-24 w-24 text-primary/10 transition-transform duration-500 group-hover:scale-125 group-hover:rotate-12" />
                         <CardHeader className="relative z-10">
                             <div className="bg-primary/10 p-3 rounded-lg self-start">
-                                <item.icon className="w-8 h-8 text-primary" aria-hidden="true" />
+                                <item.icon strokeWidth={1.5} className="w-8 h-8 text-primary" aria-hidden="true" />
                             </div>
                             <CardTitle className="mt-4">{item.title}</CardTitle>
                         </CardHeader>
