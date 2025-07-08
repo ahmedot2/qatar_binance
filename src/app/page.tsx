@@ -9,6 +9,7 @@ import { JointInitiativesSection } from '@/components/sections/joint-initiatives
 import { ImplementationTimelineSection } from '@/components/sections/implementation-timeline-section';
 import { PitchDeckSection } from '@/components/sections/pitch-deck-section';
 import { ConclusionSection } from '@/components/sections/conclusion-section';
+import { LazyContentWrapper } from '@/components/lazy-content-wrapper';
 
 export default function Home() {
   return (
@@ -16,30 +17,17 @@ export default function Home() {
       <Header />
       <main className="flex-1">
         <HeroSection />
-        <div className="relative isolate">
-            <video
-              autoPlay
-              loop
-              muted
-              playsInline
-              className="absolute -z-20 w-full h-full object-cover"
-              src="/videos/main-background.mp4"
-            >
-              Your browser does not support the video tag.
-            </video>
-            
-            <div className="absolute inset-0 -z-10 bg-background/95" />
-
-            <StrategicOpportunitySection />
-            <BinancePowerhouseSection />
-            <QatarVisionSection />
-            <DohaHQSection />
-            <InvestmentDeepDiveSection />
-            <JointInitiativesSection />
-            <ImplementationTimelineSection />
-            <PitchDeckSection />
-            <ConclusionSection />
-        </div>
+        <LazyContentWrapper>
+          <StrategicOpportunitySection />
+          <BinancePowerhouseSection />
+          <QatarVisionSection />
+          <DohaHQSection />
+          <InvestmentDeepDiveSection />
+          <JointInitiativesSection />
+          <ImplementationTimelineSection />
+          <PitchDeckSection />
+          <ConclusionSection />
+        </LazyContentWrapper>
       </main>
     </div>
   );
