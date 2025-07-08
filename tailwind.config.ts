@@ -9,9 +9,6 @@ export default {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        'dark-content-gradient': 'linear-gradient(145deg, hsl(0 0% 10% / 0.9) 0%, hsl(0 0% 16% / 0.9) 100%)',
-      },
       boxShadow: {
         'glass-inset': 'inset 0 1px 1px 0 rgb(255 255 255 / 0.075)',
       },
