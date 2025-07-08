@@ -95,7 +95,7 @@ html {
     background-size: 200% auto;
   }
   .section-subtitle {
-    @apply mt-6 font-mono text-lg text-foreground/80 text-center tracking-wider max-w-3xl mx-auto;
+    @apply mt-6 font-mono text-xl text-foreground/80 text-center tracking-wider max-w-4xl mx-auto;
     text-shadow: 0 0 10px hsl(var(--primary) / 0.4);
   }
   .chart-container {

@@ -4,10 +4,7 @@ import { useEffect, useState, useRef, type HTMLAttributes } from 'react'
 import { motion } from 'framer-motion'
 
 const styles: { [key: string]: React.CSSProperties } = {
-  wrapper: {
-    display: 'inline-block',
-    whiteSpace: 'pre-wrap',
-  },
+  wrapper: {},
   srOnly: {
     position: 'absolute',
     width: '1px',
@@ -20,7 +17,7 @@ const styles: { [key: string]: React.CSSProperties } = {
   },
 }
 
-interface DecryptedTextProps extends HTMLAttributes<HTMLSpanElement> {
+interface DecryptedTextProps extends HTMLAttributes<HTMLDivElement> {
   text: string;
   speed?: number;
   maxIterations?: number;
@@ -54,7 +51,7 @@ export default function DecryptedText({
   const [isScrambling, setIsScrambling] = useState(false);
   const [revealedIndices, setRevealedIndices] = useState<Set<number>>(new Set());
   const [hasAnimated, setHasAnimated] = useState(false);
-  const containerRef = useRef<HTMLSpanElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     let interval: NodeJS.Timeout | undefined;
@@ -219,7 +216,7 @@ export default function DecryptedText({
       : {}
 
   return (
-    <motion.span className={parentClassName} ref={containerRef} style={styles.wrapper} {...hoverProps} {...props}>
+    <motion.div className={parentClassName} ref={containerRef} style={styles.wrapper} {...hoverProps} {...props}>
       <span style={styles.srOnly}>{displayText}</span>
 
       <span aria-hidden="true">
@@ -237,6 +234,6 @@ export default function DecryptedText({
           )
         })}
       </span>
-    </motion.span>
+    </motion.div>
   )
 }
