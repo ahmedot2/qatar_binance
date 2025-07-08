@@ -43,8 +43,8 @@ export function AnimatedSection({ children, className, id, ...props }: AnimatedS
       ref={ref}
       style={{ willChange: 'transform, opacity' }}
       className={cn(
-        "container mx-auto px-4 py-16 md:py-24 transition-all duration-1000 ease-in-out",
-        inView ? "opacity-100 translate-y-0 scale-100" : "opacity-0 translate-y-10 scale-98",
+        "container mx-auto px-4 py-16 md:py-24 transition-all duration-700 ease-out",
+        inView ? "opacity-100 translate-y-0 scale-100" : "opacity-0 translate-y-4 scale-98",
         className
       )}
       {...props}

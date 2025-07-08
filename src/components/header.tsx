@@ -39,7 +39,7 @@ export function Header() {
                     </a>
                     <nav className="hidden md:flex items-center space-x-6">
                         {navLinks.map((link) => (
-                            <a key={link.href} href={link.href} className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary">
+                            <a key={link.href} href={link.href} className="text-sm font-medium text-muted-foreground transition-all duration-200 hover:text-primary hover:-translate-y-0.5">
                                 {link.label}
                             </a>
                         ))}
