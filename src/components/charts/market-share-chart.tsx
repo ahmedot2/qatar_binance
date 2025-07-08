@@ -18,7 +18,7 @@ import {
 } from "@/components/ui/chart"
 import type { ChartConfig } from "@/components/ui/chart"
 import { Button } from "@/components/ui/button"
-import { SwitchCamera, Layers } from "lucide-react"
+import { BarChart3, PieChart as PieChartIcon } from "lucide-react"
 
 const pieData = [
   { browser: "binance", volume: 41.14, fill: "var(--color-binance)" },
@@ -60,10 +60,10 @@ const renderActiveShape = (props: any) => {
 
   return (
     <g>
-      <text x={cx} y={cy - 12} dy={8} textAnchor="middle" fill={fill} className="text-lg font-bold transition-all">
+      <text x={cx} y={cy - 12} dy={8} textAnchor="middle" fill={fill} className="text-lg font-bold transition-all duration-300">
         {`${payload.volume}%`}
       </text>
-      <text x={cx} y={cy + 12} dy={8} textAnchor="middle" fill="hsl(var(--muted-foreground))" className="text-sm capitalize transition-all">
+      <text x={cx} y={cy + 12} dy={8} textAnchor="middle" fill="hsl(var(--muted-foreground))" className="text-sm capitalize transition-all duration-300">
         {payload.browser}
       </text>
       <Sector
@@ -101,7 +101,7 @@ export function MarketShareChart() {
           <CardDescription>Binance&apos;s share of global spot trading volume vs. competitors.</CardDescription>
         </div>
         <Button variant="ghost" size="icon" onClick={() => setChartType(chartType === "pie" ? "bar" : "pie")}>
-          {chartType === 'pie' ? <Layers strokeWidth={1.5} aria-hidden="true" /> : <SwitchCamera strokeWidth={1.5} aria-hidden="true" />}
+          {chartType === 'pie' ? <BarChart3 strokeWidth={1.5} aria-hidden="true" /> : <PieChartIcon strokeWidth={1.5} aria-hidden="true" />}
           <span className="sr-only">Toggle chart type</span>
         </Button>
       </CardHeader>
