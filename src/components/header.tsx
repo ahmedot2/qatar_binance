@@ -28,7 +28,7 @@ export function Header() {
     }, [])
 
     return (
-        <header className={`sticky top-0 z-50 transition-all duration-300 ${scrolled ? 'bg-white/5 backdrop-blur-lg border-b border-white/10 shadow-glass-inset' : 'bg-transparent'}`}>
+        <header className={`sticky top-0 z-50 transition-all duration-300 ${scrolled ? 'bg-white/5 backdrop-blur-lg backdrop-saturate-150 border-b border-white/10 shadow-glass-inset' : 'bg-transparent'}`}>
             <div className="container mx-auto px-4">
                 <div className="flex h-16 items-center justify-between">
                     <a href="#" className="flex items-center gap-2 font-bold text-lg">
