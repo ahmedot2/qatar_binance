@@ -31,7 +31,7 @@ export function DohaHQSection() {
                         <CardTitle>Synergy and Mutual Benefits</CardTitle>
                     </CardHeader>
                     <CardContent className="space-y-4 text-muted-foreground">
-                        <p>A formal HQ in Doha aligns perfectly with Qatar&apos;s digital ambitions. It offers Binance a stable, compliant environment to expand institutional offerings and de-risk its global operations, while cementing Qatar&apos;s status as a top-tier financial hub.</p>
+                        <p className="shiny-text">A formal HQ in Doha aligns perfectly with Qatar&apos;s digital ambitions. It offers Binance a stable, compliant environment to expand institutional offerings and de-risk its global operations, while cementing Qatar&apos;s status as a top-tier financial hub.</p>
                         <ul className="list-disc pl-5 space-y-2">
                             <li><strong className="text-foreground">Prestige & Soft Power:</strong> Aligns Qatar with the #1 crypto brand.</li>
                             <li><strong className="text-foreground">Economic Diversification:</strong> High-growth digital-asset exposure.</li>
@@ -45,7 +45,7 @@ export function DohaHQSection() {
                         <CardTitle>De-Risking the Future</CardTitle>
                     </CardHeader>
                     <CardContent className="space-y-4 text-muted-foreground">
-                        <p>A centralized HQ enhances legitimacy and provides regulatory certainty. This move, backed by Qatar&apos;s commitment to &quot;digital sovereignty,&quot; builds trust among users, institutions, and governments worldwide.</p>
+                        <p className="shiny-text">A centralized HQ enhances legitimacy and provides regulatory certainty. This move, backed by Qatar&apos;s commitment to &quot;digital sovereignty,&quot; builds trust among users, institutions, and governments worldwide.</p>
                          <ul className="list-disc pl-5 space-y-2">
                             <li><strong className="text-foreground">Regulatory Scrutiny:</strong> Mitigated by robust compliance framework.</li>
                             <li><strong className="text-foreground">Market Volatility:</strong> 5-year investment horizon spans market cycles.</li>
