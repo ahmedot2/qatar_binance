@@ -3,6 +3,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge"
 import { Map, Landmark, Briefcase, HandCoins, ShieldCheck, Scale, DollarSign } from "lucide-react"
 import DecryptedText from "../decrypted-text"
+import { AnimatedCounter } from "../animated-counter"
 
 const subtitle = "Qatar's ambitious National Vision 2030 provides the ideal foundation for Binance's global headquarters, creating powerful synergies for economic diversification and technological sovereignty."
 
@@ -28,17 +29,17 @@ export function QatarVisionSection() {
                     <CardContent className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
                         <div className="stat-card">
                             <Landmark strokeWidth={1.5} className="w-10 h-10 text-primary mb-2" aria-hidden="true" />
-                            <div className="text-3xl font-bold"> &gt;$200B</div>
+                            <div className="text-3xl font-bold"> &gt;$<AnimatedCounter value={200} />B</div>
                             <p className="text-sm text-muted-foreground">Infrastructure Investment</p>
                         </div>
                         <div className="stat-card">
                             <DollarSign strokeWidth={1.5} className="w-10 h-10 text-primary mb-2" aria-hidden="true" />
-                            <div className="text-3xl font-bold">$11B</div>
+                            <div className="text-3xl font-bold">$<AnimatedCounter value={11} />B</div>
                             <p className="text-sm text-muted-foreground">Projected Digital GDP Contribution</p>
                         </div>
                         <div className="stat-card">
                             <Briefcase strokeWidth={1.5} className="w-10 h-10 text-primary mb-2" aria-hidden="true" />
-                            <div className="text-3xl font-bold">26,000</div>
+                            <div className="text-3xl font-bold"><AnimatedCounter value={26000} /></div>
                             <p className="text-sm text-muted-foreground">New Tech Jobs by 2030</p>
                         </div>
                     </CardContent>
@@ -55,14 +56,14 @@ export function QatarVisionSection() {
                                 <p className="font-bold">RWA Tokenization Ambition</p>
                                 <p className="text-sm text-muted-foreground">A strategic focus on tokenizing real-world assets.</p>
                             </div>
-                            <div className="text-2xl font-bold text-primary">&gt;$500M</div>
+                            <div className="text-2xl font-bold text-primary">&gt;$<AnimatedCounter value={500} />M</div>
                         </div>
                         <div className="flex items-center justify-between p-4 bg-muted rounded-lg">
                              <div>
                                 <p className="font-bold">Digital Assets Lab</p>
                                 <p className="text-sm text-muted-foreground">Regulatory sandbox launched in Oct 2023.</p>
                             </div>
-                            <div className="text-2xl font-bold text-primary">20+ Companies</div>
+                            <div className="text-2xl font-bold text-primary"><AnimatedCounter value={20} />+ Companies</div>
                         </div>
                         <div className="pt-2">
                             <h4 className="font-semibold mb-2">Unmatched Business Incentives:</h4>
@@ -80,11 +81,11 @@ export function QatarVisionSection() {
                 <Card>
                     <CardHeader>
                         <CardTitle>QIA: The Patient, Strategic Investor</CardTitle>
-                        <CardDescription>The ideal partner to anchor Binance&apos;s next phase of growth.</CardDescription>
+                        <CardDescription>The ideal partner to anchor Binance's next phase of growth.</CardDescription>
                     </CardHeader>
                     <CardContent className="space-y-4">
                         <div className="text-center">
-                            <div className="text-4xl font-bold text-accent">$526B</div>
+                            <div className="text-4xl font-bold text-accent">$<AnimatedCounter value={526} />B</div>
                             <p className="text-sm text-muted-foreground">Assets Under Management</p>
                         </div>
                         <p className="text-sm text-center text-muted-foreground pt-2">
@@ -92,7 +93,7 @@ export function QatarVisionSection() {
                         </p>
                          <div className="p-3 bg-muted rounded-lg text-center">
                             <p className="font-bold text-sm">Sovereign Investment Precedent</p>
-                            <p className="text-xs text-muted-foreground">Abu Dhabi&apos;s MGX invested $2B in Binance (May 2025), paid in stablecoins.</p>
+                            <p className="text-xs text-muted-foreground">Abu Dhabi's MGX invested $2B in Binance (May 2025), paid in stablecoins.</p>
                         </div>
                     </CardContent>
                 </Card>
