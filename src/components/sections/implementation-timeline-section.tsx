@@ -66,37 +66,26 @@ const TimelineItem = ({ item, index }: { item: typeof timelineEvents[0], index: 
     return (
         <div ref={ref} className="relative">
             <motion.div
-                className={cn("md:flex items-center", index % 2 !== 0 && "md:flex-row-reverse")}
+                className="md:flex"
                 initial="hidden"
                 animate={isInView ? "visible" : "hidden"}
                 variants={cardVariants}
             >
-                <div className="md:w-1/2 md:pr-14">
-                    {index % 2 === 0 && (
-                        <Card className="ml-12 md:ml-0">
-                            <CardHeader>
-                                <p className="text-sm font-semibold text-primary">{item.phase} - <span className="text-muted-foreground">{item.date}</span></p>
-                                <CardTitle>{item.title}</CardTitle>
-                            </CardHeader>
-                            <CardContent>
-                                <p className="text-muted-foreground">{item.description}</p>
-                            </CardContent>
-                        </Card>
-                    )}
+                <div className={cn(
+                    "md:w-1/2",
+                    index % 2 === 0 ? "md:pr-14" : "md:pl-14 md:order-last"
+                )}>
+                    <Card className="ml-12 md:ml-0">
+                        <CardHeader>
+                            <p className="text-sm font-semibold text-primary">{item.phase} - <span className="text-muted-foreground">{item.date}</span></p>
+                            <CardTitle>{item.title}</CardTitle>
+                        </CardHeader>
+                        <CardContent>
+                            <p className="text-muted-foreground">{item.description}</p>
+                        </CardContent>
+                    </Card>
                 </div>
-                <div className="md:w-1/2 md:pl-14">
-                    {index % 2 !== 0 && (
-                        <Card className="ml-12 md:ml-0">
-                             <CardHeader>
-                                <p className="text-sm font-semibold text-primary">{item.phase} - <span className="text-muted-foreground">{item.date}</span></p>
-                                <CardTitle>{item.title}</CardTitle>
-                            </CardHeader>
-                            <CardContent>
-                                <p className="text-muted-foreground">{item.description}</p>
-                            </CardContent>
-                        </Card>
-                    )}
-                </div>
+                <div className="md:w-1/2" /> {/* Spacer */}
             </motion.div>
             <motion.div
                 className="absolute top-1/2 -translate-y-1/2 left-6 md:left-1/2 -translate-x-1/2"
@@ -159,10 +148,11 @@ export function ImplementationTimelineSection() {
 
                 <div className="space-y-16">
                     <AnimatedPoint className="relative">
-                        <div className="md:flex md:justify-end">
+                        <div className="md:flex">
                             <div className="md:w-1/2 md:pr-14">
                                 <h3 className="pl-12 text-2xl font-bold text-primary md:pl-0 md:text-right">START</h3>
                             </div>
+                            <div className="md:w-1/2" />
                         </div>
                         <div className="absolute left-6 top-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-primary ring-8 ring-background md:left-1/2" />
                     </AnimatedPoint>
@@ -172,17 +162,16 @@ export function ImplementationTimelineSection() {
                     ))}
                     
                     <AnimatedPoint className="relative">
-                        <div className={cn("md:flex items-center", timelineEvents.length % 2 === 0 && "md:flex-row-reverse")}>
-                             <div className="md:w-1/2 md:pr-14">
-                                {timelineEvents.length % 2 !== 0 && (
-                                    <h3 className="pl-12 text-2xl font-bold text-primary md:pl-0 md:text-right">GOAL</h3>
-                                )}
+                        <div className="md:flex">
+                             <div className={cn(
+                                "md:w-1/2",
+                                timelineEvents.length % 2 === 0
+                                    ? "md:pr-14 md:text-right"
+                                    : "md:pl-14 md:order-last md:text-left"
+                             )}>
+                                <h3 className="pl-12 text-2xl font-bold text-primary md:px-0">GOAL</h3>
                              </div>
-                             <div className="md:w-1/2 md:pl-14">
-                                {timelineEvents.length % 2 === 0 && (
-                                     <h3 className="pl-12 text-2xl font-bold text-primary md:ml-0">GOAL</h3>
-                                )}
-                             </div>
+                             <div className="md:w-1/2" />
                         </div>
                         <div className="absolute left-6 top-1/2 -translate-y-1/2 -translate-x-1/2 md:left-1/2">
                             <div className="h-6 w-6 rounded-full bg-primary flex items-center justify-center ring-8 ring-background">
