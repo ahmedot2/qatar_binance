@@ -1,9 +1,13 @@
-import { AnimatedSection } from "@/components/animated-section"
+
+"use client"
+
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Handshake, FileText, Banknote, Rocket, CheckCircle, Target, Flag } from "lucide-react"
 import { Badge } from "@/components/ui/badge"
 import { cn } from "@/lib/utils"
 import DecryptedText from "../decrypted-text"
+import { motion, useInView, useScroll, useTransform } from "framer-motion"
+import { useRef } from "react"
 
 const timelineEvents = [
     {
@@ -45,9 +49,97 @@ const timelineEvents = [
 
 const subtitle = "A clear, phased roadmap ensures meticulous execution, transforming vision into reality with defined milestones and clear accountability."
 
-export function ImplementationTimelineSection() {
+const TimelineItem = ({ item, index }: { item: typeof timelineEvents[0], index: number }) => {
+    const ref = useRef(null)
+    const isInView = useInView(ref, { once: true, amount: 0.3 })
+
+    const cardVariants = {
+        hidden: { opacity: 0, x: index % 2 === 0 ? -50 : 50 },
+        visible: { opacity: 1, x: 0, transition: { duration: 0.6, ease: "easeOut" } },
+    }
+    
+    const iconVariants = {
+        hidden: { opacity: 0, scale: 0.5 },
+        visible: { opacity: 1, scale: 1, transition: { type: "spring", stiffness: 260, damping: 20, delay: 0.3 } },
+    }
+
     return (
-        <AnimatedSection id="timeline" className="bg-transparent py-24">
+        <div ref={ref} className="relative">
+            <motion.div
+                className={cn("md:flex items-center", index % 2 !== 0 && "md:flex-row-reverse")}
+                initial="hidden"
+                animate={isInView ? "visible" : "hidden"}
+                variants={cardVariants}
+            >
+                <div className="md:w-1/2 md:pr-14">
+                    {index % 2 === 0 && (
+                        <Card className="ml-12 md:ml-0">
+                            <CardHeader>
+                                <p className="text-sm font-semibold text-primary">{item.phase} - <span className="text-muted-foreground">{item.date}</span></p>
+                                <CardTitle>{item.title}</CardTitle>
+                            </CardHeader>
+                            <CardContent>
+                                <p className="text-muted-foreground">{item.description}</p>
+                            </CardContent>
+                        </Card>
+                    )}
+                </div>
+                <div className="md:w-1/2 md:pl-14">
+                    {index % 2 !== 0 && (
+                        <Card className="ml-12 md:ml-0">
+                             <CardHeader>
+                                <p className="text-sm font-semibold text-primary">{item.phase} - <span className="text-muted-foreground">{item.date}</span></p>
+                                <CardTitle>{item.title}</CardTitle>
+                            </CardHeader>
+                            <CardContent>
+                                <p className="text-muted-foreground">{item.description}</p>
+                            </CardContent>
+                        </Card>
+                    )}
+                </div>
+            </motion.div>
+            <motion.div
+                className="absolute top-1/2 -translate-y-1/2 left-6 md:left-1/2 -translate-x-1/2"
+                initial="hidden"
+                animate={isInView ? "visible" : "hidden"}
+                variants={iconVariants}
+            >
+                <div className="h-14 w-14 rounded-full bg-background flex items-center justify-center ring-8 ring-background">
+                    <div className="bg-primary/10 p-3 rounded-full">
+                        <item.icon strokeWidth={1.5} className="w-6 h-6 text-primary" />
+                    </div>
+                </div>
+            </motion.div>
+        </div>
+    )
+}
+
+const AnimatedPoint = ({children, className}: {children: React.ReactNode, className?: string}) => {
+  const ref = useRef(null)
+  const isInView = useInView(ref, { once: true, amount: 0.5 })
+  return (
+    <motion.div
+      ref={ref}
+      initial={{ opacity: 0, scale: 0.8 }}
+      animate={isInView ? { opacity: 1, scale: 1 } : {}}
+      transition={{ duration: 0.5, ease: 'easeOut' }}
+      className={className}
+    >
+      {children}
+    </motion.div>
+  )
+}
+
+export function ImplementationTimelineSection() {
+    const timelineRef = useRef(null)
+    const { scrollYProgress } = useScroll({
+        target: timelineRef,
+        offset: ["start center", "end center"]
+    })
+    const lineHeight = useTransform(scrollYProgress, [0, 1], ["0%", "100%"])
+
+    return (
+        <section id="timeline" className="bg-transparent py-24 container mx-auto px-4">
             <h2 className="section-title">VII. A Roadmap to Success</h2>
             <DecryptedText
                 text={subtitle}
@@ -58,64 +150,28 @@ export function ImplementationTimelineSection() {
                 encryptedClassName="text-primary/50"
             />
 
-            <div className="relative mt-20 container max-w-5xl mx-auto px-4">
-                {/* Vertical line */}
-                <div className="absolute left-6 h-full w-0.5 bg-border md:left-1/2 md:-translate-x-1/2" aria-hidden="true" />
+            <div ref={timelineRef} className="relative mt-20 max-w-5xl mx-auto">
+                <motion.div 
+                    className="absolute left-6 w-0.5 bg-border md:left-1/2 md:-translate-x-1/2 origin-top"
+                    style={{ height: lineHeight }}
+                    aria-hidden="true" 
+                />
 
-                <div className="space-y-20">
-                    {/* Start Point */}
-                    <div className="relative">
+                <div className="space-y-16">
+                    <AnimatedPoint className="relative">
                         <div className="md:flex md:justify-end">
                             <div className="md:w-1/2 md:pr-14">
                                 <h3 className="pl-12 text-2xl font-bold text-primary md:pl-0 md:text-right">START</h3>
                             </div>
                         </div>
                         <div className="absolute left-6 top-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-primary ring-8 ring-background md:left-1/2" />
-                    </div>
+                    </AnimatedPoint>
 
-                    {/* Timeline Items */}
                     {timelineEvents.map((item, index) => (
-                        <div key={index} className="relative">
-                            <div className={cn("md:flex items-center", index % 2 !== 0 && "md:flex-row-reverse")}>
-                                <div className="md:w-1/2 md:pr-14">
-                                    {index % 2 === 0 && (
-                                        <Card className="ml-12 md:ml-0">
-                                            <CardHeader>
-                                                <p className="text-sm font-semibold text-primary">{item.phase} - <span className="text-muted-foreground">{item.date}</span></p>
-                                                <CardTitle>{item.title}</CardTitle>
-                                            </CardHeader>
-                                            <CardContent>
-                                                <p className="text-muted-foreground">{item.description}</p>
-                                            </CardContent>
-                                        </Card>
-                                    )}
-                                </div>
-                                <div className="md:w-1/2 md:pl-14">
-                                    {index % 2 !== 0 && (
-                                        <Card className="ml-12 md:ml-0">
-                                            <CardHeader>
-                                                <p className="text-sm font-semibold text-primary">{item.phase} - <span className="text-muted-foreground">{item.date}</span></p>
-                                                <CardTitle>{item.title}</CardTitle>
-                                            </CardHeader>
-                                            <CardContent>
-                                                <p className="text-muted-foreground">{item.description}</p>
-                                            </CardContent>
-                                        </Card>
-                                    )}
-                                </div>
-                            </div>
-                            <div className="absolute top-1/2 -translate-y-1/2 left-6 md:left-1/2 -translate-x-1/2">
-                                <div className="h-14 w-14 rounded-full bg-background flex items-center justify-center ring-8 ring-background">
-                                    <div className="bg-primary/10 p-3 rounded-full">
-                                        <item.icon strokeWidth={1.5} className="w-6 h-6 text-primary" />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                       <TimelineItem key={index} item={item} index={index} />
                     ))}
                     
-                    {/* Goal Point */}
-                    <div className="relative">
+                    <AnimatedPoint className="relative">
                         <div className={cn("md:flex items-center", timelineEvents.length % 2 === 0 && "md:flex-row-reverse")}>
                              <div className="md:w-1/2 md:pr-14">
                                 {timelineEvents.length % 2 !== 0 && (
@@ -133,7 +189,7 @@ export function ImplementationTimelineSection() {
                                 <Flag strokeWidth={1.5} className="h-3 w-3 text-primary-foreground" />
                             </div>
                         </div>
-                    </div>
+                    </AnimatedPoint>
                 </div>
             </div>
 
@@ -170,6 +226,6 @@ export function ImplementationTimelineSection() {
                     </CardFooter>
                 </Card>
             </div>
-        </AnimatedSection>
+        </section>
     )
 }
