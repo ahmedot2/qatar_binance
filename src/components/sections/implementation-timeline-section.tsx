@@ -162,12 +162,12 @@ export function ImplementationTimelineSection() {
                     ))}
                     
                     <AnimatedPoint className="relative">
-                        <div className="md:flex">
+                         <div className="md:flex">
                              <div className={cn(
                                 "md:w-1/2",
                                 timelineEvents.length % 2 === 0
                                     ? "md:pr-14 md:text-right"
-                                    : "md:pl-14 md:order-last md:text-left"
+                                    : "md:pl-14 md:text-left md:order-last"
                              )}>
                                 <h3 className="pl-12 text-2xl font-bold text-primary md:px-0">GOAL</h3>
                              </div>
