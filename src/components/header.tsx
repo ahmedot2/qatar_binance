@@ -58,7 +58,7 @@ export function Header() {
                                 </SheetHeader>
                                 <nav className="flex flex-col space-y-4 mt-8">
                                     {navLinks.map((link) => (
-                                        <a key={link.href} href={link.href} className="text-lg font-medium text-foreground transition-colors hover:text-primary">
+                                        <a key={link.href} href={link.href} className="text-lg font-medium text-white/90 transition-colors hover:text-primary">
                                             {link.label}
                                         </a>
                                     ))}
