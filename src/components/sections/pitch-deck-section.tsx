@@ -2,7 +2,7 @@
 "use client"
 
 import { AnimatedSection } from "@/components/animated-section"
-import { Card, CardContent } from "@/components/ui/card"
+import { Card } from "@/components/ui/card"
 import DecryptedText from "../decrypted-text"
 import Image from "next/image"
 import {
@@ -17,7 +17,7 @@ import { useEffect, useState } from "react"
 
 const subtitle = "Explore the complete investment proposal and strategic vision in our interactive presentation."
 
-const slides = Array.from({ length: 16 }, (_, i) => ({
+const slides = Array.from({ length: 17 }, (_, i) => ({
   src: `/slides/slide-${i + 1}.png`,
   alt: `Pitch Deck Slide ${i + 1}`,
 }))
@@ -107,4 +107,3 @@ export function PitchDeckSection() {
         </AnimatedSection>
     )
 }
-
