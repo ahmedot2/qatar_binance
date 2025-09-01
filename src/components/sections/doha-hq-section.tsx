@@ -15,7 +15,7 @@ const subtitle = "Why Doha is not just an option, but the optimal strategic choi
 export function DohaHQSection() {
     return (
         <AnimatedSection id="doha-hq" className="bg-transparent py-24">
-            <h2 className="section-title">IV. The Unbeatable Proposition: Doha as Binance&apos;s Global HQ</h2>
+            <h2 className="section-title">IV. The Unbeatable Proposition: Doha as Binance's Global HQ</h2>
             <DecryptedText
                 text={subtitle}
                 parentClassName="section-subtitle"
