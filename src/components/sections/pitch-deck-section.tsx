@@ -1,6 +1,7 @@
 import { AnimatedSection } from "@/components/animated-section"
 import { Card } from "@/components/ui/card"
 import DecryptedText from "../decrypted-text"
+import Image from "next/image"
 
 const subtitle = "Explore the complete investment proposal and strategic vision in our interactive presentation."
 
@@ -17,7 +18,7 @@ export function PitchDeckSection() {
                 encryptedClassName="text-primary/50"
             />
 
-            <div className="mt-12 flex justify-center">
+            <div className="mt-12 flex flex-col items-center gap-8">
                 <Card className="w-full max-w-5xl p-2 overflow-hidden">
                     <div className="aspect-[16/9] w-full">
                         <video
@@ -29,6 +30,16 @@ export function PitchDeckSection() {
                             Your browser does not support the video tag.
                         </video>
                     </div>
+                </Card>
+                <Card className="w-full max-w-5xl p-2 overflow-hidden">
+                    <Image
+                        src="https://picsum.photos/1280/720"
+                        alt="Pitch Deck"
+                        width={1280}
+                        height={720}
+                        className="rounded-xl"
+                        data-ai-hint="presentation slide"
+                    />
                 </Card>
             </div>
         </AnimatedSection>
