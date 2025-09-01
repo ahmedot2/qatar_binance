@@ -33,7 +33,7 @@ export function PitchDeckSection() {
                 </Card>
                 <Card className="w-full max-w-5xl p-2 overflow-hidden">
                     <Image
-                        src="https://picsum.photos/1280/720"
+                        src="/images/pitch-deck.png"
                         alt="Pitch Deck"
                         width={1280}
                         height={720}
