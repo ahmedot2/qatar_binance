@@ -1,7 +1,6 @@
 
 "use client"
 
-import { useEffect, useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet"
 import { Menu } from "lucide-react"
@@ -17,18 +16,8 @@ const navLinks = [
 ]
 
 export function Header() {
-    const [scrolled, setScrolled] = useState(false)
-
-    useEffect(() => {
-        const handleScroll = () => {
-            setScrolled(window.scrollY > 10)
-        }
-        window.addEventListener("scroll", handleScroll)
-        return () => window.removeEventListener("scroll", handleScroll)
-    }, [])
-
     return (
-        <header className={`sticky top-0 z-50 transition-all duration-300 ${scrolled ? 'bg-background/80 backdrop-blur-lg' : 'bg-transparent'}`}>
+        <header className="sticky top-0 z-50 bg-transparent">
             <div className="container mx-auto px-4">
                 <div className="flex h-16 items-center justify-between">
                     <a href="#" className="flex items-center gap-2 font-bold text-lg text-white">
@@ -38,7 +27,7 @@ export function Header() {
                     </a>
                     <nav className="hidden md:flex items-center space-x-6">
                         {navLinks.map((link) => (
-                            <a key={link.href} href={link.href} className={`text-sm font-medium transition-all duration-200 hover:text-primary hover:-translate-y-0.5 ${scrolled ? 'text-muted-foreground' : 'text-white/80'}`}>
+                            <a key={link.href} href={link.href} className="text-sm font-medium transition-all duration-200 hover:text-primary hover:-translate-y-0.5 text-white/80">
                                 {link.label}
                             </a>
                         ))}
@@ -46,7 +35,7 @@ export function Header() {
                     <div className="md:hidden">
                         <Sheet>
                             <SheetTrigger asChild>
-                                <Button variant="ghost" size="icon" className={`${scrolled ? '' : 'text-white hover:text-white hover:bg-white/10'}`}>
+                                <Button variant="ghost" size="icon" className="text-white hover:text-white hover:bg-white/10">
                                     <Menu strokeWidth={1.5} />
                                 </Button>
                             </SheetTrigger>
