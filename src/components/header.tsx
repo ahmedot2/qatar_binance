@@ -28,17 +28,17 @@ export function Header() {
     }, [])
 
     return (
-        <header className={`sticky top-0 z-50 transition-all duration-300 ${scrolled ? 'bg-transparent' : 'bg-transparent'}`}>
+        <header className={`sticky top-0 z-50 transition-all duration-300 ${scrolled ? 'bg-background/80 backdrop-blur-lg' : 'bg-transparent'}`}>
             <div className="container mx-auto px-4">
                 <div className="flex h-16 items-center justify-between">
-                    <a href="#" className="flex items-center gap-2 font-bold text-lg">
+                    <a href="#" className="flex items-center gap-2 font-bold text-lg text-white">
                         <span className="text-primary">Q</span>
                         <span>×</span>
                         <span>B</span>
                     </a>
                     <nav className="hidden md:flex items-center space-x-6">
                         {navLinks.map((link) => (
-                            <a key={link.href} href={link.href} className="text-sm font-medium text-muted-foreground transition-all duration-200 hover:text-primary hover:-translate-y-0.5">
+                            <a key={link.href} href={link.href} className={`text-sm font-medium transition-all duration-200 hover:text-primary hover:-translate-y-0.5 ${scrolled ? 'text-muted-foreground' : 'text-white/80'}`}>
                                 {link.label}
                             </a>
                         ))}
@@ -46,18 +46,18 @@ export function Header() {
                     <div className="md:hidden">
                         <Sheet>
                             <SheetTrigger asChild>
-                                <Button variant="ghost" size="icon">
+                                <Button variant="ghost" size="icon" className={`${scrolled ? '' : 'text-white hover:text-white hover:bg-white/10'}`}>
                                     <Menu strokeWidth={1.5} />
                                 </Button>
                             </SheetTrigger>
-                            <SheetContent side="right" className="bg-white/5 backdrop-blur-lg border-l border-white/10 shadow-glass-inset">
+                            <SheetContent side="right" className="bg-background/80 backdrop-blur-lg border-l border-white/10 shadow-glass-inset">
                                 <SheetHeader className="sr-only">
                                   <SheetTitle>Menu</SheetTitle>
                                   <SheetDescription>Main navigation menu</SheetDescription>
                                 </SheetHeader>
                                 <nav className="flex flex-col space-y-4 mt-8">
                                     {navLinks.map((link) => (
-                                        <a key={link.href} href={link.href} className="text-lg font-medium text-white/90 transition-colors hover:text-primary">
+                                        <a key={link.href} href={link.href} className="text-lg font-medium text-foreground transition-colors hover:text-primary">
                                             {link.label}
                                         </a>
                                     ))}
