@@ -10,6 +10,7 @@ import { ImplementationTimelineSection } from '@/components/sections/implementat
 import { PitchDeckSection } from '@/components/sections/pitch-deck-section';
 import { ConclusionSection } from '@/components/sections/conclusion-section';
 import { LazyContentWrapper } from '@/components/lazy-content-wrapper';
+import { DedicationSection } from '@/components/sections/dedication-section';
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
       <Header />
       <main className="flex-1">
         <HeroSection />
+        <DedicationSection />
         <LazyContentWrapper>
           <StrategicOpportunitySection />
           <BinancePowerhouseSection />
