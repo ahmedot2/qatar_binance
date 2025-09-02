@@ -9,7 +9,7 @@ export function DedicationSection() {
           THE ARK
         </p>
         <Separator className="my-4" />
-        <h2 className="text-xl md:text-2xl font-semibold text-foreground">
+        <h2 className="text-xl md:text-2xl font-semibold text-accent">
           H.E SHEIKH JABR BIN JASIM BIN THANI AL THANI
         </h2>
       </div>
