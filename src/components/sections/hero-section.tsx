@@ -21,7 +21,7 @@ export function HeroSection() {
 
             <div className="relative z-10 p-4">
                 <h1 className="font-bold tracking-tighter leading-tight">
-                    <span className="text-6xl md:text-8xl lg:text-9xl block whitespace-nowrap">Qatar × Binance</span>
+                    <span className="text-5xl md:text-8xl lg:text-9xl block whitespace-nowrap">Qatar × Binance</span>
                     <span className="text-primary text-3xl md:text-5xl lg:text-6xl block mt-2">Forging the Future of Global Finance</span>
                 </h1>
                 <p className="mt-6 max-w-3xl mx-auto text-lg md:text-xl text-neutral-200">
