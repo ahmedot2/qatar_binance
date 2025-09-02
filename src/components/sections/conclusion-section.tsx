@@ -1,7 +1,6 @@
 "use client"
 
 import { AnimatedSection } from "@/components/animated-section"
-import { ContactForm } from "@/components/contact-form"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../ui/card"
 import DecryptedText from "../decrypted-text"
 
@@ -21,16 +20,6 @@ export function ConclusionSection() {
                     encryptedClassName="text-primary/50"
                 />
             </div>
-
-            <Card className="relative z-10 mt-12 max-w-5xl mx-auto">
-                <CardHeader>
-                    <CardTitle className="text-2xl text-center">Initiate the Shift</CardTitle>
-                    <CardDescription className="text-center">The future is not waiting. Let&apos;s begin the conversation that will define it. Reach out to formalize our partnership and start building the new financial paradigm.</CardDescription>
-                </CardHeader>
-                <CardContent>
-                    <ContactForm />
-                </CardContent>
-            </Card>
         </AnimatedSection>
     )
 }
