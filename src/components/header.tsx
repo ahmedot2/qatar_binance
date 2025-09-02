@@ -42,7 +42,7 @@ export function Header() {
             <div className="container mx-auto px-4">
                 <div className="flex h-16 items-center justify-between">
                     <a href="#" className={cn(
-                        "flex items-center gap-2 font-bold text-lg",
+                        "flex items-center gap-2 font-bold text-lg transition-colors",
                         scrolled ? "text-foreground" : "text-white"
                     )}>
                         <span className="text-primary">Q</span>
@@ -63,7 +63,7 @@ export function Header() {
                         <Sheet>
                             <SheetTrigger asChild>
                                 <Button variant="ghost" size="icon" className={cn(
-                                    "hover:bg-white/10",
+                                    "transition-colors hover:bg-white/10",
                                     scrolled ? "text-foreground hover:text-foreground" : "text-white hover:text-white"
                                 )}>
                                     <Menu strokeWidth={1.5} />
