@@ -20,9 +20,9 @@ export function HeroSection() {
             <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/50 to-background z-0"></div>
 
             <div className="relative z-10 p-4 pb-20">
-                <h1 className="font-bold tracking-tighter leading-tight">
+                <h1 className="font-extrabold tracking-tighter">
                     <span className="text-5xl md:text-8xl lg:text-9xl block bg-clip-text text-transparent bg-gradient-to-b from-white/80 to-white/0">Qatar × Binance</span>
-                    <span className="text-3xl md:text-5xl lg:text-6xl block bg-clip-text text-transparent bg-gradient-to-b from-primary to-primary/60">Forging the Future of Global Finance</span>
+                    <span className="text-3xl md:text-5xl lg:text-6xl block mt-2 bg-clip-text text-transparent bg-gradient-to-b from-primary to-primary/60">Forging the Future of Global Finance</span>
                 </h1>
                 <p className="mt-6 max-w-3xl mx-auto text-lg md:text-xl text-neutral-200">
                     A landmark partnership to establish Doha as the world's premier digital-asset hub and co-architect the future of the financial system.
